@@ -113,3 +113,29 @@ double vec_dotsame(int n, double* x) {
   }
   return res;
 }
+
+double uMv(int n, double* u, double* v, double** M) {
+  double res = 0;
+  for(int i = 0; i< n; i++) {
+    for(int j = 0; j< n; j++) {
+      res += u[i] * M[i][j] * v[j];
+    }
+  }
+  return res;
+}
+
+void vec_mat_mult(int n, double* u, double** M, double* res) {
+  for(int i = 0; i< n; i++) {
+    res[i] = 0;
+    for(int j = 0; j< n; j++) {
+      res[i] += u[j] * M[j][i];
+    }
+  }
+}
+
+double uMv_unfused(int n, double* u, double* v, double** M) {
+  double* uM = malloc(n * sizeof(double));
+  vec_mat_mult(n, u, M, uM);
+  double res = vec_dot(n, uM, v);
+  return res;
+}

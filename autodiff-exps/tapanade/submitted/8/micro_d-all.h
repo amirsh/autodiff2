@@ -255,3 +255,65 @@ double vec_dotsame_d(int n, double *x, double *xd, double *vec_dotsame) {
     *vec_dotsame = res;
     return resd;
 }
+
+/*
+  Differentiation of uMv in forward (tangent) mode:
+   variations   of useful results: uMv
+   with respect to varying inputs: **M
+   RW status of diff variables: uMv:out **M:in
+   Plus diff mem management of: M:in *M:in
+*/
+double uMv_d(int n, double *u, double *v, double **M, double **Md, double *uMv
+) {
+    double res = 0;
+    double resd;
+    resd = 0.0;
+    for (int i = 0; i < n; ++i)
+        for (int j = 0; j < n; ++j) {
+            resd = resd + u[i]*v[j]*Md[i][j];
+            res += u[i]*M[i][j]*v[j];
+        }
+    *uMv = res;
+    return resd;
+}
+
+/*
+  Differentiation of vec_mat_mult in forward (tangent) mode:
+   variations   of useful results: *res
+   with respect to varying inputs: **M
+   Plus diff mem management of: res:in M:in *M:in
+*/
+void vec_mat_mult_d(int n, double *u, double **M, double **Md, double *res, 
+        double *resd) {
+    *resd = 0.0;
+    for (int i = 0; i < n; ++i) {
+        resd[i] = 0.0;
+        res[i] = 0;
+        for (int j = 0; j < n; ++j) {
+            resd[i] = resd[i] + u[j]*Md[j][i];
+            res[i] += u[j]*M[j][i];
+        }
+    }
+}
+
+/*
+  Differentiation of uMv_unfused in forward (tangent) mode:
+   variations   of useful results: alloc(*uM) uMv_unfused
+   with respect to varying inputs: **M
+   RW status of diff variables: alloc(*uM):out uMv_unfused:out
+                **M:in
+   Plus diff mem management of: M:in *M:in
+*/
+double uMv_unfused_d(int n, double *u, double *v, double **M, double **Md, 
+        double *uMv_unfused) {
+    double *uM;
+    double *uMd;
+    uMd = (double *)malloc(n*sizeof(double));
+    uM = (double *)malloc(n*sizeof(double));
+    vec_mat_mult_d(n, u, M, Md, uM, uMd);
+    double res;
+    double resd;
+    resd = vec_dot_d(n, uM, uMd, v, &res);
+    *uMv_unfused = res;
+    return resd;
+}

@@ -283,3 +283,65 @@ void vec_dotsame_b(int n, double *x, double *xb, double vec_dotsameb) {
     for (int i = n-1; i > -1; --i)
         xb[i] = xb[i] + 2*x[i]*resb;
 }
+
+/*
+  Differentiation of uMv in reverse (adjoint) mode:
+   gradient     of useful results: uMv **M
+   with respect to varying inputs: **M
+   RW status of diff variables: uMv:in-killed **M:incr
+   Plus diff mem management of: M:in *M:in
+*/
+void uMv_b(int n, double *u, double *v, double **M, double **Mb, double uMvb) 
+{
+    double res = 0;
+    double resb = 0.0;
+    double uMv;
+    resb = uMvb;
+    for (int i = n-1; i > -1; --i)
+        for (int j = n-1; j > -1; --j)
+            Mb[i][j] = Mb[i][j] + u[i]*v[j]*resb;
+}
+
+/*
+  Differentiation of vec_mat_mult in reverse (adjoint) mode:
+   gradient     of useful results: *res **M
+   with respect to varying inputs: *res **M
+   Plus diff mem management of: res:in M:in *M:in
+*/
+void vec_mat_mult_b(int n, double *u, double **M, double **Mb, double *res, 
+        double *resb) {
+    for (int i = n-1; i > -1; --i) {
+        for (int j = n-1; j > -1; --j)
+            Mb[j][i] = Mb[j][i] + u[j]*resb[i];
+        resb[i] = 0.0;
+    }
+}
+
+/*
+  Differentiation of uMv_unfused in reverse (adjoint) mode:
+   gradient     of useful results: alloc(*uM) uMv_unfused **M
+   with respect to varying inputs: alloc(*uM) **M
+   RW status of diff variables: alloc(*uM):in-out uMv_unfused:in-killed
+                **M:incr
+   Plus diff mem management of: M:in *M:in
+*/
+void uMv_unfused_b(int n, double *u, double *v, double **M, double **Mb, 
+        double uMv_unfusedb) {
+    double *uM;
+    double *uMb;
+    int ii1;
+    double uMv_unfused;
+    uMb = (double *)malloc(n*sizeof(double));
+    for (ii1 = 0; ii1 < n; ++ii1)
+        uMb[ii1] = 0.0;
+    uM = (double *)malloc(n*sizeof(double));
+    double res;
+    double resb;
+    resb = uMv_unfusedb;
+    vec_dot_b(n, uM, uMb, v, resb);
+    vec_mat_mult_b(n, u, M, Mb, uM, uMb);
+    free(uM);
+    free(uMb);
+}
+
+
