@@ -267,3 +267,19 @@ void vec_logsumexp_unfused_b(int n, double *v, double *vb, double
     free(mxvb);
     vec_max_b(n, v, vb, mxb);
 }
+
+/*
+  Differentiation of vec_dotsame in reverse (adjoint) mode:
+   gradient     of useful results: *x vec_dotsame
+   with respect to varying inputs: *x
+   RW status of diff variables: *x:incr vec_dotsame:in-killed
+   Plus diff mem management of: x:in
+*/
+void vec_dotsame_b(int n, double *x, double *xb, double vec_dotsameb) {
+    double res = 0;
+    double resb = 0.0;
+    double vec_dotsame;
+    resb = vec_dotsameb;
+    for (int i = n-1; i > -1; --i)
+        xb[i] = xb[i] + 2*x[i]*resb;
+}

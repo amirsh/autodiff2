@@ -105,3 +105,11 @@ double vec_logsumexp_unfused(int n, double* v) {
   
   return (log(sum)) + (mx);
 }
+
+double vec_dotsame(int n, double* x) {
+  double res = 0;
+  for(int i = 0; i< n; i++) {
+    res += x[i] * x[i];
+  }
+  return res;
+}

@@ -236,3 +236,22 @@ double vec_logsumexp_unfused_d(int n, double *v, double *vd, double *
     *vec_logsumexp_unfused = log(sum) + mx;
     return sumd/sum + mxd;
 }
+
+/*
+  Differentiation of vec_dotsame in forward (tangent) mode:
+   variations   of useful results: vec_dotsame
+   with respect to varying inputs: *x
+   RW status of diff variables: *x:in vec_dotsame:out
+   Plus diff mem management of: x:in
+*/
+double vec_dotsame_d(int n, double *x, double *xd, double *vec_dotsame) {
+    double res = 0;
+    double resd;
+    resd = 0.0;
+    for (int i = 0; i < n; ++i) {
+        resd = resd + xd[i]*x[i] + x[i]*xd[i];
+        res += x[i]*x[i];
+    }
+    *vec_dotsame = res;
+    return resd;
+}
