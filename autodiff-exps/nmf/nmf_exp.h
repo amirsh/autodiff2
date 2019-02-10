@@ -196,57 +196,39 @@ array_number_t nmf_uv(array_number_t u, array_number_t v, array_array_number_t A
 }
 
 
-array_number_t nmf_uv_dps(storage_t s, array_number_t u, array_number_t v, array_array_number_t AA) {
-/* I'm manually optimizing this code. */
-//   array_number_t x20434 = (array_number_t)s;
-//   for(int i = 0; i < n; i++){
-//     number_t x20433 = 0;
-//     number_t ui = u->arr[i];
-//     // number_t one_ui =  1 / ui;
-//     for (int x19178 = 0; x19178 < m; x19178++) {
-//       number_t x19286 = x20433;
-//       number_t x20430 = (v->arr[x19178]);
-//       number_t x20432 = (x20430) * ((ui));
-//       number_t x20428 = x20430;
-//       // x19286 = (x19286) + one_ui - ((((((AA->arr[x19178])->arr[i]) * one_ui)) / x20432));
-//       x19286 = (x19286) + (1 / ui) - ((((((AA->arr[x19178])->arr[i]))) / (ui * x20432)));
-//       x20433 = x19286;
-//     }
-    
-//     x20434->arr[i] = x20433;
-    
-//   }
-//   return x20434;
-// }
-/* */
-  index_t x23562 = (u)->length;
-  index_t x23577 = (v)->length;
-  array_number_t x23579 = (array_number_t)s;
-  for(int i = 0; i < x23579->length; i++){
-    number_t x23564 = (u->arr[i]);
-    number_t x23568 = (1) / (x23564);
-    number_t x23578 = 0;
-    for (int x22307 = 0; x22307 < x23577; x22307++) {
-      number_t x22415 = x23578;
-      number_t x23563 = (v->arr[x22307]);
-      number_t x23565 = (x23563) * (x23564);
-      array_number_t x23569 = (AA->arr[x22307]);
-      number_t x23570 = (x23569->arr[i]);
-      number_t x23571 = (x23570) * (x23563);
-      number_t x23572 = -(x23571);
-      number_t x23573 = (x23565) * (x23565);
-      number_t x23574 = (x23572) / (x23573);
-      number_t x23575 = (x23568) + (x23574);
-      number_t x23576 = (x22415) + (x23575);
-      x22415 = x23576;
-      x23578 = x22415;
+array_number_t nmf_uv_dps(storage_t x190, array_number_t u, array_number_t v, array_array_number_t AA) {
+  index_t x174 = (u)->length;
+  index_t x187 = (v)->length;
+  array_number_t x189 = (array_number_t)x190;
+  x189->length=x174;
+  x189->arr=(number_t*)(STG_OFFSET(x189, VECTOR_HEADER_BYTES));
+
+  for(int i = 0; i < x189->length; i++){
+    number_t x175 = (u->arr[i]);
+    number_t x178 = (1) / (x175);
+    number_t x188 = 0;
+    for (int x46 = 0; x46 < x187; x46++) {
+      number_t x132 = x188;
+      number_t x176 = (v->arr[x46]);
+      number_t x177 = (x176) * (x175);
+      array_number_t x179 = (AA->arr[x46]);
+      number_t x180 = (x179->arr[i]);
+      number_t x181 = (x180) * (x176);
+      number_t x182 = -(x181);
+      number_t x183 = (x177) * (x177);
+      number_t x184 = (x182) / (x183);
+      number_t x185 = (x178) + (x184);
+      number_t x186 = (x132) + (x185);
+      x132 = x186;
+      x188 = x132;
     }
     
-    x23579->arr[i] = x23578;
-    
+    x189->arr[i] = x188;
+
   }
-  return x23579;
+  return x189;
 }
+
 
 array_number_t nmf_uv_poisson(array_number_t u, array_number_t v, array_array_number_t AA) {
   index_t x23894 = (u)->length;

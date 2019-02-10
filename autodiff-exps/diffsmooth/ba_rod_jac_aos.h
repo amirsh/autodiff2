@@ -1782,3 +1782,584 @@ array_array_array_number_t ba_proj_jac(array_number_t xs, index_t n) {
   }
   return x6689;
 }
+//   number_t x2093 = (xs->arr[0]);
+//   number_t x2094 = (xs->arr[1]);
+//   number_t x2095 = (xs->arr[2]);
+//   number_t x2096 = (x2093) * (x2093);
+//   number_t x2097 = (x2094) * (x2094);
+//   number_t x2098 = (x2096) + (x2097);
+//   number_t x2099 = (x2095) * (x2095);
+//   number_t x2100 = (x2098) + (x2099);
+//   number_t x2101 = sqrt(x2100);
+//   number_t x2102 = (1) / (x2101);
+//   number_t x2103 = (x2094) * (x2102);
+//   number_t x2104 = (x2095) * (x2102);
+//   number_t x2105 = (x2093) * (x2102);
+//   number_t x2106 = cos(x2101);
+//   number_t x2107 = (1) - (x2106);
+//   number_t x2108 = (xs->arr[9]);
+//   number_t x2109 = (xs->arr[10]);
+//   number_t x2110 = (xs->arr[6]);
+//   number_t x2111 = sin(x2101);
+//   index_t x2112 = (xs)->length;
+//   number_t x2130 = (x2102) * (0.5);
+//   number_t x2133 = (x2101) * (x2101);
+//   number_t x2144 = -(x2111);
+//   number_t x2150 = (xs->arr[5]);
+//   number_t x2160 = (xs->arr[4]);
+//   number_t x2169 = (xs->arr[3]);
+//   array_array_array_number_t x2605 = (array_array_array_number_t)storage_alloc(sizeof(int) * 2);x2605->length=x2112;x2605->arr = (array_array_number_t*)storage_alloc(sizeof(array_array_number_t) * x2112);
+//   for(int i = 0; i < x2605->length; i++){
+//     index_t x2113 = (i) == (0);
+//     index_t x2114;
+//     if (x2113) {
+//       x2114 = 1;
+//     } else {
+//       x2114 = 0;
+//     }
+//     index_t x2115 = (i) == (1);
+//     index_t x2116;
+//     if (x2115) {
+//       x2116 = 1;
+//     } else {
+//       x2116 = 0;
+//     }
+//     index_t x2117 = (i) == (2);
+//     index_t x2118;
+//     if (x2117) {
+//       x2118 = 1;
+//     } else {
+//       x2118 = 0;
+//     }
+//     number_t x2119 = (x2114) * (x2093);
+//     number_t x2120 = (x2093) * (x2114);
+//     number_t x2121 = (x2119) + (x2120);
+//     number_t x2122 = (x2116) * (x2094);
+//     number_t x2123 = (x2094) * (x2116);
+//     number_t x2124 = (x2122) + (x2123);
+//     number_t x2125 = (x2121) + (x2124);
+//     number_t x2126 = (x2118) * (x2095);
+//     number_t x2127 = (x2095) * (x2118);
+//     number_t x2128 = (x2126) + (x2127);
+//     number_t x2129 = (x2125) + (x2128);
+//     number_t x2131 = (x2129) * (x2130);
+//     number_t x2132 = -(x2131);
+//     number_t x2134 = (x2132) / (x2133);
+//     number_t x2135 = (x2116) * (x2102);
+//     number_t x2136 = (x2094) * (x2134);
+//     number_t x2137 = (x2135) + (x2136);
+//     number_t x2138 = (x2118) * (x2102);
+//     number_t x2139 = (x2095) * (x2134);
+//     number_t x2140 = (x2138) + (x2139);
+//     number_t x2141 = (x2114) * (x2102);
+//     number_t x2142 = (x2093) * (x2134);
+//     number_t x2143 = (x2141) + (x2142);
+//     number_t x2145 = (x2131) * (x2144);
+//     index_t x2155 = (i) == (5);
+//     index_t x2165 = (i) == (4);
+//     index_t x2174 = (i) == (3);
+//     index_t x2516 = (i) == (9);
+//     index_t x2548 = (i) == (10);
+//     index_t x2594 = (i) == (6);
+//     array_array_number_t x2604 = (array_array_number_t)storage_alloc(sizeof(int) * 2);x2604->length=n;x2604->arr = (array_number_t*)storage_alloc(sizeof(array_number_t) * n);
+//     for(int i0 = 0; i0 < x2604->length; i0++){
+//       index_t x2146 = (3) * (i0);
+//       index_t x2147 = (11) + (x2146);
+//       index_t x2148 = (2) + (x2147);
+//       number_t x2149 = (xs->arr[x2148]);
+//       number_t x2151 = (x2149) - (x2150);
+//       index_t x2152 = (i) == (x2148);
+//       index_t x2157;
+//       if (x2152) {
+//         index_t x2154;
+//         if (x2155) {
+//           x2154 = 0;
+//         } else {
+//           x2154 = 1;
+//         }
+//         x2157 = x2154;
+//       } else {
+//         index_t x2156;
+//         if (x2155) {
+//           x2156 = -1;
+//         } else {
+//           x2156 = 0;
+//         }
+//         x2157 = x2156;
+//       }
+//       index_t x2158 = (1) + (x2147);
+//       number_t x2159 = (xs->arr[x2158]);
+//       number_t x2161 = (x2159) - (x2160);
+//       index_t x2162 = (i) == (x2158);
+//       index_t x2167;
+//       if (x2162) {
+//         index_t x2164;
+//         if (x2165) {
+//           x2164 = 0;
+//         } else {
+//           x2164 = 1;
+//         }
+//         x2167 = x2164;
+//       } else {
+//         index_t x2166;
+//         if (x2165) {
+//           x2166 = -1;
+//         } else {
+//           x2166 = 0;
+//         }
+//         x2167 = x2166;
+//       }
+//       number_t x2168 = (xs->arr[x2147]);
+//       number_t x2170 = (x2168) - (x2169);
+//       index_t x2171 = (i) == (x2147);
+//       index_t x2176;
+//       if (x2171) {
+//         index_t x2173;
+//         if (x2174) {
+//           x2173 = 0;
+//         } else {
+//           x2173 = 1;
+//         }
+//         x2176 = x2173;
+//       } else {
+//         index_t x2175;
+//         if (x2174) {
+//           x2175 = -1;
+//         } else {
+//           x2175 = 0;
+//         }
+//         x2176 = x2175;
+//       }
+//       number_t x2177 = (x2105) * (x2170);
+//       number_t x2178 = (x2103) * (x2161);
+//       number_t x2179 = (x2177) + (x2178);
+//       number_t x2180 = (x2104) * (x2151);
+//       number_t x2181 = (x2179) + (x2180);
+//       number_t x2182 = (x2181) * (x2107);
+//       number_t x2188 = (x2103) * (x2151);
+//       number_t x2189 = (x2104) * (x2161);
+//       number_t x2190 = (x2188) - (x2189);
+//       number_t x2191 = (x2137) * (x2151);
+//       number_t x2192 = (x2103) * (x2157);
+//       number_t x2193 = (x2191) + (x2192);
+//       number_t x2194 = (x2140) * (x2161);
+//       number_t x2195 = (x2104) * (x2167);
+//       number_t x2196 = (x2194) + (x2195);
+//       number_t x2197 = (x2193) - (x2196);
+//       tuple_number_t_number_t x2198 = (tuple_number_t_number_t){._1=x2190, ._2=x2197};
+//       number_t x2199 = (x2104) * (x2170);
+//       number_t x2200 = (x2105) * (x2151);
+//       number_t x2201 = (x2199) - (x2200);
+//       number_t x2202 = (x2140) * (x2170);
+//       number_t x2203 = (x2104) * (x2176);
+//       number_t x2204 = (x2202) + (x2203);
+//       number_t x2205 = (x2143) * (x2151);
+//       number_t x2206 = (x2105) * (x2157);
+//       number_t x2207 = (x2205) + (x2206);
+//       number_t x2208 = (x2204) - (x2207);
+//       tuple_number_t_number_t x2209 = (tuple_number_t_number_t){._1=x2201, ._2=x2208};
+//       number_t x2210 = (x2105) * (x2161);
+//       number_t x2211 = (x2103) * (x2170);
+//       number_t x2212 = (x2210) - (x2211);
+//       number_t x2213 = (x2143) * (x2161);
+//       number_t x2214 = (x2105) * (x2167);
+//       number_t x2215 = (x2213) + (x2214);
+//       number_t x2216 = (x2137) * (x2170);
+//       number_t x2217 = (x2103) * (x2176);
+//       number_t x2218 = (x2216) + (x2217);
+//       number_t x2219 = (x2215) - (x2218);
+//       tuple_number_t_number_t x2220 = (tuple_number_t_number_t){._1=x2212, ._2=x2219};
+//       array_tuple_number_t_number_t x2221 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x2221->length=3;x2221->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 3);
+//       x2221->arr[0] = x2198;
+//       x2221->arr[1] = x2209;
+//       x2221->arr[2] = x2220;
+//       array_tuple_number_t_number_t x2472 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x2472->length=3;x2472->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 3);
+//       for(int x1246 = 0; x1246 < x2472->length; x1246++){
+//         index_t x2183 = (x1246) + (x2147);
+//         index_t x2184 = (x1246) + (3);
+//         number_t x2185 = (xs->arr[x2183]);
+//         number_t x2186 = (xs->arr[x2184]);
+//         number_t x2187 = (x2185) - (x2186);
+//         tuple_number_t_number_t x2222 = (x2221->arr[x1246]);
+//         number_t x2223 = (x2222)._1;
+//         number_t x2224 = (xs->arr[x1246]);
+//         number_t x2225 = (x2224) * (x2102);
+//         number_t x2226 = (x2187) * (x2106);
+//         number_t x2227 = (x2223) * (x2111);
+//         number_t x2228 = (x2226) + (x2227);
+//         number_t x2229 = (x2225) * (x2182);
+//         number_t x2230 = (x2228) + (x2229);
+//         index_t x2231 = (i) == (x2183);
+//         index_t x2350 = (i) == (x2184);
+//         index_t x2412 = (i) == (x1246);
+//         number_t x2441 = (x2187) * (x2145);
+//         number_t x2470;
+//         if (x2231) {
+//           number_t x2349;
+//           if (x2350) {
+//             number_t x2263 = (x2222)._2;
+//             number_t x2264 = (x2263) * (x2111);
+//             number_t x2265 = (x2131) * (x2106);
+//             number_t x2266 = (x2223) * (x2265);
+//             number_t x2267 = (x2264) + (x2266);
+//             number_t x2268 = (x2441) + (x2267);
+//             number_t x2269 = (x2224) * (x2134);
+//             number_t x2289;
+//             if (x2412) {
+//               number_t x2242 = (x2102) + (x2269);
+//               number_t x2243 = (x2242) * (x2182);
+//               number_t x2244 = (x2143) * (x2170);
+//               number_t x2245 = (x2105) * (x2176);
+//               number_t x2246 = (x2244) + (x2245);
+//               number_t x2247 = (x2137) * (x2161);
+//               number_t x2248 = (x2103) * (x2167);
+//               number_t x2249 = (x2247) + (x2248);
+//               number_t x2250 = (x2246) + (x2249);
+//               number_t x2251 = (x2140) * (x2151);
+//               number_t x2252 = (x2104) * (x2157);
+//               number_t x2253 = (x2251) + (x2252);
+//               number_t x2254 = (x2250) + (x2253);
+//               number_t x2255 = (x2254) * (x2107);
+//               number_t x2256 = -(x2145);
+//               number_t x2257 = (x2181) * (x2256);
+//               number_t x2258 = (x2255) + (x2257);
+//               number_t x2259 = (x2225) * (x2258);
+//               number_t x2260 = (x2243) + (x2259);
+//               number_t x2261 = (x2268) + (x2260);
+//               x2289 = x2261;
+//             } else {
+//               number_t x2270 = (x2269) * (x2182);
+//               number_t x2271 = (x2143) * (x2170);
+//               number_t x2272 = (x2105) * (x2176);
+//               number_t x2273 = (x2271) + (x2272);
+//               number_t x2274 = (x2137) * (x2161);
+//               number_t x2275 = (x2103) * (x2167);
+//               number_t x2276 = (x2274) + (x2275);
+//               number_t x2277 = (x2273) + (x2276);
+//               number_t x2278 = (x2140) * (x2151);
+//               number_t x2279 = (x2104) * (x2157);
+//               number_t x2280 = (x2278) + (x2279);
+//               number_t x2281 = (x2277) + (x2280);
+//               number_t x2282 = (x2281) * (x2107);
+//               number_t x2283 = -(x2145);
+//               number_t x2284 = (x2181) * (x2283);
+//               number_t x2285 = (x2282) + (x2284);
+//               number_t x2286 = (x2225) * (x2285);
+//               number_t x2287 = (x2270) + (x2286);
+//               number_t x2288 = (x2268) + (x2287);
+//               x2289 = x2288;
+//             }
+//             x2349 = x2289;
+//           } else {
+//             number_t x2321 = (x2106) + (x2441);
+//             number_t x2322 = (x2222)._2;
+//             number_t x2323 = (x2322) * (x2111);
+//             number_t x2324 = (x2131) * (x2106);
+//             number_t x2325 = (x2223) * (x2324);
+//             number_t x2326 = (x2323) + (x2325);
+//             number_t x2327 = (x2321) + (x2326);
+//             number_t x2328 = (x2224) * (x2134);
+//             number_t x2348;
+//             if (x2412) {
+//               number_t x2300 = (x2102) + (x2328);
+//               number_t x2301 = (x2300) * (x2182);
+//               number_t x2302 = (x2143) * (x2170);
+//               number_t x2303 = (x2105) * (x2176);
+//               number_t x2304 = (x2302) + (x2303);
+//               number_t x2305 = (x2137) * (x2161);
+//               number_t x2306 = (x2103) * (x2167);
+//               number_t x2307 = (x2305) + (x2306);
+//               number_t x2308 = (x2304) + (x2307);
+//               number_t x2309 = (x2140) * (x2151);
+//               number_t x2310 = (x2104) * (x2157);
+//               number_t x2311 = (x2309) + (x2310);
+//               number_t x2312 = (x2308) + (x2311);
+//               number_t x2313 = (x2312) * (x2107);
+//               number_t x2314 = -(x2145);
+//               number_t x2315 = (x2181) * (x2314);
+//               number_t x2316 = (x2313) + (x2315);
+//               number_t x2317 = (x2225) * (x2316);
+//               number_t x2318 = (x2301) + (x2317);
+//               number_t x2319 = (x2327) + (x2318);
+//               x2348 = x2319;
+//             } else {
+//               number_t x2329 = (x2328) * (x2182);
+//               number_t x2330 = (x2143) * (x2170);
+//               number_t x2331 = (x2105) * (x2176);
+//               number_t x2332 = (x2330) + (x2331);
+//               number_t x2333 = (x2137) * (x2161);
+//               number_t x2334 = (x2103) * (x2167);
+//               number_t x2335 = (x2333) + (x2334);
+//               number_t x2336 = (x2332) + (x2335);
+//               number_t x2337 = (x2140) * (x2151);
+//               number_t x2338 = (x2104) * (x2157);
+//               number_t x2339 = (x2337) + (x2338);
+//               number_t x2340 = (x2336) + (x2339);
+//               number_t x2341 = (x2340) * (x2107);
+//               number_t x2342 = -(x2145);
+//               number_t x2343 = (x2181) * (x2342);
+//               number_t x2344 = (x2341) + (x2343);
+//               number_t x2345 = (x2225) * (x2344);
+//               number_t x2346 = (x2329) + (x2345);
+//               number_t x2347 = (x2327) + (x2346);
+//               x2348 = x2347;
+//             }
+//             x2349 = x2348;
+//           }
+//           x2470 = x2349;
+//         } else {
+//           number_t x2442 = (x2222)._2;
+//           number_t x2443 = (x2442) * (x2111);
+//           number_t x2444 = (x2131) * (x2106);
+//           number_t x2445 = (x2223) * (x2444);
+//           number_t x2446 = (x2443) + (x2445);
+//           number_t x2469;
+//           if (x2350) {
+//             number_t x2382 = (-1) * (x2106);
+//             number_t x2384 = (x2382) + (x2441);
+//             number_t x2390 = (x2384) + (x2446);
+//             number_t x2391 = (x2224) * (x2134);
+//             number_t x2411;
+//             if (x2412) {
+//               number_t x2362 = (x2102) + (x2391);
+//               number_t x2363 = (x2362) * (x2182);
+//               number_t x2364 = (x2143) * (x2170);
+//               number_t x2365 = (x2105) * (x2176);
+//               number_t x2366 = (x2364) + (x2365);
+//               number_t x2367 = (x2137) * (x2161);
+//               number_t x2368 = (x2103) * (x2167);
+//               number_t x2369 = (x2367) + (x2368);
+//               number_t x2370 = (x2366) + (x2369);
+//               number_t x2371 = (x2140) * (x2151);
+//               number_t x2372 = (x2104) * (x2157);
+//               number_t x2373 = (x2371) + (x2372);
+//               number_t x2374 = (x2370) + (x2373);
+//               number_t x2375 = (x2374) * (x2107);
+//               number_t x2376 = -(x2145);
+//               number_t x2377 = (x2181) * (x2376);
+//               number_t x2378 = (x2375) + (x2377);
+//               number_t x2379 = (x2225) * (x2378);
+//               number_t x2380 = (x2363) + (x2379);
+//               number_t x2381 = (x2390) + (x2380);
+//               x2411 = x2381;
+//             } else {
+//               number_t x2392 = (x2391) * (x2182);
+//               number_t x2393 = (x2143) * (x2170);
+//               number_t x2394 = (x2105) * (x2176);
+//               number_t x2395 = (x2393) + (x2394);
+//               number_t x2396 = (x2137) * (x2161);
+//               number_t x2397 = (x2103) * (x2167);
+//               number_t x2398 = (x2396) + (x2397);
+//               number_t x2399 = (x2395) + (x2398);
+//               number_t x2400 = (x2140) * (x2151);
+//               number_t x2401 = (x2104) * (x2157);
+//               number_t x2402 = (x2400) + (x2401);
+//               number_t x2403 = (x2399) + (x2402);
+//               number_t x2404 = (x2403) * (x2107);
+//               number_t x2405 = -(x2145);
+//               number_t x2406 = (x2181) * (x2405);
+//               number_t x2407 = (x2404) + (x2406);
+//               number_t x2408 = (x2225) * (x2407);
+//               number_t x2409 = (x2392) + (x2408);
+//               number_t x2410 = (x2390) + (x2409);
+//               x2411 = x2410;
+//             }
+//             x2469 = x2411;
+//           } else {
+//             number_t x2447 = (x2441) + (x2446);
+//             number_t x2448 = (x2224) * (x2134);
+//             number_t x2468;
+//             if (x2412) {
+//               number_t x2421 = (x2102) + (x2448);
+//               number_t x2422 = (x2421) * (x2182);
+//               number_t x2423 = (x2143) * (x2170);
+//               number_t x2424 = (x2105) * (x2176);
+//               number_t x2425 = (x2423) + (x2424);
+//               number_t x2426 = (x2137) * (x2161);
+//               number_t x2427 = (x2103) * (x2167);
+//               number_t x2428 = (x2426) + (x2427);
+//               number_t x2429 = (x2425) + (x2428);
+//               number_t x2430 = (x2140) * (x2151);
+//               number_t x2431 = (x2104) * (x2157);
+//               number_t x2432 = (x2430) + (x2431);
+//               number_t x2433 = (x2429) + (x2432);
+//               number_t x2434 = (x2433) * (x2107);
+//               number_t x2435 = -(x2145);
+//               number_t x2436 = (x2181) * (x2435);
+//               number_t x2437 = (x2434) + (x2436);
+//               number_t x2438 = (x2225) * (x2437);
+//               number_t x2439 = (x2422) + (x2438);
+//               number_t x2440 = (x2447) + (x2439);
+//               x2468 = x2440;
+//             } else {
+//               number_t x2449 = (x2448) * (x2182);
+//               number_t x2450 = (x2143) * (x2170);
+//               number_t x2451 = (x2105) * (x2176);
+//               number_t x2452 = (x2450) + (x2451);
+//               number_t x2453 = (x2137) * (x2161);
+//               number_t x2454 = (x2103) * (x2167);
+//               number_t x2455 = (x2453) + (x2454);
+//               number_t x2456 = (x2452) + (x2455);
+//               number_t x2457 = (x2140) * (x2151);
+//               number_t x2458 = (x2104) * (x2157);
+//               number_t x2459 = (x2457) + (x2458);
+//               number_t x2460 = (x2456) + (x2459);
+//               number_t x2461 = (x2460) * (x2107);
+//               number_t x2462 = -(x2145);
+//               number_t x2463 = (x2181) * (x2462);
+//               number_t x2464 = (x2461) + (x2463);
+//               number_t x2465 = (x2225) * (x2464);
+//               number_t x2466 = (x2449) + (x2465);
+//               number_t x2467 = (x2447) + (x2466);
+//               x2468 = x2467;
+//             }
+//             x2469 = x2468;
+//           }
+//           x2470 = x2469;
+//         }
+//         tuple_number_t_number_t x2471 = (tuple_number_t_number_t){._1=x2230, ._2=x2470};
+//         x2472->arr[x1246] = x2471;
+        
+//       }
+//       array_tuple_number_t_number_t x2473 = x2472;
+//       tuple_number_t_number_t x2474 = (x2473->arr[2]);
+//       number_t x2475 = (x2474)._1;
+//       tuple_number_t_number_t x2476 = (x2473->arr[0]);
+//       number_t x2477 = (x2476)._1;
+//       number_t x2478 = (1) / (x2475);
+//       number_t x2479 = (x2474)._2;
+//       number_t x2480 = -(x2479);
+//       number_t x2481 = (x2475) * (x2475);
+//       number_t x2482 = (x2480) / (x2481);
+//       number_t x2483 = (x2477) * (x2478);
+//       number_t x2484 = (x2476)._2;
+//       number_t x2485 = (x2484) * (x2478);
+//       number_t x2486 = (x2477) * (x2482);
+//       number_t x2487 = (x2485) + (x2486);
+//       tuple_number_t_number_t x2488 = (x2473->arr[1]);
+//       number_t x2489 = (x2488)._1;
+//       number_t x2490 = (x2489) * (x2478);
+//       number_t x2491 = (x2488)._2;
+//       number_t x2492 = (x2491) * (x2478);
+//       number_t x2493 = (x2489) * (x2482);
+//       number_t x2494 = (x2492) + (x2493);
+//       number_t x2495 = (x2483) * (x2483);
+//       number_t x2496 = (x2490) * (x2490);
+//       number_t x2497 = (x2495) + (x2496);
+//       number_t x2498 = (x2487) * (x2483);
+//       number_t x2499 = (x2483) * (x2487);
+//       number_t x2500 = (x2498) + (x2499);
+//       number_t x2501 = (x2494) * (x2490);
+//       number_t x2502 = (x2490) * (x2494);
+//       number_t x2503 = (x2501) + (x2502);
+//       number_t x2504 = (x2500) + (x2503);
+//       number_t x2505 = (x2109) * (x2497);
+//       number_t x2506 = (x2108) * (x2497);
+//       number_t x2507 = (1) + (x2506);
+//       number_t x2508 = (x2505) * (x2497);
+//       number_t x2509 = (x2507) + (x2508);
+//       number_t x2568 = (x2108) * (x2504);
+//       number_t x2569 = (x2109) * (x2504);
+//       array_tuple_number_t_number_t x2579 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x2579->length=2;x2579->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 2);
+//       for(int x968 = 0; x968 < x2579->length; x968++){
+//         tuple_number_t_number_t x2512 = (x2473->arr[x968]);
+//         number_t x2513 = (x2512)._1;
+//         number_t x2514 = (x2513) * (x2478);
+//         number_t x2515 = (x2514) * (x2509);
+//         number_t x2563 = (x2512)._2;
+//         number_t x2564 = (x2563) * (x2478);
+//         number_t x2565 = (x2513) * (x2482);
+//         number_t x2566 = (x2564) + (x2565);
+//         number_t x2567 = (x2566) * (x2509);
+//         number_t x2577;
+//         if (x2516) {
+//           number_t x2539 = (x2497) + (x2568);
+//           number_t x2547;
+//           if (x2548) {
+//             number_t x2526 = (x2497) + (x2569);
+//             number_t x2527 = (x2526) * (x2497);
+//             number_t x2528 = (x2505) * (x2504);
+//             number_t x2529 = (x2527) + (x2528);
+//             number_t x2530 = (x2539) + (x2529);
+//             number_t x2531 = (x2514) * (x2530);
+//             number_t x2532 = (x2567) + (x2531);
+//             x2547 = x2532;
+//           } else {
+//             number_t x2541 = (x2569) * (x2497);
+//             number_t x2542 = (x2505) * (x2504);
+//             number_t x2543 = (x2541) + (x2542);
+//             number_t x2544 = (x2539) + (x2543);
+//             number_t x2545 = (x2514) * (x2544);
+//             number_t x2546 = (x2567) + (x2545);
+//             x2547 = x2546;
+//           }
+//           x2577 = x2547;
+//         } else {
+//           number_t x2576;
+//           if (x2548) {
+//             number_t x2556 = (x2497) + (x2569);
+//             number_t x2557 = (x2556) * (x2497);
+//             number_t x2558 = (x2505) * (x2504);
+//             number_t x2559 = (x2557) + (x2558);
+//             number_t x2560 = (x2568) + (x2559);
+//             number_t x2561 = (x2514) * (x2560);
+//             number_t x2562 = (x2567) + (x2561);
+//             x2576 = x2562;
+//           } else {
+//             number_t x2570 = (x2569) * (x2497);
+//             number_t x2571 = (x2505) * (x2504);
+//             number_t x2572 = (x2570) + (x2571);
+//             number_t x2573 = (x2568) + (x2572);
+//             number_t x2574 = (x2514) * (x2573);
+//             number_t x2575 = (x2567) + (x2574);
+//             x2576 = x2575;
+//           }
+//           x2577 = x2576;
+//         }
+//         tuple_number_t_number_t x2578 = (tuple_number_t_number_t){._1=x2515, ._2=x2577};
+//         x2579->arr[x968] = x2578;
+        
+//       }
+//       array_tuple_number_t_number_t x2580 = x2579;
+//       array_number_t x2603 = (array_number_t)storage_alloc(sizeof(int) * 2);x2603->length=2;x2603->arr = (number_t*)storage_alloc(sizeof(number_t) * 2);
+//       for(int i00 = 0; i00 < x2603->length; i00++){
+//         tuple_number_t_number_t x2581 = (x2580->arr[i00]);
+//         index_t x2582 = (i00) + (7);
+//         index_t x2583 = (i) == (x2582);
+//         number_t x2599 = (x2581)._2;
+//         number_t x2600 = (x2599) * (x2110);
+//         number_t x2602;
+//         if (x2583) {
+//           number_t x2593;
+//           if (x2594) {
+//             number_t x2587 = (x2581)._1;
+//             number_t x2588 = (x2600) + (x2587);
+//             number_t x2589 = (1) + (x2588);
+//             x2593 = x2589;
+//           } else {
+//             number_t x2592 = (1) + (x2600);
+//             x2593 = x2592;
+//           }
+//           x2602 = x2593;
+//         } else {
+//           number_t x2601;
+//           if (x2594) {
+//             number_t x2597 = (x2581)._1;
+//             number_t x2598 = (x2600) + (x2597);
+//             x2601 = x2598;
+//           } else {
+//             x2601 = x2600;
+//           }
+//           x2602 = x2601;
+//         }
+//         x2603->arr[i00] = x2602;
+        
+//       }
+//       x2604->arr[i0] = x2603;
+      
+//     }
+//     x2605->arr[i] = x2604;
+    
+//   }
+//   return x2605;
+// }
