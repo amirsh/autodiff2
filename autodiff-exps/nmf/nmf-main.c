@@ -95,7 +95,7 @@ void test_nmf(card_t M, card_t N, card_t K, card_t iters)
     }
   }
 
-  timer_t t = tic();
+  mytimer_t t = tic();
 
   double total = 0;
 

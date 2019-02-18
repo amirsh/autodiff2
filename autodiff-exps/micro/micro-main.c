@@ -216,7 +216,7 @@ void test_micro(card_t DIM, card_t iters)
     vec2->arr[k] = dist(rng);
   }
 
-  timer_t t = tic();
+  mytimer_t t = tic();
 
   double total = 0;
 

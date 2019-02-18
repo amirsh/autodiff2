@@ -5,27 +5,27 @@
 
 /** Timing */
 
-typedef struct timer_t {
+typedef struct mytimer_t {
 	clock_t start;
-} timer_t;
+} mytimer_t;
 
-// timer_t tic();
+// mytimer_t tic();
 
-// void toc(timer_t t, char* s);
+// void toc(mytimer_t t, char* s);
 
-timer_t tic() {
-	timer_t res;
+mytimer_t tic() {
+	mytimer_t res;
 	res.start = clock();
 	return res;
 }
 
-void toc(timer_t t, char* s) {
+void toc(mytimer_t t, char* s) {
 	clock_t end = clock();
 	float milliseconds = (float)(end - t.start) * 1000.0 / CLOCKS_PER_SEC;
 	printf("%s -- %d (ms)\n", s, (int)milliseconds);
 }
 
-float toc2(timer_t t) {
+float toc2(mytimer_t t) {
 	clock_t end = clock();
 	float milliseconds = (float)(end - t.start) * 1000.0 / CLOCKS_PER_SEC;
 	// printf("%s -- %d (ms)\n", s, (int)milliseconds);
