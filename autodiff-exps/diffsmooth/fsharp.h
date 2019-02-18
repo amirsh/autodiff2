@@ -6,11 +6,14 @@
 #include "types.h"
 #include "mem_mng.h"
 
-#define VECTOR_HEADER_BYTES (sizeof(number_t*) + sizeof(int))
-#define VECTOR_ALL_BYTES(rows) ((rows) * sizeof(number_t) + VECTOR_HEADER_BYTES)
-#define MATRIX_HEADER_BYTES(rows) (VECTOR_HEADER_BYTES + (sizeof(array_number_t) * (rows)))
-#define MATRIX_ROWS_OFFSET(rows, cols, row) (MATRIX_HEADER_BYTES(rows) + (VECTOR_ALL_BYTES(cols)) * (row))
-#define STG_OFFSET(stg, offset) (storage_t)(((char*)(stg)) + (offset))
+#define STRUCT_HEADER_BYTES (sizeof(number_t*) + sizeof(int))
+#define VECTOR_HEADER_BYTES (STRUCT_HEADER_BYTES)
+#define VECTOR_ALL_BYTES(rows,tp) ((rows) * sizeof(tp) + VECTOR_HEADER_BYTES)
+#define MATRIX_HEADER_BYTES(rows,vtp) (STRUCT_HEADER_BYTES + (sizeof(vtp) * (rows)))
+// #define MATRIX_ROWS_OFFSET(rows,cols,row,tp,vtp) (MATRIX_HEADER_BYTES(rows,vtp) + (VECTOR_ALL_BYTES(cols,tp)) * (row))
+#define MATRIX_ALL_BYTES(rows,cols,tp,vtp) (MATRIX_HEADER_BYTES(rows,vtp) + (VECTOR_ALL_BYTES(cols,tp)) * (rows))
+#define MATRIX3_HEADER_BYTES(rows,cols,mtp) (STRUCT_HEADER_BYTES + (sizeof(mtp) * (rows)))
+#define STG_OFFSET(stg, offset) (storage_t)(((unsigned char*)(stg)) + (offset))
 
 #define false 0
 #define true 1
@@ -55,7 +58,7 @@ void array_print(array_number_t arr) {
 
 storage_t vector_alloc(index_t size) {
 	// start_timing();
-	storage_t area = storage_alloc(VECTOR_ALL_BYTES(size));
+	storage_t area = storage_alloc(VECTOR_ALL_BYTES(size, number_t));
 	array_number_t boxed_vector = (array_number_t)area;
 	boxed_vector->length = size;
 	boxed_vector->arr = (number_t*)(((char*)area) + VECTOR_HEADER_BYTES);
@@ -166,7 +169,7 @@ array_array_number_t matrix_read_s(storage_t storage, string_t name, int start_l
 		// fseek(fp, -length-2, SEEK_CUR);
 		int elems = cols;
 		// TODO make its memory usage better
-		array_number_t one_row = (array_number_t)malloc(VECTOR_ALL_BYTES(elems));
+		array_number_t one_row = (array_number_t)malloc(VECTOR_ALL_BYTES(elems,number_t));
 		one_row->length = elems;
 		one_row->arr = (number_t*)(((char*)one_row) + VECTOR_HEADER_BYTES);
 		for(int i=0; i<elems; i++) {
@@ -223,19 +226,19 @@ matrix3d_shape_t nested_shape_matrix_shape_t(matrix_shape_t elem, card_t card) {
 }
 
 card_t width_card_t(card_t shape) {
-  return VECTOR_ALL_BYTES(shape);
+  return VECTOR_ALL_BYTES(shape, number_t);
 }
 
 card_t width_matrix_shape_t(matrix_shape_t shape) {
   card_t rows = shape.card;
   card_t cols = shape.elem;
-  return width_card_t(cols) * rows + MATRIX_HEADER_BYTES(rows);
+  return width_card_t(cols) * rows + MATRIX_HEADER_BYTES(rows,array_number_t);
 }
 
 card_t width_matrix3d_shape_t(matrix3d_shape_t shape) {
   card_t rows = shape.card;
   matrix_shape_t cols = shape.elem;
-  return width_matrix_shape_t(cols) * rows + MATRIX_HEADER_BYTES(rows);
+  return width_matrix_shape_t(cols) * rows + MATRIX_HEADER_BYTES(rows,array_number_t);
 }
 
 card_t width_tuple_card_t_card_t(tuple_card_t_card_t shape) {
