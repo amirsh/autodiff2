@@ -106,10 +106,10 @@ def plot(file, title, variants, xlabel = 'Vector Dimension', legpos = 'upper lef
 		plt.close()
 
 plot('data/ba_proj', "Jacobian of Project in Bundle Adjustment", [TapenadeR, TapenadeF, DiffSmooth, DiffSmoothMotion, DiffSmoothMotionDPS])
-plot('data/add', "Jacobian of Vector Addition w.r.t. the First Vector", [TapenadeR, TapenadeF, DiffSmooth, DiffSmoothDPS])
-plot('data/mults', "Gradient of Vector-Scalar Multiplication w.r.t. Scalar", [TapenadeR, TapenadeF, DiffSmooth, DiffSmoothDPS])
-plot('data/dot', "Gradient of Vector Dot Product w.r.t. the First Vector", [TapenadeR, TapenadeF, DiffSmooth, DiffSmoothDPS])
-plot('data/max', "Gradient of Vector Max w.r.t. the Input Vector", [TapenadeR, TapenadeF, DiffSmooth, DiffSmoothDPS])
+plot('data/add', "Jacobian of Vector Addition w.r.t. the First Vector", [TapenadeR, TapenadeF, DiffSmooth, DiffSmoothDPS, Theano])
+plot('data/mults', "Gradient of Vector-Scalar Multiplication w.r.t. Scalar", [TapenadeR, TapenadeF, DiffSmooth, DiffSmoothDPS, Theano])
+plot('data/dot', "Gradient of Vector Dot Product w.r.t. the First Vector", [TapenadeR, TapenadeF, DiffSmooth, DiffSmoothDPS, Theano])
+plot('data/max', "Gradient of Vector Max w.r.t. the Input Vector", [TapenadeR, TapenadeF, DiffSmooth, DiffSmoothDPS, Theano])
 plot('data/lse', "Gradient of Log-Sum-Exp", [TapenadeR, TapenadeF, TapenadeRFused, TapenadeFFused, DiffSmooth, DiffSmoothDPS], 
 	legpos = 'center left')
 plot('data/nmf_1', "Non-Negative Matrix Factorization -- Dimension of A: 100 x K", 

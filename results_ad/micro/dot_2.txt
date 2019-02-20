@@ -1,0 +1,88 @@
+200
+./dot_tap_rev.exe
+total =1013.584209, time per call = 0.000300 ms
+./dot_tap_for.exe
+total =1013.584209, time per call = 0.036200 ms
+./dot_diff.exe
+total =1013.584209, time per call = 0.000800 ms
+./dot_diff_dps.exe
+total =1013.584209, time per call = 0.000300 ms
+python micro.py dot
+total =1012.107263, time per call = 0.033400 ms
+400
+./dot_tap_rev.exe
+total =1965.930949, time per call = 0.000700 ms
+./dot_tap_for.exe
+total =1965.930949, time per call = 0.151000 ms
+./dot_diff.exe
+total =1965.930949, time per call = 0.001200 ms
+./dot_diff_dps.exe
+total =1965.930949, time per call = 0.000500 ms
+python micro.py dot
+total =1993.945302, time per call = 0.034700 ms
+800
+./dot_tap_rev.exe
+total =3967.799314, time per call = 0.001100 ms
+./dot_tap_for.exe
+total =3967.799314, time per call = 0.623500 ms
+./dot_diff.exe
+total =3967.799314, time per call = 0.002300 ms
+./dot_diff_dps.exe
+total =3967.799314, time per call = 0.001000 ms
+python micro.py dot
+total =4003.612243, time per call = 0.034800 ms
+1600
+./dot_tap_rev.exe
+total =7908.816928, time per call = 0.002200 ms
+./dot_tap_for.exe
+total =7908.816928, time per call = 2.550900 ms
+./dot_diff.exe
+total =7908.816928, time per call = 0.004700 ms
+./dot_diff_dps.exe
+total =7908.816928, time per call = 0.002000 ms
+python micro.py dot
+total =7995.337329, time per call = 0.035500 ms
+3200
+./dot_tap_rev.exe
+total =15943.719827, time per call = 0.004400 ms
+./dot_tap_for.exe
+total =15943.719827, time per call = 10.228900 ms
+./dot_diff.exe
+total =15943.719827, time per call = 0.009500 ms
+./dot_diff_dps.exe
+total =15943.719827, time per call = 0.004200 ms
+python micro.py dot
+total =15818.680689, time per call = 0.038500 ms
+6400
+./dot_tap_rev.exe
+total =32205.338464, time per call = 0.009000 ms
+./dot_tap_for.exe
+total =32205.338464, time per call = 40.984201 ms
+./dot_diff.exe
+total =32205.338464, time per call = 0.018400 ms
+./dot_diff_dps.exe
+total =32205.338464, time per call = 0.008300 ms
+python micro.py dot
+total =31721.145757, time per call = 0.044800 ms
+12800
+./dot_tap_rev.exe
+total =63623.703678, time per call = 0.018000 ms
+./dot_tap_for.exe
+total =63623.703678, time per call = 164.302795 ms
+./dot_diff.exe
+total =63623.703678, time per call = 0.036400 ms
+./dot_diff_dps.exe
+total =63623.703678, time per call = 0.016700 ms
+python micro.py dot
+total =64785.878990, time per call = 0.058600 ms
+25600
+./dot_tap_rev.exe
+total =127181.829689, time per call = 0.037000 ms
+./dot_tap_for.exe
+total =127181.829689, time per call = 657.360986 ms
+./dot_diff.exe
+total =127181.829689, time per call = 0.072900 ms
+./dot_diff_dps.exe
+total =127181.829689, time per call = 0.033900 ms
+python micro.py dot
+total =127280.115801, time per call = 0.080700 ms
