@@ -36,11 +36,13 @@ def micro(prog, dim, iters):
         dTerm = T.grad(term, V1)
         dTermF = theano.function([V1, V2], dTerm)
         matrixSum = theano.function([VR], T.sum(VR))
-    # elif(prog == 'mults'):
-    #     term = V1 * (S * S)
+    elif(prog == 'mults'):
+        term = V1 * (S * S)
     #     dTerm = T.grad(term, S)
     #     dTermF = theano.function([V1, S], dTerm)
-    #     matrixSum = theano.function([VR], T.sum(VR))
+        J, updates = theano.scan(lambda i, y, x : T.grad(y[i], x), sequences=T.arange(term.shape[0]), non_sequences=[term, S])
+        dTermF = theano.function([V1, S], J, updates=updates)
+        matrixSum = theano.function([VR], T.sum(VR))
     elif(prog == 'max'):
         term = T.max(V1)
         dTerm = T.grad(term, V1)
@@ -50,6 +52,7 @@ def micro(prog, dim, iters):
         mx = T.max(V1)
         semx = T.sum(T.exp(V1 - mx))
         term = T.log(semx) + mx
+        # term = T.log(T.sum(T.exp(V1)))
         dTerm = T.grad(term, V1)
         dTermF = theano.function([V1], dTerm)
         matrixSum = theano.function([VR], T.sum(VR))
@@ -73,6 +76,8 @@ def micro(prog, dim, iters):
             res = dTermF(v1, v2)
         elif(prog == 'max' or prog == 'lse'):
             res = dTermF(v1)
+        elif(prog == 'mults'):
+            res = dTermF(v1, v2[1])
         total += matrixSum(res)
         pr.create_stats()
         stats = pstats.Stats(pr)
