@@ -1,0 +1,88 @@
+200
+./max_tap_rev.exe
+total =10.000000, time per call = 0.000300 ms
+./max_tap_for.exe
+total =10.000000, time per call = 0.015400 ms
+./max_diff.exe
+total =10.000000, time per call = 0.001000 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.000400 ms
+python micro.py max
+total =10.000000, time per call = 0.031800 ms
+400
+./max_tap_rev.exe
+total =10.000000, time per call = 0.000700 ms
+./max_tap_for.exe
+total =10.000000, time per call = 0.060700 ms
+./max_diff.exe
+total =10.000000, time per call = 0.001400 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.000800 ms
+python micro.py max
+total =10.000000, time per call = 0.032200 ms
+800
+./max_tap_rev.exe
+total =10.000000, time per call = 0.001300 ms
+./max_tap_for.exe
+total =10.000000, time per call = 0.237200 ms
+./max_diff.exe
+total =10.000000, time per call = 0.002800 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.001400 ms
+python micro.py max
+total =10.000000, time per call = 0.035100 ms
+1600
+./max_tap_rev.exe
+total =10.000000, time per call = 0.002500 ms
+./max_tap_for.exe
+total =10.000000, time per call = 0.943200 ms
+./max_diff.exe
+total =10.000000, time per call = 0.005600 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.002800 ms
+python micro.py max
+total =10.000000, time per call = 0.037100 ms
+3200
+./max_tap_rev.exe
+total =10.000000, time per call = 0.004800 ms
+./max_tap_for.exe
+total =10.000000, time per call = 3.776800 ms
+./max_diff.exe
+total =10.000000, time per call = 0.011100 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.005600 ms
+python micro.py max
+total =10.000000, time per call = 0.046100 ms
+6400
+./max_tap_rev.exe
+total =10.000000, time per call = 0.009700 ms
+./max_tap_for.exe
+total =10.000000, time per call = 14.968800 ms
+./max_diff.exe
+total =10.000000, time per call = 0.021800 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.011100 ms
+python micro.py max
+total =10.000000, time per call = 0.053200 ms
+12800
+./max_tap_rev.exe
+total =10.000000, time per call = 0.019100 ms
+./max_tap_for.exe
+total =10.000000, time per call = 59.347498 ms
+./max_diff.exe
+total =10.000000, time per call = 0.043100 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.022100 ms
+python micro.py max
+total =10.000000, time per call = 0.074900 ms
+25600
+./max_tap_rev.exe
+total =10.000000, time per call = 0.037200 ms
+./max_tap_for.exe
+total =10.000000, time per call = 237.313989 ms
+./max_diff.exe
+total =10.000000, time per call = 0.083700 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.044300 ms
+python micro.py max
+total =10.000000, time per call = 0.117600 ms

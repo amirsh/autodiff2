@@ -1,0 +1,77 @@
+100
+./add_tap_rev.exe
+total =1000.000000, time per call = 0.067900 ms
+./add_tap_for.exe
+total =1000.000000, time per call = 0.225000 ms
+./add_diff.exe
+total =1000.000000, time per call = 0.030800 ms
+./add_diff_dps.exe
+total =1000.000000, time per call = 0.013800 ms
+python micro.py add
+total =1000.000000, time per call = 0.441100 ms
+200
+./add_tap_rev.exe
+total =2000.000000, time per call = 0.059700 ms
+./add_tap_for.exe
+total =2000.000000, time per call = 0.196600 ms
+./add_diff.exe
+total =2000.000000, time per call = 0.121200 ms
+./add_diff_dps.exe
+total =2000.000000, time per call = 0.055200 ms
+python micro.py add
+total =2000.000000, time per call = 0.856100 ms
+400
+./add_tap_rev.exe
+total =4000.000000, time per call = 0.239800 ms
+./add_tap_for.exe
+total =4000.000000, time per call = 0.802300 ms
+./add_diff.exe
+total =4000.000000, time per call = 0.492200 ms
+./add_diff_dps.exe
+total =4000.000000, time per call = 0.217600 ms
+python micro.py add
+total =4000.000000, time per call = 1.814800 ms
+800
+./add_tap_rev.exe
+total =8000.000000, time per call = 0.941300 ms
+./add_tap_for.exe
+total =8000.000000, time per call = 3.366900 ms
+./add_diff.exe
+total =8000.000000, time per call = 1.955300 ms
+./add_diff_dps.exe
+total =8000.000000, time per call = 0.871100 ms
+python micro.py add
+total =8000.000000, time per call = 4.500700 ms
+1600
+./add_tap_rev.exe
+total =16000.000000, time per call = 4.286300 ms
+./add_tap_for.exe
+total =16000.000000, time per call = 13.414400 ms
+./add_diff.exe
+total =16000.000000, time per call = 7.853800 ms
+./add_diff_dps.exe
+total =16000.000000, time per call = 3.791800 ms
+python micro.py add
+total =16000.000000, time per call = 13.008700 ms
+3200
+./add_tap_rev.exe
+total =32000.000000, time per call = 17.341800 ms
+./add_tap_for.exe
+total =32000.000000, time per call = 53.560699 ms
+./add_diff.exe
+total =32000.000000, time per call = 31.047699 ms
+./add_diff_dps.exe
+total =32000.000000, time per call = 15.703700 ms
+python micro.py add
+total =32000.000000, time per call = 49.532100 ms
+6400
+./add_tap_rev.exe
+total =64000.000000, time per call = 69.120300 ms
+./add_tap_for.exe
+total =64000.000000, time per call = 215.733398 ms
+./add_diff.exe
+total =64000.000000, time per call = 124.225903 ms
+./add_diff_dps.exe
+total =64000.000000, time per call = 63.384698 ms
+python micro.py add
+total =64000.000000, time per call = 166.679000 ms

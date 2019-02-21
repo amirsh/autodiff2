@@ -1,6 +1,6 @@
 REV_FOLDER=../tapanade/ADFirstAidKit
 FLIB=-L /usr/local/lib/gcc/7/ -lgfortran $(REV_FOLDER)/adBuffer.c $(REV_FOLDER)/adStack.c
-OPTS=-O3 -DBUMP
+OPTS=-O3 -DBUMP -lm
 
 all : ba_proj micro 
 
@@ -24,8 +24,8 @@ micro :
 	clang $(OPTS) micro-main.c -DLSE -DTAPENADE -DFUSED -DREV_MODE $(FLIB) -o lse_tap_fused_rev.exe
 
 ba_proj :
-	clang -O3 micro-main.c -DBUMP -DBA_PROJ -DFUSED -o ba_proj_diff_fused.exe
-	clang -O3 micro-main.c -DBUMP -DBA_PROJ -DFUSED -DNOMOTION -o ba_proj_diff_fused_nomotion.exe
-	clang -O3 micro-main.c -DBUMP -DBA_PROJ -DFUSED -DDPS -o ba_proj_diff_fused_dps.exe
-	clang -O3 micro-main.c -DBUMP -DBA_PROJ -DTAPENADE -o ba_proj_tap_for.exe
-	clang -O3 micro-main.c -DBUMP -DBA_PROJ -DTAPENADE -DREV_MODE $(FLIB) -o ba_proj_tap_rev.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -DFUSED -o ba_proj_diff_fused.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -DFUSED -DNOMOTION -o ba_proj_diff_fused_nomotion.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -DFUSED -DDPS -o ba_proj_diff_fused_dps.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -DTAPENADE -o ba_proj_tap_for.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -DTAPENADE -DREV_MODE $(FLIB) -o ba_proj_tap_rev.exe
