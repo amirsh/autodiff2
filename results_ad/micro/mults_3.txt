@@ -1,0 +1,128 @@
+200
+./mults_tap_rev.exe
+total =4452.120176, time per call = 0.059100 ms
+./mults_tap_for.exe
+total =4452.120176, time per call = 0.001500 ms
+./mults_diff.exe
+total =4452.120176, time per call = 0.001000 ms
+./mults_diff_dps.exe
+total =4452.120176, time per call = 0.000500 ms
+python micro.py mults
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =813.157920, time per call = 0.822000 ms
+mono mults_fsharp_for.exe
+total =1.157861, time per call = 1.400000 ms
+mono mults_fsharp_rev.exe
+total =1.157861, time per call = 7.600000 ms
+400
+./mults_tap_rev.exe
+total =8645.459076, time per call = 0.156000 ms
+./mults_tap_for.exe
+total =8645.459076, time per call = 0.001900 ms
+./mults_diff.exe
+total =8645.459076, time per call = 0.001100 ms
+./mults_diff_dps.exe
+total =8645.459076, time per call = 0.000500 ms
+python micro.py mults
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =1614.538447, time per call = 1.751500 ms
+mono mults_fsharp_for.exe
+total =1.157861, time per call = 1.500000 ms
+mono mults_fsharp_rev.exe
+total =1.157861, time per call = 24.500000 ms
+800
+./mults_tap_rev.exe
+total =16535.510349, time per call = 0.636300 ms
+./mults_tap_for.exe
+total =16535.510349, time per call = 0.004100 ms
+./mults_diff.exe
+total =16535.510349, time per call = 0.002500 ms
+./mults_diff_dps.exe
+total =16535.510349, time per call = 0.001100 ms
+python micro.py mults
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =3328.172483, time per call = 3.850000 ms
+mono mults_fsharp_for.exe
+total =1.157861, time per call = 1.600000 ms
+mono mults_fsharp_rev.exe
+total =1.157861, time per call = 92.200000 ms
+1600
+./mults_tap_rev.exe
+total =34007.724975, time per call = 2.572000 ms
+./mults_tap_for.exe
+total =34007.724975, time per call = 0.008600 ms
+./mults_diff.exe
+total =34007.724975, time per call = 0.004900 ms
+./mults_diff_dps.exe
+total =34007.724975, time per call = 0.002000 ms
+python micro.py mults
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =6630.448294, time per call = 9.350000 ms
+mono mults_fsharp_for.exe
+total =1.157861, time per call = 1.700000 ms
+mono mults_fsharp_rev.exe
+total =1.157861, time per call = 410.300000 ms
+3200
+./mults_tap_rev.exe
+total =68481.526612, time per call = 10.270100 ms
+./mults_tap_for.exe
+total =68481.526612, time per call = 0.016900 ms
+./mults_diff.exe
+total =68481.526612, time per call = 0.013600 ms
+./mults_diff_dps.exe
+total =68481.526612, time per call = 0.004300 ms
+python micro.py mults
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =13191.083453, time per call = 27.486100 ms
+mono mults_fsharp_for.exe
+total =1.157861, time per call = 2.500000 ms
+mono mults_fsharp_rev.exe
+total =1.157861, time per call = 1646.300000 ms
+6400
+./mults_tap_rev.exe
+total =136211.100909, time per call = 41.197299 ms
+./mults_tap_for.exe
+total =136211.100909, time per call = 0.032400 ms
+./mults_diff.exe
+total =136211.100909, time per call = 0.018800 ms
+./mults_diff_dps.exe
+total =136211.100909, time per call = 0.008300 ms
+python micro.py mults
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =25973.218173, time per call = 89.687100 ms
+mono mults_fsharp_for.exe
+total =1.157861, time per call = 3.400000 ms
+mono mults_fsharp_rev.exe
+total =1.157861, time per call = 6866.100000 ms
+12800
+./mults_tap_rev.exe
+total =271933.733464, time per call = 164.628003 ms
+./mults_tap_for.exe
+total =271933.733464, time per call = 0.061800 ms
+./mults_diff.exe
+total =271933.733464, time per call = 0.036600 ms
+./mults_diff_dps.exe
+total =271933.733464, time per call = 0.016500 ms
+python micro.py mults
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =53400.345482, time per call = 313.121400 ms
+mono mults_fsharp_for.exe
+total =1.157861, time per call = 5.600000 ms
+mono mults_fsharp_rev.exe
+total =1.157861, time per call = 27699.100000 ms
+25600
+./mults_tap_rev.exe
+total =542919.705373, time per call = 658.640186 ms
+./mults_tap_for.exe
+total =542919.705373, time per call = 0.126400 ms
+./mults_diff.exe
+total =542919.705373, time per call = 0.073100 ms
+./mults_diff_dps.exe
+total =542919.705373, time per call = 0.034200 ms
+python micro.py mults
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =105610.536879, time per call = 1168.298000 ms
+mono mults_fsharp_for.exe
+total =1.157861, time per call = 9.800000 ms
+mono mults_fsharp_rev.exe
+total =1.157861, time per call = 108871.100000 ms

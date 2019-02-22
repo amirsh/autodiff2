@@ -1,0 +1,128 @@
+200
+./max_tap_rev.exe
+total =10.000000, time per call = 0.000400 ms
+./max_tap_for.exe
+total =10.000000, time per call = 0.017000 ms
+./max_diff.exe
+total =10.000000, time per call = 0.000800 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.000400 ms
+python micro.py max
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =10.000000, time per call = 0.033200 ms
+mono max_fsharp_for.exe
+total =10.000000, time per call = 5.200000 ms
+mono max_fsharp_rev.exe
+total =10.000000, time per call = 1.800000 ms
+400
+./max_tap_rev.exe
+total =10.000000, time per call = 0.000700 ms
+./max_tap_for.exe
+total =10.000000, time per call = 0.060700 ms
+./max_diff.exe
+total =10.000000, time per call = 0.001500 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.000800 ms
+python micro.py max
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =10.000000, time per call = 0.033600 ms
+mono max_fsharp_for.exe
+total =10.000000, time per call = 15.700000 ms
+mono max_fsharp_rev.exe
+total =10.000000, time per call = 1.800000 ms
+800
+./max_tap_rev.exe
+total =10.000000, time per call = 0.001300 ms
+./max_tap_for.exe
+total =10.000000, time per call = 0.236700 ms
+./max_diff.exe
+total =10.000000, time per call = 0.003000 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.001500 ms
+python micro.py max
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =10.000000, time per call = 0.034400 ms
+mono max_fsharp_for.exe
+total =10.000000, time per call = 57.000000 ms
+mono max_fsharp_rev.exe
+total =10.000000, time per call = 1.900000 ms
+1600
+./max_tap_rev.exe
+total =10.000000, time per call = 0.002500 ms
+./max_tap_for.exe
+total =10.000000, time per call = 0.957800 ms
+./max_diff.exe
+total =10.000000, time per call = 0.005700 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.002800 ms
+python micro.py max
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =10.000000, time per call = 0.037000 ms
+mono max_fsharp_for.exe
+total =10.000000, time per call = 368.700000 ms
+mono max_fsharp_rev.exe
+total =10.000000, time per call = 2.000000 ms
+3200
+./max_tap_rev.exe
+total =10.000000, time per call = 0.005300 ms
+./max_tap_for.exe
+total =10.000000, time per call = 3.755800 ms
+./max_diff.exe
+total =10.000000, time per call = 0.012400 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.005600 ms
+python micro.py max
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =10.000000, time per call = 0.043600 ms
+mono max_fsharp_for.exe
+total =10.000000, time per call = 1460.600000 ms
+mono max_fsharp_rev.exe
+total =10.000000, time per call = 2.600000 ms
+6400
+./max_tap_rev.exe
+total =10.000000, time per call = 0.009600 ms
+./max_tap_for.exe
+total =10.000000, time per call = 14.901401 ms
+./max_diff.exe
+total =10.000000, time per call = 0.022100 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.011100 ms
+python micro.py max
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =10.000000, time per call = 0.053500 ms
+mono max_fsharp_for.exe
+total =10.000000, time per call = 5828.600000 ms
+mono max_fsharp_rev.exe
+total =10.000000, time per call = 3.300000 ms
+12800
+./max_tap_rev.exe
+total =10.000000, time per call = 0.019000 ms
+./max_tap_for.exe
+total =10.000000, time per call = 59.481897 ms
+./max_diff.exe
+total =10.000000, time per call = 0.043300 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.022200 ms
+python micro.py max
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =10.000000, time per call = 0.076800 ms
+mono max_fsharp_for.exe
+total =10.000000, time per call = 23449.100000 ms
+mono max_fsharp_rev.exe
+total =10.000000, time per call = 5.100000 ms
+25600
+./max_tap_rev.exe
+total =10.000000, time per call = 0.038200 ms
+./max_tap_for.exe
+total =10.000000, time per call = 237.117090 ms
+./max_diff.exe
+total =10.000000, time per call = 0.086200 ms
+./max_diff_dps.exe
+total =10.000000, time per call = 0.047300 ms
+python micro.py max
+WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
+total =10.000000, time per call = 0.120800 ms
+mono max_fsharp_for.exe
+total =10.000000, time per call = 940.200000 ms
+mono max_fsharp_rev.exe
+total =10.000000, time per call = 8.200000 ms
