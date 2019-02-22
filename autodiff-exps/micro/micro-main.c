@@ -357,7 +357,7 @@ void test_micro(card_t DIM, card_t iters)
     #if defined BA_ROD
         ba_rod_jac_dps(mat3_result, vec1, OUT_N);
       #else
-        mat3_result = ba_proj_jac_dps(storage_alloc(1000 * 1000 * 100), vec1, OUT_N);
+        ba_proj_jac_dps(mat3_result, vec1, OUT_N);
       #endif
     #else
       #if defined BA_ROD
