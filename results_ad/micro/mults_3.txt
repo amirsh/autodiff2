@@ -8,7 +8,6 @@ total =4452.120176, time per call = 0.001000 ms
 ./mults_diff_dps.exe
 total =4452.120176, time per call = 0.000500 ms
 python micro.py mults
-WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
 total =813.157920, time per call = 0.822000 ms
 mono mults_fsharp_for.exe
 total =1.157861, time per call = 1.400000 ms
@@ -24,7 +23,6 @@ total =8645.459076, time per call = 0.001100 ms
 ./mults_diff_dps.exe
 total =8645.459076, time per call = 0.000500 ms
 python micro.py mults
-WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
 total =1614.538447, time per call = 1.751500 ms
 mono mults_fsharp_for.exe
 total =1.157861, time per call = 1.500000 ms
@@ -40,7 +38,6 @@ total =16535.510349, time per call = 0.002500 ms
 ./mults_diff_dps.exe
 total =16535.510349, time per call = 0.001100 ms
 python micro.py mults
-WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
 total =3328.172483, time per call = 3.850000 ms
 mono mults_fsharp_for.exe
 total =1.157861, time per call = 1.600000 ms
@@ -56,7 +53,6 @@ total =34007.724975, time per call = 0.004900 ms
 ./mults_diff_dps.exe
 total =34007.724975, time per call = 0.002000 ms
 python micro.py mults
-WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
 total =6630.448294, time per call = 9.350000 ms
 mono mults_fsharp_for.exe
 total =1.157861, time per call = 1.700000 ms
@@ -72,7 +68,6 @@ total =68481.526612, time per call = 0.013600 ms
 ./mults_diff_dps.exe
 total =68481.526612, time per call = 0.004300 ms
 python micro.py mults
-WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
 total =13191.083453, time per call = 27.486100 ms
 mono mults_fsharp_for.exe
 total =1.157861, time per call = 2.500000 ms
@@ -88,7 +83,6 @@ total =136211.100909, time per call = 0.018800 ms
 ./mults_diff_dps.exe
 total =136211.100909, time per call = 0.008300 ms
 python micro.py mults
-WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
 total =25973.218173, time per call = 89.687100 ms
 mono mults_fsharp_for.exe
 total =1.157861, time per call = 3.400000 ms
@@ -104,7 +98,6 @@ total =271933.733464, time per call = 0.036600 ms
 ./mults_diff_dps.exe
 total =271933.733464, time per call = 0.016500 ms
 python micro.py mults
-WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
 total =53400.345482, time per call = 313.121400 ms
 mono mults_fsharp_for.exe
 total =1.157861, time per call = 5.600000 ms
@@ -120,7 +113,6 @@ total =542919.705373, time per call = 0.073100 ms
 ./mults_diff_dps.exe
 total =542919.705373, time per call = 0.034200 ms
 python micro.py mults
-WARNING (theano.tensor.blas): Using NumPy C-API based implementation for BLAS functions.
 total =105610.536879, time per call = 1168.298000 ms
 mono mults_fsharp_for.exe
 total =1.157861, time per call = 9.800000 ms
