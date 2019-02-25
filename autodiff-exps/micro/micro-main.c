@@ -6,6 +6,9 @@
 // #include "../diffsmooth/ba_rod_fused.h"
 // #include "../tapanade/submitted/9/ba_rod.h"
 
+#define VEC1_FILE "../data/vec1.dat"
+#define VEC2_FILE "../data/vec2.dat"
+
 #if defined BA_ROD || BA_PROJ
   #if defined TAPENADE
     #if defined REV_MODE
@@ -174,10 +177,29 @@ number_t matrix3Sum(array_array_array_number_t m) {
 
 void test_micro(card_t DIM, card_t iters)
 {
+#if WRITE_OUTPUT
   int rng = 42;
   srand(rng);
   array_number_t vec1 = vector_fill(DIM, 0.0);
   array_number_t vec2 = vector_fill(DIM, 0.0);
+  for (card_t k = 0; k < DIM; ++k) {
+    vec1->arr[k] = dist(rng);
+    vec2->arr[k] = dist(rng);
+  }
+  printf("Started writing to the files!\n");
+  FILE* fp1 = fopen(VEC1_FILE,"w+");
+  array_print_row(fp1, vec1, " ");
+  FILE* fp2 = fopen(VEC2_FILE,"w+");
+  array_print_row(fp2, vec2, " ");
+  fclose(fp1);
+  fclose(fp2);
+  printf("Finished writing to the files!\n");
+  return;
+#else
+  array_number_t vec1 = matrix_read(VEC1_FILE, 0, 1, DIM)->arr[0];
+  array_number_t vec2 = matrix_read(VEC2_FILE, 0, 1, DIM)->arr[0];
+#endif
+
   array_number_t vec_result = vector_fill(DIM, 0.0);
   array_array_number_t mat_result = matrix_fill(DIM, DIM, 0.0);
   array_number_t vec_tmp = vector_fill(DIM, 0.0);
@@ -210,11 +232,6 @@ void test_micro(card_t DIM, card_t iters)
   array_array_number_t mat4_result = matrix_fill(OUT_N, OUT_DIM, 0.0);
   double** mat4_result_st = matrix_pointer(mat4_result);
 #endif
-
-  for (card_t k = 0; k < DIM; ++k) {
-    vec1->arr[k] = dist(rng);
-    vec2->arr[k] = dist(rng);
-  }
 
   mytimer_t t = tic();
 

@@ -33,13 +33,17 @@ closure_t make_closure(lambda_t lam, env_t env) {
 	return c;
 }
 
+void array_print_row(FILE *stream, array_number_t arr, string_t sep) {
+	for (int i = 0; i < arr->length; i++) {
+		fprintf(stream, "%f", arr->arr[i]);
+		if (i != arr->length - 1)
+			fprintf(stream, "%s", sep);
+	}
+}
+
 void array_print(array_number_t arr) {
 	printf("[");
-	for (int i = 0; i < arr->length; i++) {
-		printf("%f", arr->arr[i]);
-		if (i != arr->length - 1)
-			printf(", ");
-	}
+	array_print_row(stdout, arr, ", ");
 	printf("]\n");
 }
 
