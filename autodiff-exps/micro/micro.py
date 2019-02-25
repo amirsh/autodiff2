@@ -15,6 +15,61 @@ import warnings
 if not sys.warnoptions:
     warnings.simplefilter("ignore")
 
+BA_NCAMPARAMS = 11
+ROT_IDX = 0
+C_IDX = 3
+F_IDX = 6
+X0_IDX = 7
+RAD_IDX = 9
+
+
+def cross(a, b):
+    return T.as_tensor([
+        a[1] * b[2] - a[2] * b[1],
+        a[2] * b[0] - a[0] * b[2],
+        a[0] * b[1] - a[1] * b[0]])
+
+
+def rodrigues_rotate_point(rot, X):
+    sqtheta = T.sum(T.sqr(rot))
+    theta = T.sqrt(sqtheta)
+    costheta = T.cos(theta)
+    sintheta = T.sin(theta)
+    theta_inverse = 1. / theta
+
+    w = theta_inverse * rot
+    w_cross_X = cross(w, X)
+    tmp = T.dot(w, X) * (1. - costheta)
+
+    return X * costheta + w_cross_X * sintheta + w * tmp
+
+
+def radial_distort(rad_params, proj):
+    rsq = T.sum(T.sqr(proj))
+    L = 1. + rad_params[0] * rsq + rad_params[1] * rsq * rsq
+    return proj * L
+
+
+def project(cam, X):
+    Xcam = rodrigues_rotate_point(
+        cam[ROT_IDX:ROT_IDX + 3], X - cam[C_IDX:C_IDX + 3])
+    distorted = radial_distort(cam[RAD_IDX:RAD_IDX + 2], Xcam[0:2] / Xcam[2])
+    return distorted * cam[F_IDX] + cam[X0_IDX:X0_IDX + 2]
+
+def project_all(n, xs):
+    # V1 = T.dvector('V1t')
+    # V2 = T.dvector('V2t')
+    cam = xs[0:11]
+    V1 = xs
+    V2 = cam
+    scanTerm, updates = theano.scan(lambda i, c : project(c, V1[(11+i*3):(14+i*3)]),
+                            outputs_info=None,
+                            sequences=T.arange(n), non_sequences=[V2])
+    # scanF = theano.function([V1, V2], scanTerm, updates=updates)
+    # res = scanF(xs, cam)
+    res = scanTerm
+    return res.flatten()
+
 def micro(prog, dim, iters):
     M = T.dmatrix('M')
     V1 = T.dvector('V1')
@@ -22,9 +77,11 @@ def micro(prog, dim, iters):
     VR = T.dvector('VR')
     S = T.dscalar('S')
 
-    np.random.seed(42)
-    v1 = np.random.random(dim)
-    v2 = np.random.random(dim)
+    # np.random.seed(42)
+    # v1 = np.random.random(dim)
+    # v2 = np.random.random(dim)
+    v1 = np.loadtxt("../data/vec1.dat", delimiter=" ")[:dim]
+    v2 = np.loadtxt("../data/vec2.dat", delimiter=" ")[:dim]
 
     if(prog == 'add'):
         term = V1 + V2
@@ -56,6 +113,12 @@ def micro(prog, dim, iters):
         dTerm = T.grad(term, V1)
         dTermF = theano.function([V1], dTerm)
         matrixSum = theano.function([VR], T.sum(VR))
+    elif(prog == 'ba'):
+        n = (dim - 11) / 3
+        term = project_all(n, V1)
+        dTerm = T.jacobian(term, V1)
+        dTermF = theano.function([V1], dTerm)
+        matrixSum = theano.function([M], T.sum(M))
     else:
         raise ValueError('prog %s not handled' % prog)
 
@@ -66,8 +129,8 @@ def micro(prog, dim, iters):
     timesTheano = []
     total = 0.0
     for i in range(iters):
-        v1[0] = 1.0 / (2.0 + v1[0])
-        v2[1] = 1.0 / (2.0 + v2[1])
+        v1[0] += 1.0 / (2.0 + v1[0])
+        v2[1] += 1.0 / (2.0 + v2[1])
         # print "\tIteration %d" % (i + 1)
         pr = cProfile.Profile()
         pr.enable()
@@ -78,6 +141,8 @@ def micro(prog, dim, iters):
             res = dTermF(v1)
         elif(prog == 'mults'):
             res = dTermF(v1, v2[1])
+        elif(prog == 'ba'):
+            res = dTermF(v1)
         total += matrixSum(res)
         pr.create_stats()
         stats = pstats.Stats(pr)

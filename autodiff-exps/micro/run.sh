@@ -9,6 +9,7 @@ declare -a files=(
 	# "./ba_rod_diff_fused_nomotion.exe" "./ba_rod_diff_fused.exe" "./ba_rod_diff_fused_dps.exe"
 	"./ba_proj_tap_rev.exe" "./ba_proj_tap_for.exe"
 	"./ba_proj_diff_fused_nomotion.exe" "./ba_proj_diff_fused.exe" "./ba_proj_diff_fused_dps.exe"
+	"python micro.py ba"
 	"mono ba_fsharp_for.exe" "mono ba_fsharp_rev.exe"
 	)
 
