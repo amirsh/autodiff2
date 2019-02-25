@@ -381,6 +381,7 @@ void test_micro(card_t DIM, card_t iters)
         mat3_result = ba_rod_jac(vec1, OUT_N);
       #else
         mat3_result = ba_proj_jac(vec1, OUT_N);
+        // matrix3d_print(mat3_result);
       #endif
       // mat4_result = ba_proj(vec1, OUT_N);
     #endif

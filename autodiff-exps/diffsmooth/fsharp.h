@@ -122,6 +122,16 @@ void matrix_print(array_array_number_t arr) {
 	printf("]\n");
 }
 
+void matrix3d_print(array_array_array_number_t arr) {
+	printf("[\n   ");
+	for (int i = 0; i < arr->length; i++) {
+		if (i != 0)
+			printf(" , ");
+		matrix_print(arr->arr[i]);
+	}
+	printf("]\n");
+}
+
 void array_tuple_print(array_tuple_number_t_number_t arr) {
 	printf("[");
 	for (int i = 0; i < arr->length; i++) {
