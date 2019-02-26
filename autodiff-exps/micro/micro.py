@@ -57,16 +57,21 @@ def project(cam, X):
     return distorted * cam[F_IDX] + cam[X0_IDX:X0_IDX + 2]
 
 def project_all(n, xs):
-    # V1 = T.dvector('V1t')
-    # V2 = T.dvector('V2t')
     cam = xs[0:11]
     V1 = xs
     V2 = cam
     scanTerm, updates = theano.scan(lambda i, c : project(c, V1[(11+i*3):(14+i*3)]),
                             outputs_info=None,
                             sequences=T.arange(n), non_sequences=[V2])
-    # scanF = theano.function([V1, V2], scanTerm, updates=updates)
-    # res = scanF(xs, cam)
+    res = scanTerm
+    return res.flatten()
+
+def project_all2(n, xs, cam):
+    V1 = xs
+    V2 = cam
+    scanTerm, updates = theano.scan(lambda i, c : project(c, V1[(11+i*3):(14+i*3)]),
+                            outputs_info=None,
+                            sequences=T.arange(n), non_sequences=[V2])
     res = scanTerm
     return res.flatten()
 
@@ -115,9 +120,12 @@ def micro(prog, dim, iters):
         matrixSum = theano.function([VR], T.sum(VR))
     elif(prog == 'ba'):
         n = (dim - 11) / 3
-        term = project_all(n, V1)
-        dTerm = T.jacobian(term, V1)
-        dTermF = theano.function([V1], dTerm)
+        # term = project_all(n, V1)
+        # dTerm = T.jacobian(term, V1)
+        # dTermF = theano.function([V1], dTerm)
+        term = project_all2(n, V1, V2)
+        dTerm = T.jacobian(term, V2)
+        dTermF = theano.function([V1, V2], dTerm)
         matrixSum = theano.function([M], T.sum(M))
     else:
         raise ValueError('prog %s not handled' % prog)
@@ -142,7 +150,8 @@ def micro(prog, dim, iters):
         elif(prog == 'mults'):
             res = dTermF(v1, v2[1])
         elif(prog == 'ba'):
-            res = dTermF(v1)
+            # res = dTermF(v1)
+            res = dTermF(v1, v1[0:11])
         total += matrixSum(res)
         pr.create_stats()
         stats = pstats.Stats(pr)

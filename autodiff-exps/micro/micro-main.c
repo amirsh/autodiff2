@@ -200,6 +200,10 @@ void test_micro(card_t DIM, card_t iters)
   array_number_t vec2 = matrix_read(VEC2_FILE, 0, 1, DIM)->arr[0];
 #endif
 
+  array_number_t cam = vector_fill(11, 0.0);
+  for(int i =0; i<11; i++) {
+    cam->arr[i] = vec1->arr[i];
+  }
   array_number_t vec_result = vector_fill(DIM, 0.0);
   array_array_number_t mat_result = matrix_fill(DIM, DIM, 0.0);
   array_number_t vec_tmp = vector_fill(DIM, 0.0);
@@ -211,7 +215,7 @@ void test_micro(card_t DIM, card_t iters)
   #else
     card_t OUT_DIM = 2;
   #endif
-  array_array_array_number_t mat3_result = matrix3_fill(DIM, OUT_N, OUT_DIM, 0.0);
+  array_array_array_number_t mat3_result = matrix3_fill(11, OUT_N, OUT_DIM, 0.0);
   // double*** mat3_result_st = (double***)malloc(sizeof(double**) * DIM);
   // for(int i = 0; i<DIM; i++) {
   //   double** mat3_result_st_r = (double**)malloc(sizeof(double*) * OUT_N);
@@ -239,6 +243,7 @@ void test_micro(card_t DIM, card_t iters)
 
   for (card_t count = 0; count < iters; ++count) {
     vec1->arr[0] += 1.0 / (2.0 + vec1->arr[0]);
+    cam->arr[0] += 1.0 / (2.0 + cam->arr[0]);
     vec2->arr[1] += 1.0 / (2.0 + vec2->arr[1]);
 #if defined MULTS
   #if defined TAPENADE && defined REV_MODE
@@ -353,14 +358,14 @@ void test_micro(card_t DIM, card_t iters)
           ba_proj_native_b(3, vec1->arr, vec_result->arr, OUT_N, mat2_result_st, mat2_result_2_st);
         #endif
         mat2_result_2_st[j][k] = 0;
-        for(int i=0; i<DIM; i++) {
+        for(int i=0; i<11; i++) {
           mat3_result_st[i][j][k] = vec_result->arr[i];
         }
       }
     }
     #elif defined TAPENADE
     double** tmp = mat2_result_st;
-    for(int i=0; i<DIM; i++) {
+    for(int i=0; i<11; i++) {
       vec_tmp->arr[i] = 1;
       #if defined BA_ROD
         ba_rod_native_d(3, vec1->arr, vec_tmp->arr, OUT_N, tmp, mat3_result_st[i]);
@@ -374,13 +379,14 @@ void test_micro(card_t DIM, card_t iters)
     #if defined BA_ROD
         ba_rod_jac_dps(mat3_result, vec1, OUT_N);
       #else
-        ba_proj_jac_dps(mat3_result, vec1, OUT_N);
+        // ba_proj_jac_dps(mat3_result, vec1, OUT_N);
+        ba_proj_jac2_dps(mat3_result, cam, vec1, OUT_N);
       #endif
     #else
       #if defined BA_ROD
         mat3_result = ba_rod_jac(vec1, OUT_N);
       #else
-        mat3_result = ba_proj_jac(vec1, OUT_N);
+        mat3_result = ba_proj_jac2(cam, vec1, OUT_N);
         // matrix3d_print(mat3_result);
       #endif
       // mat4_result = ba_proj(vec1, OUT_N);

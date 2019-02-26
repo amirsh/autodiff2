@@ -115,9 +115,8 @@ let project (X:D[]) (cam:D[]) =
     let distorted = radial_distort kappa (proj Xcam)
     vector_add_d principal_point (vector_mults_d distorted focal_length)
 
-let projall_d (n: int) (xs: D[]): D[] = 
+let projall_d (n: int) (xs: D[]) (cam: D[]): D[] = 
     [| for i = 0 to (n - 1) do  
-        let cam = xs.[0..10]
         let x = xs.[11 + 3 * i .. (13 + 3 * i)] 
         yield project x cam
     |] |> Array.concat
@@ -183,7 +182,8 @@ let benchmark_micro (dim: int) (iters: int) =
 #else 
 #if BA
       let n = (dim - 11) / 3
-      let vres = jacobian (projall_d n) vec1
+      let cam = vec1.[0..10]
+      let vres = jacobian (projall_d n vec1) cam
 //      printf "%A\n" vres
       total <- total + (vres |> matrix_sum_d)
 #else
