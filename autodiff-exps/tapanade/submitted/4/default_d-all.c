@@ -3,6 +3,7 @@
 */
 #include <stdlib.h>
 #include <math.h>
+#include "../../../diffsmooth/mem_mng.h"
 
 /*
   Differentiation of matrix_sum in forward (tangent) mode:
@@ -112,36 +113,36 @@ double nmfMain_d(int m, int n, double *u, double *ud, double *v, double **AA,
         double *nmfMain) {
     double *elems1;
     double *elems1d;
-    elems1d = (double *)malloc(sizeof(double)*m*n);
-    elems1 = (double *)malloc(sizeof(double)*m*n);
+    elems1d = (double *)storage_alloc(sizeof(double)*m*n);
+    elems1 = (double *)storage_alloc(sizeof(double)*m*n);
     double *elems2;
     double *elems2d;
-    elems2d = (double *)malloc(sizeof(double)*m*n);
-    elems2 = (double *)malloc(sizeof(double)*m*n);
+    elems2d = (double *)storage_alloc(sizeof(double)*m*n);
+    elems2 = (double *)storage_alloc(sizeof(double)*m*n);
     double *elems3;
     double *elems3d;
-    elems3d = (double *)malloc(sizeof(double)*m*n);
-    elems3 = (double *)malloc(sizeof(double)*m*n);
+    elems3d = (double *)storage_alloc(sizeof(double)*m*n);
+    elems3 = (double *)storage_alloc(sizeof(double)*m*n);
     double *elems4;
     double *elems4d;
-    elems4d = (double *)malloc(sizeof(double)*m*n);
-    elems4 = (double *)malloc(sizeof(double)*m*n);
+    elems4d = (double *)storage_alloc(sizeof(double)*m*n);
+    elems4 = (double *)storage_alloc(sizeof(double)*m*n);
     double **m1;
     double **m1d;
-    m1d = (double **)malloc(sizeof(double *)*n);
-    m1 = (double **)malloc(sizeof(double *)*n);
+    m1d = (double **)storage_alloc(sizeof(double *)*n);
+    m1 = (double **)storage_alloc(sizeof(double *)*n);
     double **uv;
     double **uvd;
-    uvd = (double **)malloc(sizeof(double *)*n);
-    uv = (double **)malloc(sizeof(double *)*n);
+    uvd = (double **)storage_alloc(sizeof(double *)*n);
+    uv = (double **)storage_alloc(sizeof(double *)*n);
     double **m2;
     double **m2d;
-    m2d = (double **)malloc(sizeof(double *)*n);
-    m2 = (double **)malloc(sizeof(double *)*n);
+    m2d = (double **)storage_alloc(sizeof(double *)*n);
+    m2 = (double **)storage_alloc(sizeof(double *)*n);
     double **m3;
     double **m3d;
-    m3d = (double **)malloc(sizeof(double *)*n);
-    m3 = (double **)malloc(sizeof(double *)*n);
+    m3d = (double **)storage_alloc(sizeof(double *)*n);
+    m3 = (double **)storage_alloc(sizeof(double *)*n);
     for (int i = 0; i < n; ++i) {
         if (elems1d)
             *elems1d = 0.0;
@@ -167,22 +168,22 @@ double nmfMain_d(int m, int n, double *u, double *ud, double *v, double **AA,
     double res;
     double resd;
     resd = matrix_sum_d(n, m, m3, m3d, &res);
-    free(elems1d);
-    free(elems1);
-    free(elems2d);
-    free(elems2);
-    free(elems3d);
-    free(elems3);
-    free(elems4d);
-    free(elems4);
-    free(m1d);
-    free(m1);
-    free(m2d);
-    free(m2);
-    free(m3d);
-    free(m3);
-    free(uvd);
-    free(uv);
+    storage_free(m3,sizeof(double *)*n);
+    storage_free(m3d,sizeof(double *)*n);
+    storage_free(m2,sizeof(double *)*n);
+    storage_free(m2d,sizeof(double *)*n);
+    storage_free(uv,sizeof(double *)*n);
+    storage_free(uvd,sizeof(double *)*n);
+    storage_free(m1,sizeof(double *)*n);
+    storage_free(m1d,sizeof(double *)*n);
+    storage_free(elems4,sizeof(double)*m*n);
+    storage_free(elems4d,sizeof(double)*m*n);
+    storage_free(elems3,sizeof(double)*m*n);
+    storage_free(elems3d,sizeof(double)*m*n);
+    storage_free(elems2,sizeof(double)*m*n);
+    storage_free(elems2d,sizeof(double)*m*n);
+    storage_free(elems1,sizeof(double)*m*n);
+    storage_free(elems1d,sizeof(double)*m*n);
     *nmfMain = res;
     return resd;
 }

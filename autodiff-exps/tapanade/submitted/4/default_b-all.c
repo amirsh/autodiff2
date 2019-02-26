@@ -6,6 +6,7 @@
 #include <string.h>
 #include "../../ADFirstAidKit/adBuffer.h"
 #include "nmf_unfused.h"
+#include "../../../diffsmooth/mem_mng.h"
 
 /*
   Differentiation of matrix_sum in reverse (adjoint) mode:
@@ -114,52 +115,52 @@ void nmfMain_b(int m, int n, double *u, double *ub, double *v, double **AA,
     double *elems1b;
     int ii1;
     double nmfMain;
-    elems1b = (double *)malloc(sizeof(double)*m*n);
+    elems1b = (double *)storage_alloc(sizeof(double)*m*n);
     for (ii1 = 0; ii1 < m*n; ++ii1)
         elems1b[ii1] = 0.0;
-    elems1 = (double *)malloc(sizeof(double)*m*n);
+    elems1 = (double *)storage_alloc(sizeof(double)*m*n);
     double *elems2;
     double *elems2b;
-    elems2b = (double *)malloc(sizeof(double)*m*n);
+    elems2b = (double *)storage_alloc(sizeof(double)*m*n);
     for (ii1 = 0; ii1 < m*n; ++ii1)
         elems2b[ii1] = 0.0;
-    elems2 = (double *)malloc(sizeof(double)*m*n);
+    elems2 = (double *)storage_alloc(sizeof(double)*m*n);
     double *elems3;
     double *elems3b;
-    elems3b = (double *)malloc(sizeof(double)*m*n);
+    elems3b = (double *)storage_alloc(sizeof(double)*m*n);
     for (ii1 = 0; ii1 < m*n; ++ii1)
         elems3b[ii1] = 0.0;
-    elems3 = (double *)malloc(sizeof(double)*m*n);
+    elems3 = (double *)storage_alloc(sizeof(double)*m*n);
     double *elems4;
     double *elems4b;
-    elems4b = (double *)malloc(sizeof(double)*m*n);
+    elems4b = (double *)storage_alloc(sizeof(double)*m*n);
     for (ii1 = 0; ii1 < m*n; ++ii1)
         elems4b[ii1] = 0.0;
-    elems4 = (double *)malloc(sizeof(double)*m*n);
+    elems4 = (double *)storage_alloc(sizeof(double)*m*n);
     double **m1;
     double **m1b;
-    m1b = (double **)malloc(sizeof(double *)*n);
+    m1b = (double **)storage_alloc(sizeof(double *)*n);
     for (ii1 = 0; ii1 < n; ++ii1)
         m1b[ii1] = NULL;
-    m1 = (double **)malloc(sizeof(double *)*n);
+    m1 = (double **)storage_alloc(sizeof(double *)*n);
     double **uv;
     double **uvb;
-    uvb = (double **)malloc(sizeof(double *)*n);
+    uvb = (double **)storage_alloc(sizeof(double *)*n);
     for (ii1 = 0; ii1 < n; ++ii1)
         uvb[ii1] = NULL;
-    uv = (double **)malloc(sizeof(double *)*n);
+    uv = (double **)storage_alloc(sizeof(double *)*n);
     double **m2;
     double **m2b;
-    m2b = (double **)malloc(sizeof(double *)*n);
+    m2b = (double **)storage_alloc(sizeof(double *)*n);
     for (ii1 = 0; ii1 < n; ++ii1)
         m2b[ii1] = NULL;
-    m2 = (double **)malloc(sizeof(double *)*n);
+    m2 = (double **)storage_alloc(sizeof(double *)*n);
     double **m3;
     double **m3b;
-    m3b = (double **)malloc(sizeof(double *)*n);
+    m3b = (double **)storage_alloc(sizeof(double *)*n);
     for (ii1 = 0; ii1 < n; ++ii1)
         m3b[ii1] = NULL;
-    m3 = (double **)malloc(sizeof(double *)*n);
+    m3 = (double **)storage_alloc(sizeof(double *)*n);
     for (int i = 0; i < n; ++i) {
         m1b[i] = &elems1b[i*m];
         m1[i] = &elems1[i*m];
@@ -182,20 +183,20 @@ void nmfMain_b(int m, int n, double *u, double *ub, double *v, double **AA,
     matrix_div_b(n, m, AA, uv, uvb, m2, m2b);
     matrix_log_b(n, m, uv, uvb, m1, m1b);
     vector_out_prod_b(n, m, v, u, ub, uv, uvb);
-    free(m3);
-    free(m3b);
-    free(m2);
-    free(m2b);
-    free(uv);
-    free(uvb);
-    free(m1);
-    free(m1b);
-    free(elems4);
-    free(elems4b);
-    free(elems3);
-    free(elems3b);
-    free(elems2);
-    free(elems2b);
-    free(elems1);
-    free(elems1b);
+    storage_free(m3,sizeof(double *)*n);
+    storage_free(m3b,sizeof(double *)*n);
+    storage_free(m2,sizeof(double *)*n);
+    storage_free(m2b,sizeof(double *)*n);
+    storage_free(uv,sizeof(double *)*n);
+    storage_free(uvb,sizeof(double *)*n);
+    storage_free(m1,sizeof(double *)*n);
+    storage_free(m1b,sizeof(double *)*n);
+    storage_free(elems4,sizeof(double)*m*n);
+    storage_free(elems4b,sizeof(double)*m*n);
+    storage_free(elems3,sizeof(double)*m*n);
+    storage_free(elems3b,sizeof(double)*m*n);
+    storage_free(elems2,sizeof(double)*m*n);
+    storage_free(elems2b,sizeof(double)*m*n);
+    storage_free(elems1,sizeof(double)*m*n);
+    storage_free(elems1b,sizeof(double)*m*n);
 }

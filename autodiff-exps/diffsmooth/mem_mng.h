@@ -17,7 +17,7 @@ typedef struct heap_t {
   memory_size_t size; 
 } heap_t; 
 
-storage_t try_allocate(memory_size_t size) {
+inline storage_t try_allocate(memory_size_t size) {
   storage_t storage = malloc(size);
   if(storage == NULL) {
     fprintf(stderr, "Cannot allocate buffer of size %llu\n", size);
@@ -26,7 +26,7 @@ storage_t try_allocate(memory_size_t size) {
   return storage;
 }
 
-heap_t initHeap(memory_size_t size) {
+inline heap_t initHeap(memory_size_t size) {
   heap_t heap;
   heap.storage = try_allocate(size);
   heap.free_index = 0;
@@ -37,7 +37,7 @@ heap_t initHeap(memory_size_t size) {
 heap_t heapObject;
 memory_size_t increase_rate;
 
-storage_t bulk_alloc(memory_size_t size) {
+inline storage_t bulk_alloc(memory_size_t size) {
   memory_size_t aligned_size = ALLIGN_BY_16(size);
   memory_size_t new_free_index = heapObject.free_index + aligned_size;
   if (new_free_index >= heapObject.size) {
@@ -59,7 +59,7 @@ storage_t bulk_alloc(memory_size_t size) {
   return allocatedStorage;
 }
 
-void bulk_free(storage_t storage, memory_size_t size) {
+inline void bulk_free(storage_t storage, memory_size_t size) {
   memory_size_t aligned_size = ALLIGN_BY_16(size);
   heapObject.free_index -= aligned_size;
   assert(heapObject.free_index >= 0);
@@ -67,7 +67,7 @@ void bulk_free(storage_t storage, memory_size_t size) {
   //  heapObject.free_index = 0;
 }
 
-storage_t storage_alloc(memory_size_t size) {
+inline storage_t storage_alloc(memory_size_t size) {
 #ifdef BUMP
   return bulk_alloc(size);
 #else
@@ -79,7 +79,7 @@ storage_t storage_alloc(memory_size_t size) {
 #endif
 }
 
-void storage_free(storage_t storage, memory_size_t size) {
+inline void storage_free(storage_t storage, memory_size_t size) {
 #ifdef BUMP
   bulk_free(storage, size);
 #else
