@@ -12,9 +12,9 @@
 #if defined BA_ROD || BA_PROJ
   #if defined TAPENADE
     #if defined REV_MODE
-      #include "../tapanade/submitted/9/ba_rod_b-all.h"
+      #include "../tapanade/submitted/10/ba_proj_b-all.h"
     #else
-      #include "../tapanade/submitted/9/ba_rod_d-all.h"
+      #include "../tapanade/submitted/10/ba_proj_d-all.h"
     #endif
   #elif defined FUSED && defined NOUNROLL
     #include "../diffsmooth/ba_rod_jac_nounroll.h"
@@ -355,7 +355,7 @@ void test_micro(card_t DIM, card_t iters)
         #if defined BA_ROD
           ba_rod_native_b(3, vec1->arr, vec_result->arr, OUT_N, mat2_result_st, mat2_result_2_st);
         #else
-          ba_proj_native_b(3, vec1->arr, vec_result->arr, OUT_N, mat2_result_st, mat2_result_2_st);
+          ba_proj_native_b(3, vec1->arr, vec_result->arr, vec1->arr, OUT_N, mat2_result_st, mat2_result_2_st);
         #endif
         mat2_result_2_st[j][k] = 0;
         for(int i=0; i<11; i++) {
@@ -370,7 +370,7 @@ void test_micro(card_t DIM, card_t iters)
       #if defined BA_ROD
         ba_rod_native_d(3, vec1->arr, vec_tmp->arr, OUT_N, tmp, mat3_result_st[i]);
       #else
-        ba_proj_native_d(3, vec1->arr, vec_tmp->arr, OUT_N, tmp, mat3_result_st[i]);
+        ba_proj_native_d(3, vec1->arr, vec_tmp->arr, vec1->arr, OUT_N, tmp, mat3_result_st[i]);
       #endif
       vec_tmp->arr[i] = 0;
     }
