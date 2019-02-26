@@ -5,7 +5,7 @@ object ExtractCSV {
   val MICRO_BENCH = "MICRO"
   val NMF_BENCH = "NMF"
   // val bench = GMM_BENCH
-  val bench = MICRO_BENCH
+  var bench = MICRO_BENCH
   // val bench = NMF_BENCH
   val TIME = "time per call = "
   var currentType: String = _
@@ -27,8 +27,10 @@ object ExtractCSV {
     case MICRO_BENCH => s.toInt
     case NMF_BENCH => 
       val (m, n) = {
-        val spaceIndex = s.indexOf(" ")
-        s.substring(0, spaceIndex).toInt -> s.substring(spaceIndex + 1).toInt
+        // val spaceIndex = s.indexOf(" ")
+        // s.substring(0, spaceIndex).toInt -> s.substring(spaceIndex + 1).toInt
+        val dim = s.toInt
+        (dim / 10000) -> (dim % 10000)
       }
       m * 100 * 1000 + n
   }
@@ -38,6 +40,8 @@ object ExtractCSV {
   def main(args: Array[String]): Unit = {
     val FILE = args(0)
     val lines = Source.fromFile(FILE).getLines.toList
+    if(FILE.contains("nmf"))
+      bench = NMF_BENCH
     
     def isTime(s: String) = s.contains(TIME)
     def isExe(s: String) = s.contains(".exe") || s.contains("python")

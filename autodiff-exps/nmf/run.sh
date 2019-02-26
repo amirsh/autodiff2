@@ -14,7 +14,8 @@ declare -a files=(
 	"./nmf_tap_rev.exe" "./nmf_tap_for.exe" 
 	"./nmf_diff.exe" "./nmf_diff_dps.exe"
 	"python ./NMF.py exponential"
-	"mono nmf_fsharp_for.exe" "mono nmf_fsharp_rev.exe"
+	"mono nmf_fsharp_for.exe" 
+	"mono nmf_fsharp_rev.exe"
 	# "./nmf_poisson_tap_rev.exe" "./nmf_poisson_tap_for.exe" 
 	# "./nmf_poisson_diff.exe" "./nmf_poisson_diff_dps.exe" 
 	)
