@@ -12,15 +12,16 @@
 declare -a files=(
 	"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe"
 	"./nmf_tap_rev.exe" "./nmf_tap_for.exe" 
-	"python ./NMF.py exponential"
 	"./nmf_diff.exe" "./nmf_diff_dps.exe"
+	"python ./NMF.py exponential"
+	"mono nmf_fsharp_for.exe" "mono nmf_fsharp_rev.exe"
 	# "./nmf_poisson_tap_rev.exe" "./nmf_poisson_tap_for.exe" 
 	# "./nmf_poisson_diff.exe" "./nmf_poisson_diff_dps.exe" 
 	)
 
 declare -a params=(
-	"100 100" "200 100" "400 100" "800 100" "1600 100" "3200 100"
-	"100 200" "100 400" "100 800" "100 1600" "100 3200"
+	"1000100" "2000100" "4000100" "8000100" "16000100" "32000100"
+	"1000200" "1000400" "1000800" "1001600" "1003200"
 	)
 
 for p in "${params[@]}"
@@ -29,6 +30,6 @@ do
 	for f in "${files[@]}"
 	do
 		echo "$f"
-		eval "$f $p 1 10"
+		eval "$f $p 10"
 	done
 done

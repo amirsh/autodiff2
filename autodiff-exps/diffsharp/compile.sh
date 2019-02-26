@@ -1,4 +1,6 @@
 cd diffsharp-exps
+fsharpc -r DiffSharp Program.fs --define:NMF -o ../../nmf/nmf_fsharp_for.exe
+fsharpc -r DiffSharp Program.fs --define:NMF --define:REV_MODE -o ../../nmf/nmf_fsharp_rev.exe
 fsharpc -r DiffSharp Program.fs --define:BA -o ../../micro/ba_fsharp_for.exe
 fsharpc -r DiffSharp Program.fs --define:BA --define:REV_MODE -o ../../micro/ba_fsharp_rev.exe
 fsharpc -r DiffSharp Program.fs --define:ADD -o ../../micro/add_fsharp_for.exe

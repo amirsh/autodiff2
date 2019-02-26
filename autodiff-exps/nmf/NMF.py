@@ -16,18 +16,23 @@ if not sys.warnoptions:
     warnings.simplefilter("ignore")
 
 def nmf(distribution, m, n, k, runs):
-    W = T.dmatrix('W')
-    H = T.dmatrix('H')
+    W = T.dvector('W')
+    H = T.dvector('H')
     A = T.dmatrix('A')
-    M = T.dmatrix('M')
+    M = T.dvector('M')
 
-    np.random.seed(42)
-    a = np.random.random((m, n))        
-    w = np.random.random((m, k))
-    h = np.random.random((k, n))
+    # np.random.seed(42)
+    # a = np.random.random((m, n))        
+    # w = np.random.random((m, k))
+    # h = np.random.random((k, n))
+    v1 = np.loadtxt("../data/vec1.dat", delimiter=" ")[:(m * n)]
+    v2 = np.loadtxt("../data/vec2.dat", delimiter=" ")[:(m + n)]
+    a = v1.reshape(m, n)
+    w = v2[:m]
+    h = v2[m:(m+n)]
 
     # print "Deriving Theano rules"
-    Abar = theano.dot(W, H)
+    Abar = T.outer(W, H)
 
     # neglogexp = -1*T.log( T.prod(  exprs  ))
     neglogexp = T.sum(T.log(Abar) + A / Abar)
@@ -41,12 +46,14 @@ def nmf(distribution, m, n, k, runs):
     timesTheano = []
     total = 0.0
     for i in range(runs):
+        h[0] += 1.0 / (2.0 + h[0])
+        w[0] += 1.0 / (2.0 + w[0])
         # print "\tIteration %d" % (i + 1)
         pr = cProfile.Profile()
         pr.enable()
         # Htheano, Wtheano = theanoRuleH(a, Wtheano, Htheano), theanoRuleW(a, Wtheano, Htheano)
-        Htheano = theanoRuleH(a, Wtheano, Htheano)
-        total += matrixSum(Htheano)
+        res = theanoRuleH(a, Wtheano, Htheano)
+        total += matrixSum(res)
         pr.create_stats()
         stats = pstats.Stats(pr)
         # print "\t\tExecution time spent is %s." % stats.total_tt
@@ -68,18 +75,18 @@ def nmf(distribution, m, n, k, runs):
 #    1: Lago-Code
 def main(args):
     distribution = args[0]
-    m = int(args[1])
-    n = int(args[2])
-    k = int(args[3])
-    runs = int(args[4]) if len(args) > 4 else 1
+    dim = int(args[1])
+    m = dim / 10000
+    n = dim % 10000
+    runs = int(args[2]) if len(args) > 2 else 1
 
-    total, timesTheano = nmf(distribution, m, n, k, runs)
+    total, timesTheano = nmf(distribution, m, n, 1, runs)
 
     print "total =%f, time per call = %f s" % (total, reduce(lambda x, y: x + y, timesTheano) / len(timesTheano))
 
 if __name__ == "__main__":
     import sys
     if len(sys.argv) < 3:
-        print "Usage: %s <gaussian|exponential|poisson> <rows> <columns> <k> [runs] [check]" % sys.argv[0]
+        print "Usage: %s <gaussian|exponential|poisson> <rows*10000+columns> [runs] [check]" % sys.argv[0]
     else:
         main(sys.argv[1:])

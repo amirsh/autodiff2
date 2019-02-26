@@ -58,6 +58,18 @@ let matrix3d_sum_d (matrix: D[,][]): D =
 let vector_add_d (v1: _[]) (v2: _[]): _[] =
     Array.map2 (fun a b -> a + b) v1 v2
 
+let matrix_map2  (op : _ -> _ -> _) (m1: _[][]) (m2: _[][]): _[][] =
+    Array.map2 (fun a b -> Array.map2 (op) a b) m1 m2
+
+let matrix_map  (op : _ -> _) (m1: _[][]): _[][] =
+    m1 |> Array.map (Array.map (op))
+
+let matrix_add_d (v1: _[][]) (v2: _[][]): _[][] =
+    matrix_map2 (+) v1 v2 
+
+let vector_out_d (v1: _[]) (v2: _[]): _[][] =
+    v1 |> Array.map (fun x -> v2 |> Array.map (fun y -> x * y))
+
 let vector_sub_d (v1: _[]) (v2: _[]): _[] =
     Array.map2 (fun a b -> a - b) v1 v2
 
@@ -110,6 +122,12 @@ let projall_d (n: int) (xs: D[]): D[] =
         yield project x cam
     |] |> Array.concat
 
+let nmf (a: D[][]) (v: D[]) (u: D[]): D = 
+    let aBar = vector_out_d v u
+    let logTerm = aBar |> matrix_map (log)
+    let res = matrix_add_d aBar (matrix_map2 (/) a aBar)
+    res |> Array.map(Array.sum) |> Array.sum
+
 let benchmark_micro (dim: int) (iters: int) = 
     //let rng = 42
     //let rand = System.Random(rng)
@@ -121,8 +139,26 @@ let benchmark_micro (dim: int) (iters: int) =
     //  vec1.[k] <- dist(rng)
     //  vec2.[k] <- dist(rng)
     //  vec3.[k] <- dist(rng)
+#if NMF
+    let m = dim / 10000
+    let n = dim % 10000
+    let vec1 = (matrixRead "../data/vec1.dat" 0 1 (m * n)).[0] |> Array.map (D)
+    let vec2 = (matrixRead "../data/vec2.dat" 0 1 (m + n)).[0] |> Array.map (D)
+    let a = matrix_fill_d m n 0.0
+    let u = vector_fill_d n 0.0
+    let v = vector_fill_d m 0.0
+    for mm = 0 to m - 1 do
+      for nn = 0 to n - 1 do
+        a.[mm].[nn] <- vec1.[mm * n + nn]
+      v.[mm] <- vec2.[mm]
+    for nn = 0 to n - 1 do
+      u.[nn] <- vec2.[m + nn]
+#else
     let vec1 = (matrixRead "../data/vec1.dat" 0 1 dim).[0] |> Array.map (D)
     let vec2 = (matrixRead "../data/vec2.dat" 0 1 dim).[0] |> Array.map (D)
+#endif
+  
+
 
     let mutable total = D 0.0
     let t = Stopwatch.StartNew()
@@ -151,7 +187,14 @@ let benchmark_micro (dim: int) (iters: int) =
 //      printf "%A\n" vres
       total <- total + (vres |> matrix_sum_d)
 #else
+#if NMF
+      u.[0] <- u.[0] + 1.0 / (2.0 + u.[0])
+      v.[0] <- v.[0] + 1.0 / (2.0 + v.[0])
+      let vres = grad (nmf a v) u
+      total <- total + (vres |> vector_sum_d)
+#else
       total <- D 42.0
+#endif
 #endif
 #endif
 #endif
