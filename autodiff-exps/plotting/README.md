@@ -5,7 +5,7 @@ Extracting Data
 ---
 Example:
 ```
-scala ExtractCSV.scala ../nmf/results/results_nmf_3.txt 
+scala ExtractCSV.scala ../nmf/results/results_nmf_4.txt 
 scala ExtractCSV.scala ../../results_ad/gmm/gmm_3.txt
 scala ExtractCSV.scala ../../results_ad/micro/add_1.txt > data/add.csv
 scala ExtractCSV.scala ../../results_ad/micro/mults_1.txt > data/mults.csv
