@@ -152,7 +152,7 @@ void test_nmf(card_t M, card_t N, card_t K, card_t iters)
   }
 
   double elapsed = toc2(t);
-  printf("total =%f, time per call = %f s\n", total, elapsed / (double)(iters) / 1000.0);
+  printf("total =%f, time per call = %f ms\n", total, elapsed / (double)(iters));
 }
 
 int main(int argc, char *argv[])

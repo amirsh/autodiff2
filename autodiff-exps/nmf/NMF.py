@@ -82,7 +82,7 @@ def main(args):
 
     total, timesTheano = nmf(distribution, m, n, 1, runs)
 
-    print "total =%f, time per call = %f s" % (total, reduce(lambda x, y: x + y, timesTheano) / len(timesTheano))
+    print "total =%f, time per call = %f ms" % (total, reduce(lambda x, y: x + y, timesTheano) / len(timesTheano) * 1000)
 
 if __name__ == "__main__":
     import sys
