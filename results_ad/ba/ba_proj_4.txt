@@ -1,0 +1,136 @@
+29
+./ba_proj_tap_rev.exe
+total =-230758656473699.343750, time per call = 0.021100 ms
+./ba_proj_tap_for.exe
+total =-230758656473699.343750, time per call = 0.010800 ms
+./ba_proj_diff_fused_nomotion.exe
+total =-230758656473699.406250, time per call = 0.020900 ms
+./ba_proj_diff_fused.exe
+total =-230758656473699.406250, time per call = 0.007900 ms
+./ba_proj_diff_fused_dps.exe
+total =-230758656473699.406250, time per call = 0.006500 ms
+python micro.py ba
+total =-230758656473706.812500, time per call = 5.782100 ms
+mono ba_fsharp_for.exe
+total =-230758656473699.000000, time per call = 2.200000 ms
+mono ba_fsharp_rev.exe
+total =-230758656473699.000000, time per call = 2.800000 ms
+47
+./ba_proj_tap_rev.exe
+total =-1197248900761989.500000, time per call = 0.076600 ms
+./ba_proj_tap_for.exe
+total =-1197248900761989.500000, time per call = 0.018500 ms
+./ba_proj_diff_fused_nomotion.exe
+total =-1197248900761989.500000, time per call = 0.037600 ms
+./ba_proj_diff_fused.exe
+total =-1197248900761989.500000, time per call = 0.011800 ms
+./ba_proj_diff_fused_dps.exe
+total =-1197248900761989.500000, time per call = 0.010600 ms
+python micro.py ba
+total =-1197248900762003.250000, time per call = 19.193100 ms
+mono ba_fsharp_for.exe
+total =-1197248900761990.000000, time per call = 2.600000 ms
+mono ba_fsharp_rev.exe
+total =-1197248900761990.000000, time per call = 4.800000 ms
+86
+./ba_proj_tap_rev.exe
+total =-1221013410076760.250000, time per call = 0.305000 ms
+./ba_proj_tap_for.exe
+total =-1221013410076760.250000, time per call = 0.044600 ms
+./ba_proj_diff_fused_nomotion.exe
+total =-1221013410076760.500000, time per call = 0.081200 ms
+./ba_proj_diff_fused.exe
+total =-1221013410076760.500000, time per call = 0.023800 ms
+./ba_proj_diff_fused_dps.exe
+total =-1221013410076760.500000, time per call = 0.020900 ms
+python micro.py ba
+total =-1221013410076775.000000, time per call = 73.004500 ms
+mono ba_fsharp_for.exe
+total =-1221013410076760.000000, time per call = 3.500000 ms
+mono ba_fsharp_rev.exe
+total =-1221013410076760.000000, time per call = 14.000000 ms
+161
+./ba_proj_tap_rev.exe
+total =-1611591059247527.750000, time per call = 1.201800 ms
+./ba_proj_tap_for.exe
+total =-1611591059247528.000000, time per call = 0.072900 ms
+./ba_proj_diff_fused_nomotion.exe
+total =-1611591059247528.000000, time per call = 0.161900 ms
+./ba_proj_diff_fused.exe
+total =-1611591059247528.000000, time per call = 0.047400 ms
+./ba_proj_diff_fused_dps.exe
+total =-1611591059247528.000000, time per call = 0.040600 ms
+python micro.py ba
+total =-1611591059247527.750000, time per call = 276.507100 ms
+mono ba_fsharp_for.exe
+total =-1611591059247530.000000, time per call = 5.100000 ms
+mono ba_fsharp_rev.exe
+total =-1611591059247530.000000, time per call = 47.700000 ms
+311
+./ba_proj_tap_rev.exe
+total =-4171197823183019.500000, time per call = 4.785800 ms
+./ba_proj_tap_for.exe
+total =-4171197823183020.500000, time per call = 0.149100 ms
+./ba_proj_diff_fused_nomotion.exe
+total =-4171197823183020.500000, time per call = 0.316400 ms
+./ba_proj_diff_fused.exe
+total =-4171197823183020.500000, time per call = 0.102400 ms
+./ba_proj_diff_fused_dps.exe
+total =-4171197823183020.500000, time per call = 0.082200 ms
+python micro.py ba
+total =-4171197823182926.500000, time per call = 1059.861800 ms
+mono ba_fsharp_for.exe
+total =-4171197823183020.000000, time per call = 8.600000 ms
+mono ba_fsharp_rev.exe
+total =-4171197823183030.000000, time per call = 182.000000 ms
+611
+./ba_proj_tap_rev.exe
+total =-68413417231204134340788224.000000, time per call = 18.999800 ms
+./ba_proj_tap_for.exe
+total =-68413417231204117160919040.000000, time per call = 0.296900 ms
+./ba_proj_diff_fused_nomotion.exe
+total =-68413417231204099981049856.000000, time per call = 0.626900 ms
+./ba_proj_diff_fused.exe
+total =-68413417231204099981049856.000000, time per call = 0.198400 ms
+./ba_proj_diff_fused_dps.exe
+total =-68413417231204099981049856.000000, time per call = 0.166500 ms
+python micro.py ba
+total =-68413417231114077466525696.000000, time per call = 4222.959700 ms
+mono ba_fsharp_for.exe
+total =-68413417231204100000000000.000000, time per call = 15.000000 ms
+mono ba_fsharp_rev.exe
+total =-68413417231204100000000000.000000, time per call = 748.000000 ms
+1211
+./ba_proj_tap_rev.exe
+total =-68563149695161391416082432.000000, time per call = 77.057501 ms
+./ba_proj_tap_for.exe
+total =-68563149695161357056344064.000000, time per call = 0.582000 ms
+./ba_proj_diff_fused_nomotion.exe
+total =-68563149695161357056344064.000000, time per call = 1.277100 ms
+./ba_proj_diff_fused.exe
+total =-68563149695161357056344064.000000, time per call = 0.416600 ms
+./ba_proj_diff_fused_dps.exe
+total =-68563149695161357056344064.000000, time per call = 0.333200 ms
+python micro.py ba
+total =-68563149695071231462604800.000000, time per call = 17011.806700 ms
+mono ba_fsharp_for.exe
+total =-68563149695161400000000000.000000, time per call = 27.800000 ms
+mono ba_fsharp_rev.exe
+total =-68563149695161400000000000.000000, time per call = 3595.700000 ms
+2411
+./ba_proj_tap_rev.exe
+total =-68570627041410994782863360.000000, time per call = 301.719409 ms
+./ba_proj_tap_for.exe
+total =-68570627041410977602994176.000000, time per call = 1.191200 ms
+./ba_proj_diff_fused_nomotion.exe
+total =-68570627041410977602994176.000000, time per call = 2.498400 ms
+./ba_proj_diff_fused.exe
+total =-68570627041410977602994176.000000, time per call = 0.775700 ms
+./ba_proj_diff_fused_dps.exe
+total =-68570627041410977602994176.000000, time per call = 0.697300 ms
+python micro.py ba
+total =-68570627041320886368993280.000000, time per call = 66369.018100 ms
+mono ba_fsharp_for.exe
+total =-68570627041411000000000000.000000, time per call = 54.500000 ms
+mono ba_fsharp_rev.exe
+total =-68570627041411000000000000.000000, time per call = 17188.800000 ms
