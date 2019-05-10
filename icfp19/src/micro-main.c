@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include "../diffsmooth/fsharp.h"
-#include "../diffsmooth/timer.h"
+#include "diffsmooth/fsharp.h"
+#include "diffsmooth/timer.h"
 // #include "../diffsmooth/ba_rod_fused.h"
 // #include "../tapanade/submitted/9/ba_rod.h"
 
@@ -12,28 +12,28 @@
 #if defined BA_ROD || BA_PROJ
   #if defined TAPENADE
     #if defined REV_MODE
-      #include "../tapanade/submitted/10/ba_proj_b-all.h"
+      #include "tapanade/submitted/10/ba_proj_b-all.h"
     #else
-      #include "../tapanade/submitted/10/ba_proj_d-all.h"
+      #include "tapanade/submitted/10/ba_proj_d-all.h"
     #endif
   #elif defined FUSED && defined NOUNROLL
-    #include "../diffsmooth/ba_rod_jac_nounroll.h"
+    #include "diffsmooth/ba_rod_jac_nounroll.h"
   #elif defined FUSED && defined DPS
-    #include "../diffsmooth/ba_rod_jac_aos_dps.h"
+    #include "diffsmooth/ba_rod_jac_aos_dps.h"
   #elif defined FUSED && defined NOMOTION
-    #include "../diffsmooth/ba_rod_jac_nomotion.h"
+    #include "diffsmooth/ba_rod_jac_nomotion.h"
   #elif defined FUSED
-    #include "../diffsmooth/ba_rod_jac_aos.h"
+    #include "diffsmooth/ba_rod_jac_aos.h"
   #endif
 #else
   #if defined TAPENADE
     #if defined REV_MODE
-        #include "../tapanade/submitted/8/micro_b-all.h"
+        #include "tapanade/submitted/8/micro_b-all.h"
     #else
-        #include "../tapanade/submitted/8/micro_d-all.h"
+        #include "tapanade/submitted/8/micro_d-all.h"
     #endif
   #else
-    #include "../diffsmooth/micro_diff.h"
+    #include "diffsmooth/micro_diff.h"
   #endif
 #endif
 

@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <string.h>
-#include "../diffsmooth/fsharp.h"
-#include "../diffsmooth/timer.h"
+#include "diffsmooth/fsharp.h"
+#include "diffsmooth/timer.h"
 
 #define VEC1_FILE "../data/vec1.dat"
 #define VEC2_FILE "../data/vec2.dat"
@@ -9,15 +9,15 @@
 #if defined TAPENADE
   #if defined REV_MODE
     #if defined UNFUSED
-      #include "../tapanade/submitted/4/nmf_unfused_b-all.h"
+      #include "tapanade/submitted/4/nmf_unfused_b-all.h"
     #else
-      #include "../tapanade/submitted/3/nmf_b-all.h"
+      #include "tapanade/submitted/3/nmf_b-all.h"
     #endif
   #else
     #if defined UNFUSED
-      #include "../tapanade/submitted/4/nmf_unfused_d-all.h"
+      #include "tapanade/submitted/4/nmf_unfused_d-all.h"
     #else
-      #include "../tapanade/submitted/3/nmf_d-all.h"
+      #include "tapanade/submitted/3/nmf_d-all.h"
     #endif
   #endif
 #else
