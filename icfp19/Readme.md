@@ -5,21 +5,19 @@ Installation
 ---
 In order to compile the DiffSharp files, you have to make sure that:
 * fsharpc is installed. 
-* DLL files for DiffSharp, FsAlg, and FSharpQuotationEvaluator are in place.
+* DLL files for DiffSharp, FsAlg, and FSharpQuotationEvaluator are in the `src` folder.
 
 
 Compilation
 ---
-Afterwards, run the following command in the `src/diffsharp` directory:
+Afterwards, run the following command in the `src` directory to compile the F# code:
 ```
-./compile.sh
+./compile_fs.sh
 ```
 
-Then, move to the `src` directory, and make sure that the previously mentioned DLL files are in this directory as well.
 Run the following command in order to compile the C code:
 ```
 make
 ```
 
 Finally, use the `run.sh` and `run_nmf.sh` scripts in order to run the experiments that you are interested in.
- 
