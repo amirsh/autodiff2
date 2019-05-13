@@ -10,14 +10,9 @@ In order to compile the DiffSharp files, you have to make sure that:
 
 Compilation
 ---
-Afterwards, run the following command in the `src` directory to compile the F# code:
+Afterwards, run the following command in the `src` directory to compile all the F# and C code:
 ```
-./compile_fs.sh
-```
-
-Run the following command in order to compile the C code:
-```
-make
+./compile.sh
 ```
 
-Finally, use the `run.sh` and `run_nmf.sh` scripts in order to run the experiments that you are interested in.
+Finally, run the `run.sh` script in order to run all the experiments.
