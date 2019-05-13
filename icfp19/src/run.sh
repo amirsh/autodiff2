@@ -5,9 +5,9 @@ function get_params() {
 	if [ $prog == "MULTS" ]; then
 		params=("200" "400" "800" "1600" "3200" "6400" "12800" "25600");
 	elif [ $prog == "ADD" ]; then
-		params=("100" "200" "400" "800" "1600" "3200" "6400");
+		params=("50" "100" "200" "400" "800" "1600" "3200" "6400");
 	elif [ $prog == "DOT" ]; then
-		params=("200" "400" "800" "1600" "3200" "6400" "12800" "25600");
+		params=("100" "200" "400" "800" "1600" "3200" "6400" "12800");
 	elif [ $prog == "MAX" ]; then
 		params=("800" "1600" "3200" "6400" "12800" "25600" "51200");
 	elif [ $prog == "BA" ]; then
@@ -59,7 +59,7 @@ function run_bench {
 		do
 			echo "$f"
 			# eval "$f $p 10"
-			eval "gtimeout 10 $f $p 10"
+			eval "gtimeout 60 $f $p 10"
 		done
 	done
 }
