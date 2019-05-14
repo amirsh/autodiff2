@@ -1,3 +1,5 @@
+cd src
+
 function compileFs {
 	eval "fsharpc -r ../DiffSharp Program.fs --define:$1 $2 -o ../$3"
 }
@@ -20,3 +22,5 @@ compileFs "MULTS" "--define:REV_MODE" "mults_fsharp_rev.exe"
 cd ..
 
 make -B
+
+cd ..

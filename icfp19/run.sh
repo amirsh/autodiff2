@@ -1,3 +1,5 @@
+cd src
+
 function get_params() {
 	local prog;
 	prog=$1
@@ -72,3 +74,5 @@ run_bench "dot"
 run_bench "max"
 run_bench "ba"
 run_bench "nmf"
+
+cd ..
