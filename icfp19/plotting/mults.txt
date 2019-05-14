@@ -1,119 +1,119 @@
 200
 ./mults_tap_rev.exe
-total =4141.600581, time per call = 0.039400 ms
+total =4141.600581, time per call = 0.039500 ms
 ./mults_tap_for.exe
-total =4141.600581, time per call = 0.002500 ms
+total =4141.600581, time per call = 0.002000 ms
 ./mults_diff.exe
-total =4141.600581, time per call = 0.000900 ms
+total =4141.600581, time per call = 0.001200 ms
 ./mults_diff_dps.exe
-total =4141.600581, time per call = 0.000600 ms
+total =4141.600581, time per call = 0.000500 ms
 python micro.py mults
-total =4141.600581, time per call = 2.318700 ms
+total =4141.600581, time per call = 2.166500 ms
 mono mults_fsharp_for.exe
-total =19.750396, time per call = 2.400000 ms
+total =19.750396, time per call = 5.400000 ms
 mono mults_fsharp_rev.exe
-total =19.750396, time per call = 10.900000 ms
+total =19.750396, time per call = 10.600000 ms
 400
 ./mults_tap_rev.exe
-total =8176.111362, time per call = 0.141400 ms
+total =8176.111362, time per call = 0.166000 ms
 ./mults_tap_for.exe
-total =8176.111362, time per call = 0.003400 ms
+total =8176.111362, time per call = 0.004800 ms
 ./mults_diff.exe
-total =8176.111362, time per call = 0.001800 ms
+total =8176.111362, time per call = 0.001900 ms
 ./mults_diff_dps.exe
 total =8176.111362, time per call = 0.000700 ms
 python micro.py mults
-total =8176.111362, time per call = 4.333700 ms
+total =8176.111362, time per call = 4.117400 ms
 mono mults_fsharp_for.exe
-total =19.750396, time per call = 3.100000 ms
+total =19.750396, time per call = 2.900000 ms
 mono mults_fsharp_rev.exe
-total =19.750396, time per call = 33.000000 ms
+total =19.750396, time per call = 32.000000 ms
 800
 ./mults_tap_rev.exe
-total =16290.811457, time per call = 0.639600 ms
+total =16290.811457, time per call = 0.589300 ms
 ./mults_tap_for.exe
-total =16290.811457, time per call = 0.006200 ms
+total =16290.811457, time per call = 0.007200 ms
 ./mults_diff.exe
-total =16290.811457, time per call = 0.003000 ms
+total =16290.811457, time per call = 0.003800 ms
 ./mults_diff_dps.exe
 total =16290.811457, time per call = 0.001300 ms
 python micro.py mults
-total =16290.811457, time per call = 9.271400 ms
-mono mults_fsharp_for.exe
-total =19.750396, time per call = 3.600000 ms
-mono mults_fsharp_rev.exe
-total =19.750396, time per call = 122.200000 ms
-1600
-./mults_tap_rev.exe
-total =33119.993999, time per call = 2.426100 ms
-./mults_tap_for.exe
-total =33119.993999, time per call = 0.011100 ms
-./mults_diff.exe
-total =33119.993999, time per call = 0.006500 ms
-./mults_diff_dps.exe
-total =33119.993999, time per call = 0.002500 ms
-python micro.py mults
-total =33119.993999, time per call = 20.632100 ms
+total =16290.811457, time per call = 9.238000 ms
 mono mults_fsharp_for.exe
 total =19.750396, time per call = 3.100000 ms
 mono mults_fsharp_rev.exe
-total =19.750396, time per call = 572.800000 ms
+total =19.750396, time per call = 125.900000 ms
+1600
+./mults_tap_rev.exe
+total =33119.993999, time per call = 2.462900 ms
+./mults_tap_for.exe
+total =33119.993999, time per call = 0.014200 ms
+./mults_diff.exe
+total =33119.993999, time per call = 0.006800 ms
+./mults_diff_dps.exe
+total =33119.993999, time per call = 0.002400 ms
+python micro.py mults
+total =33119.993999, time per call = 20.118200 ms
+mono mults_fsharp_for.exe
+total =19.750396, time per call = 2.900000 ms
+mono mults_fsharp_rev.exe
+total =19.750396, time per call = 559.800000 ms
 3200
 ./mults_tap_rev.exe
-total =65290.191340, time per call = 9.255100 ms
+total =65290.191340, time per call = 9.047000 ms
 ./mults_tap_for.exe
-total =65290.191340, time per call = 0.027900 ms
+total =65290.191340, time per call = 0.022100 ms
 ./mults_diff.exe
-total =65290.191340, time per call = 0.011900 ms
+total =65290.191340, time per call = 0.012700 ms
 ./mults_diff_dps.exe
 total =65290.191340, time per call = 0.004700 ms
 python micro.py mults
-total =65290.191340, time per call = 50.917400 ms
+total =65290.191340, time per call = 50.906400 ms
 mono mults_fsharp_for.exe
 total =19.750396, time per call = 4.000000 ms
 mono mults_fsharp_rev.exe
-total =19.750396, time per call = 2220.700000 ms
+total =19.750396, time per call = 2197.800000 ms
 6400
 ./mults_tap_rev.exe
-total =130329.409167, time per call = 36.133200 ms
+total =130329.409167, time per call = 35.017401 ms
 ./mults_tap_for.exe
-total =130329.409167, time per call = 0.043200 ms
+total =130329.409167, time per call = 0.042000 ms
 ./mults_diff.exe
-total =130329.409167, time per call = 0.027000 ms
+total =130329.409167, time per call = 0.023000 ms
 ./mults_diff_dps.exe
-total =130329.409167, time per call = 0.009000 ms
+total =130329.409167, time per call = 0.010000 ms
 python micro.py mults
-total =130329.409167, time per call = 147.628100 ms
+total =130329.409167, time per call = 147.089000 ms
 mono mults_fsharp_for.exe
-total =19.750396, time per call = 5.700000 ms
+total =19.750396, time per call = 5.900000 ms
 mono mults_fsharp_rev.exe
-total =19.750396, time per call = 9004.800000 ms
+total =19.750396, time per call = 8907.200000 ms
 12800
 ./mults_tap_rev.exe
-total =258462.466939, time per call = 141.401196 ms
+total =258462.466939, time per call = 145.745105 ms
 ./mults_tap_for.exe
-total =258462.466939, time per call = 0.082800 ms
+total =258462.466939, time per call = 0.081100 ms
 ./mults_diff.exe
-total =258462.466939, time per call = 0.047600 ms
+total =258462.466939, time per call = 0.045900 ms
 ./mults_diff_dps.exe
-total =258462.466939, time per call = 0.017300 ms
+total =258462.466939, time per call = 0.017700 ms
 python micro.py mults
-total =258462.466939, time per call = 454.829800 ms
+total =258462.466939, time per call = 452.059200 ms
 mono mults_fsharp_for.exe
-total =19.750396, time per call = 9.900000 ms
+total =19.750396, time per call = 9.800000 ms
 mono mults_fsharp_rev.exe
-total =19.750396, time per call = 38692.200000 ms
+total =19.750396, time per call = 37030.200000 ms
 25600
 ./mults_tap_rev.exe
-total =518158.745239, time per call = 576.650586 ms
+total =518158.745239, time per call = 570.282812 ms
 ./mults_tap_for.exe
-total =518158.745239, time per call = 0.191100 ms
+total =518158.745239, time per call = 0.170100 ms
 ./mults_diff.exe
-total =518158.745239, time per call = 0.098100 ms
+total =518158.745239, time per call = 0.094200 ms
 ./mults_diff_dps.exe
 total =518158.745239, time per call = 0.036200 ms
 python micro.py mults
-total =518158.745239, time per call = 1571.234100 ms
+total =518158.745239, time per call = 1554.161800 ms
 mono mults_fsharp_for.exe
-total =19.750396, time per call = 20.000000 ms
+total =19.750396, time per call = 18.000000 ms
 mono mults_fsharp_rev.exe

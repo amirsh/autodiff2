@@ -2,119 +2,119 @@
 ./dot_tap_rev.exe
 total =459.529070, time per call = 0.001300 ms
 ./dot_tap_for.exe
-total =459.529070, time per call = 0.007600 ms
+total =459.529070, time per call = 0.007900 ms
 ./dot_diff.exe
 total =459.529070, time per call = 0.000500 ms
 ./dot_diff_dps.exe
 total =459.529070, time per call = 0.000400 ms
 python micro.py dot
-total =459.529070, time per call = 0.075900 ms
+total =459.529070, time per call = 0.068200 ms
 mono dot_fsharp_for.exe
-total =459.529070, time per call = 3.100000 ms
+total =459.529070, time per call = 2.700000 ms
 mono dot_fsharp_rev.exe
-total =459.529070, time per call = 0.900000 ms
+total =459.529070, time per call = 0.800000 ms
 200
 ./dot_tap_rev.exe
 total =978.344030, time per call = 0.001400 ms
 ./dot_tap_for.exe
-total =978.344030, time per call = 0.034600 ms
+total =978.344030, time per call = 0.034700 ms
 ./dot_diff.exe
-total =978.344030, time per call = 0.001100 ms
+total =978.344030, time per call = 0.001000 ms
 ./dot_diff_dps.exe
 total =978.344030, time per call = 0.000500 ms
 python micro.py dot
-total =978.344030, time per call = 0.080600 ms
+total =978.344030, time per call = 0.066600 ms
 mono dot_fsharp_for.exe
-total =978.344030, time per call = 9.000000 ms
+total =978.344030, time per call = 8.000000 ms
 mono dot_fsharp_rev.exe
-total =978.344030, time per call = 1.500000 ms
+total =978.344030, time per call = 1.400000 ms
 400
 ./dot_tap_rev.exe
-total =1960.724910, time per call = 0.001700 ms
-./dot_tap_for.exe
-total =1960.724910, time per call = 0.155200 ms
-./dot_diff.exe
 total =1960.724910, time per call = 0.001600 ms
+./dot_tap_for.exe
+total =1960.724910, time per call = 0.132000 ms
+./dot_diff.exe
+total =1960.724910, time per call = 0.001700 ms
 ./dot_diff_dps.exe
 total =1960.724910, time per call = 0.000800 ms
 python micro.py dot
-total =1960.724910, time per call = 0.067800 ms
+total =1960.724910, time per call = 0.068000 ms
 mono dot_fsharp_for.exe
-total =1960.724910, time per call = 30.300000 ms
+total =1960.724910, time per call = 30.000000 ms
 mono dot_fsharp_rev.exe
 total =1960.724910, time per call = 1.500000 ms
 800
 ./dot_tap_rev.exe
 total =3859.237200, time per call = 0.002300 ms
 ./dot_tap_for.exe
-total =3859.237200, time per call = 0.553300 ms
+total =3859.237200, time per call = 0.551500 ms
 ./dot_diff.exe
-total =3859.237200, time per call = 0.003100 ms
+total =3859.237200, time per call = 0.003600 ms
 ./dot_diff_dps.exe
-total =3859.237200, time per call = 0.001100 ms
+total =3859.237200, time per call = 0.001400 ms
 python micro.py dot
-total =3859.237200, time per call = 0.068200 ms
+total =3859.237200, time per call = 0.066600 ms
 mono dot_fsharp_for.exe
-total =3859.237200, time per call = 122.200000 ms
+total =3859.237200, time per call = 118.700000 ms
 mono dot_fsharp_rev.exe
-total =3859.237200, time per call = 1.900000 ms
+total =3859.237200, time per call = 2.000000 ms
 1600
 ./dot_tap_rev.exe
-total =7683.429590, time per call = 0.003400 ms
+total =7683.429590, time per call = 0.003800 ms
 ./dot_tap_for.exe
-total =7683.429590, time per call = 2.205200 ms
+total =7683.429590, time per call = 2.185900 ms
 ./dot_diff.exe
-total =7683.429590, time per call = 0.006600 ms
+total =7683.429590, time per call = 0.006100 ms
 ./dot_diff_dps.exe
 total =7683.429590, time per call = 0.002300 ms
 python micro.py dot
-total =7683.429590, time per call = 0.075600 ms
+total =7683.429590, time per call = 0.072100 ms
 mono dot_fsharp_for.exe
-total =7683.429590, time per call = 743.600000 ms
+total =7683.429590, time per call = 704.900000 ms
 mono dot_fsharp_rev.exe
-total =7683.429590, time per call = 2.200000 ms
+total =7683.429590, time per call = 2.100000 ms
 3200
 ./dot_tap_rev.exe
-total =15566.615610, time per call = 0.006300 ms
+total =15566.615610, time per call = 0.006200 ms
 ./dot_tap_for.exe
-total =15566.615610, time per call = 8.754900 ms
+total =15566.615610, time per call = 8.655300 ms
 ./dot_diff.exe
-total =15566.615610, time per call = 0.012900 ms
+total =15566.615610, time per call = 0.012300 ms
 ./dot_diff_dps.exe
-total =15566.615610, time per call = 0.005000 ms
+total =15566.615610, time per call = 0.004500 ms
 python micro.py dot
-total =15566.615610, time per call = 0.070700 ms
+total =15566.615610, time per call = 0.072800 ms
 mono dot_fsharp_for.exe
-total =15566.615610, time per call = 2811.700000 ms
+total =15566.615610, time per call = 2699.900000 ms
 mono dot_fsharp_rev.exe
-total =15566.615610, time per call = 5.300000 ms
+total =15566.615610, time per call = 5.200000 ms
 6400
 ./dot_tap_rev.exe
-total =31159.788570, time per call = 0.011000 ms
+total =31159.788570, time per call = 0.011100 ms
 ./dot_tap_for.exe
-total =31159.788570, time per call = 36.239700 ms
+total =31159.788570, time per call = 34.546799 ms
 ./dot_diff.exe
-total =31159.788570, time per call = 0.022800 ms
+total =31159.788570, time per call = 0.024100 ms
 ./dot_diff_dps.exe
-total =31159.788570, time per call = 0.008800 ms
+total =31159.788570, time per call = 0.008900 ms
 python micro.py dot
-total =31159.788570, time per call = 0.086500 ms
+total =31159.788570, time per call = 0.078000 ms
 mono dot_fsharp_for.exe
-total =31159.788570, time per call = 11389.600000 ms
+total =31159.788570, time per call = 10835.900000 ms
 mono dot_fsharp_rev.exe
-total =31159.788570, time per call = 12.700000 ms
+total =31159.788570, time per call = 11.900000 ms
 12800
 ./dot_tap_rev.exe
-total =63224.190710, time per call = 0.020800 ms
+total =63224.190710, time per call = 0.020900 ms
 ./dot_tap_for.exe
-total =63224.190710, time per call = 152.813403 ms
+total =63224.190710, time per call = 137.934094 ms
 ./dot_diff.exe
-total =63224.190710, time per call = 0.047800 ms
+total =63224.190710, time per call = 0.047300 ms
 ./dot_diff_dps.exe
-total =63224.190710, time per call = 0.018800 ms
+total =63224.190710, time per call = 0.018100 ms
 python micro.py dot
-total =63224.190710, time per call = 0.092000 ms
+total =63224.190710, time per call = 0.089700 ms
 mono dot_fsharp_for.exe
-total =63224.190710, time per call = 46295.300000 ms
+total =63224.190710, time per call = 43096.800000 ms
 mono dot_fsharp_rev.exe
-total =63224.190710, time per call = 38.500000 ms
+total =63224.190710, time per call = 35.600000 ms

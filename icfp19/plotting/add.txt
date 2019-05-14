@@ -2,119 +2,119 @@
 ./add_tap_rev.exe
 total =500.000000, time per call = 0.005100 ms
 ./add_tap_for.exe
-total =500.000000, time per call = 0.023100 ms
+total =500.000000, time per call = 0.023700 ms
 ./add_diff.exe
-total =500.000000, time per call = 0.012100 ms
+total =500.000000, time per call = 0.010300 ms
 ./add_diff_dps.exe
-total =500.000000, time per call = 0.004100 ms
+total =500.000000, time per call = 0.003900 ms
 python micro.py add
-total =500.000000, time per call = 0.659100 ms
+total =500.000000, time per call = 0.592500 ms
 mono add_fsharp_for.exe
-total =500.000000, time per call = 4.500000 ms
+total =500.000000, time per call = 4.100000 ms
 mono add_fsharp_rev.exe
-total =500.000000, time per call = 4.300000 ms
+total =500.000000, time per call = 4.700000 ms
 100
 ./add_tap_rev.exe
-total =1000.000000, time per call = 0.017300 ms
+total =1000.000000, time per call = 0.017200 ms
 ./add_tap_for.exe
-total =1000.000000, time per call = 0.090200 ms
+total =1000.000000, time per call = 0.084200 ms
 ./add_diff.exe
-total =1000.000000, time per call = 0.047100 ms
+total =1000.000000, time per call = 0.046500 ms
 ./add_diff_dps.exe
-total =1000.000000, time per call = 0.019700 ms
+total =1000.000000, time per call = 0.017300 ms
 python micro.py add
-total =1000.000000, time per call = 1.114900 ms
+total =1000.000000, time per call = 1.086500 ms
 mono add_fsharp_for.exe
-total =1000.000000, time per call = 8.500000 ms
+total =1000.000000, time per call = 8.300000 ms
 mono add_fsharp_rev.exe
-total =1000.000000, time per call = 7.700000 ms
+total =1000.000000, time per call = 7.400000 ms
 200
 ./add_tap_rev.exe
 total =2000.000000, time per call = 0.067900 ms
 ./add_tap_for.exe
-total =2000.000000, time per call = 0.357000 ms
+total =2000.000000, time per call = 0.357700 ms
 ./add_diff.exe
-total =2000.000000, time per call = 0.162700 ms
+total =2000.000000, time per call = 0.168200 ms
 ./add_diff_dps.exe
 total =2000.000000, time per call = 0.068100 ms
 python micro.py add
-total =2000.000000, time per call = 2.335700 ms
+total =2000.000000, time per call = 2.165800 ms
 mono add_fsharp_for.exe
-total =2000.000000, time per call = 26.300000 ms
+total =2000.000000, time per call = 25.500000 ms
 mono add_fsharp_rev.exe
-total =2000.000000, time per call = 21.100000 ms
+total =2000.000000, time per call = 19.900000 ms
 400
 ./add_tap_rev.exe
-total =4000.000000, time per call = 0.249700 ms
+total =4000.000000, time per call = 0.258000 ms
 ./add_tap_for.exe
-total =4000.000000, time per call = 1.259000 ms
+total =4000.000000, time per call = 1.205100 ms
 ./add_diff.exe
-total =4000.000000, time per call = 0.657600 ms
+total =4000.000000, time per call = 0.650500 ms
 ./add_diff_dps.exe
-total =4000.000000, time per call = 0.243200 ms
+total =4000.000000, time per call = 0.243400 ms
 python micro.py add
-total =4000.000000, time per call = 4.647600 ms
+total =4000.000000, time per call = 4.379900 ms
 mono add_fsharp_for.exe
-total =4000.000000, time per call = 100.700000 ms
+total =4000.000000, time per call = 94.700000 ms
 mono add_fsharp_rev.exe
-total =4000.000000, time per call = 74.600000 ms
+total =4000.000000, time per call = 71.400000 ms
 800
 ./add_tap_rev.exe
-total =8000.000000, time per call = 1.171400 ms
+total =8000.000000, time per call = 1.048100 ms
 ./add_tap_for.exe
-total =8000.000000, time per call = 4.810600 ms
+total =8000.000000, time per call = 4.678100 ms
 ./add_diff.exe
-total =8000.000000, time per call = 2.767800 ms
+total =8000.000000, time per call = 2.622300 ms
 ./add_diff_dps.exe
-total =8000.000000, time per call = 1.026200 ms
+total =8000.000000, time per call = 0.973900 ms
 python micro.py add
-total =8000.000000, time per call = 10.648500 ms
+total =8000.000000, time per call = 10.444300 ms
 mono add_fsharp_for.exe
-total =8000.000000, time per call = 409.400000 ms
+total =8000.000000, time per call = 391.000000 ms
 mono add_fsharp_rev.exe
-total =8000.000000, time per call = 289.200000 ms
+total =8000.000000, time per call = 273.300000 ms
 1600
 ./add_tap_rev.exe
-total =16000.000000, time per call = 5.450200 ms
+total =16000.000000, time per call = 5.301400 ms
 ./add_tap_for.exe
-total =16000.000000, time per call = 18.186900 ms
+total =16000.000000, time per call = 17.483099 ms
 ./add_diff.exe
-total =16000.000000, time per call = 11.042500 ms
+total =16000.000000, time per call = 10.512700 ms
 ./add_diff_dps.exe
-total =16000.000000, time per call = 4.572800 ms
+total =16000.000000, time per call = 4.540300 ms
 python micro.py add
-total =16000.000000, time per call = 29.748300 ms
+total =16000.000000, time per call = 24.358900 ms
 mono add_fsharp_for.exe
-total =16000.000000, time per call = 2698.700000 ms
+total =16000.000000, time per call = 2343.200000 ms
 mono add_fsharp_rev.exe
-total =16000.000000, time per call = 1376.400000 ms
+total =16000.000000, time per call = 1234.400000 ms
 3200
 ./add_tap_rev.exe
-total =32000.000000, time per call = 24.302400 ms
+total =32000.000000, time per call = 23.005701 ms
 ./add_tap_for.exe
-total =32000.000000, time per call = 74.011102 ms
+total =32000.000000, time per call = 68.715503 ms
 ./add_diff.exe
-total =32000.000000, time per call = 45.037000 ms
+total =32000.000000, time per call = 41.190701 ms
 ./add_diff_dps.exe
-total =32000.000000, time per call = 20.315199 ms
+total =32000.000000, time per call = 18.339101 ms
 python micro.py add
-total =32000.000000, time per call = 77.563700 ms
+total =32000.000000, time per call = 74.433100 ms
 mono add_fsharp_for.exe
-total =32000.000000, time per call = 12253.300000 ms
+total =32000.000000, time per call = 11732.500000 ms
 mono add_fsharp_rev.exe
-total =32000.000000, time per call = 5587.100000 ms
+total =32000.000000, time per call = 5327.700000 ms
 6400
 ./add_tap_rev.exe
-total =64000.000000, time per call = 94.869098 ms
+total =64000.000000, time per call = 92.271698 ms
 ./add_tap_for.exe
-total =64000.000000, time per call = 286.504102 ms
+total =64000.000000, time per call = 274.479004 ms
 ./add_diff.exe
-total =64000.000000, time per call = 171.980603 ms
+total =64000.000000, time per call = 166.110803 ms
 ./add_diff_dps.exe
-total =64000.000000, time per call = 76.256702 ms
+total =64000.000000, time per call = 73.484802 ms
 python micro.py add
-total =64000.000000, time per call = 271.651300 ms
+total =64000.000000, time per call = 257.643000 ms
 mono add_fsharp_for.exe
-total =64000.000000, time per call = 80007.300000 ms
+total =64000.000000, time per call = 73435.500000 ms
 mono add_fsharp_rev.exe
-total =64000.000000, time per call = 29882.000000 ms
+total =64000.000000, time per call = 27918.900000 ms

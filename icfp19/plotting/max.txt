@@ -1,104 +1,104 @@
 800
 ./max_tap_rev.exe
-total =10.000000, time per call = 0.006300 ms
+total =10.000000, time per call = 0.004700 ms
 ./max_tap_for.exe
-total =10.000000, time per call = 2.518000 ms
+total =10.000000, time per call = 2.202200 ms
 ./max_diff.exe
-total =10.000000, time per call = 0.011100 ms
+total =10.000000, time per call = 0.006200 ms
 ./max_diff_dps.exe
 total =10.000000, time per call = 0.004700 ms
 python micro.py max
-total =10.000000, time per call = 0.067200 ms
+total =10.000000, time per call = 0.065600 ms
 mono max_fsharp_for.exe
-total =10.000000, time per call = 59.900000 ms
+total =10.000000, time per call = 57.500000 ms
 mono max_fsharp_rev.exe
-total =10.000000, time per call = 3.600000 ms
+total =10.000000, time per call = 3.500000 ms
 1600
 ./max_tap_rev.exe
-total =10.000000, time per call = 0.008600 ms
+total =10.000000, time per call = 0.008500 ms
 ./max_tap_for.exe
-total =10.000000, time per call = 9.088300 ms
+total =10.000000, time per call = 8.863800 ms
 ./max_diff.exe
-total =10.000000, time per call = 0.014000 ms
+total =10.000000, time per call = 0.011900 ms
 ./max_diff_dps.exe
-total =10.000000, time per call = 0.009100 ms
+total =10.000000, time per call = 0.008000 ms
 python micro.py max
-total =10.000000, time per call = 0.076400 ms
+total =10.000000, time per call = 0.066600 ms
 mono max_fsharp_for.exe
-total =10.000000, time per call = 454.500000 ms
+total =10.000000, time per call = 444.000000 ms
 mono max_fsharp_rev.exe
-total =10.000000, time per call = 3.200000 ms
+total =10.000000, time per call = 3.000000 ms
 3200
 ./max_tap_rev.exe
-total =10.000000, time per call = 0.015300 ms
+total =10.000000, time per call = 0.015800 ms
 ./max_tap_for.exe
-total =10.000000, time per call = 41.373599 ms
+total =10.000000, time per call = 34.739099 ms
 ./max_diff.exe
-total =10.000000, time per call = 0.026400 ms
+total =10.000000, time per call = 0.027300 ms
 ./max_diff_dps.exe
-total =10.000000, time per call = 0.017800 ms
+total =10.000000, time per call = 0.015600 ms
 python micro.py max
-total =10.000000, time per call = 0.078600 ms
+total =10.000000, time per call = 0.077600 ms
 mono max_fsharp_for.exe
-total =10.000000, time per call = 1900.900000 ms
+total =10.000000, time per call = 1730.800000 ms
 mono max_fsharp_rev.exe
-total =10.000000, time per call = 4.500000 ms
+total =10.000000, time per call = 3.700000 ms
 6400
 ./max_tap_rev.exe
-total =10.000000, time per call = 0.033600 ms
+total =10.000000, time per call = 0.029400 ms
 ./max_tap_for.exe
-total =10.000000, time per call = 162.747705 ms
+total =10.000000, time per call = 139.454102 ms
 ./max_diff.exe
-total =10.000000, time per call = 0.050000 ms
+total =10.000000, time per call = 0.047500 ms
 ./max_diff_dps.exe
-total =10.000000, time per call = 0.038000 ms
+total =10.000000, time per call = 0.032200 ms
 python micro.py max
-total =10.000000, time per call = 0.112500 ms
+total =10.000000, time per call = 0.080900 ms
 mono max_fsharp_for.exe
-total =10.000000, time per call = 7523.300000 ms
+total =10.000000, time per call = 6821.600000 ms
 mono max_fsharp_rev.exe
-total =10.000000, time per call = 5.000000 ms
+total =10.000000, time per call = 4.600000 ms
 12800
 ./max_tap_rev.exe
-total =10.000000, time per call = 0.078100 ms
+total =10.000000, time per call = 0.057600 ms
 ./max_tap_for.exe
-total =10.000000, time per call = 613.403516 ms
+total =10.000000, time per call = 555.726904 ms
 ./max_diff.exe
-total =10.000000, time per call = 0.109600 ms
+total =10.000000, time per call = 0.095100 ms
 ./max_diff_dps.exe
-total =10.000000, time per call = 0.071900 ms
+total =10.000000, time per call = 0.062500 ms
 python micro.py max
-total =10.000000, time per call = 0.103500 ms
+total =10.000000, time per call = 0.100900 ms
 mono max_fsharp_for.exe
-total =10.000000, time per call = 29543.100000 ms
+total =10.000000, time per call = 26719.800000 ms
 mono max_fsharp_rev.exe
-total =10.000000, time per call = 6.700000 ms
+total =10.000000, time per call = 6.800000 ms
 25600
 ./max_tap_rev.exe
-total =10.000000, time per call = 0.167500 ms
+total =10.000000, time per call = 0.116300 ms
 ./max_tap_for.exe
-total =10.000000, time per call = 2372.967578 ms
+total =10.000000, time per call = 2220.639648 ms
 ./max_diff.exe
-total =10.000000, time per call = 0.186000 ms
+total =10.000000, time per call = 0.190000 ms
 ./max_diff_dps.exe
-total =10.000000, time per call = 0.123200 ms
+total =10.000000, time per call = 0.125100 ms
 python micro.py max
-total =10.000000, time per call = 0.159500 ms
+total =10.000000, time per call = 0.141000 ms
 mono max_fsharp_for.exe
-total =10.000000, time per call = 112758.200000 ms
+total =10.000000, time per call = 109409.400000 ms
 mono max_fsharp_rev.exe
-total =10.000000, time per call = 14.000000 ms
+total =10.000000, time per call = 13.300000 ms
 51200
 ./max_tap_rev.exe
-total =10.000000, time per call = 0.266400 ms
+total =10.000000, time per call = 0.282000 ms
 ./max_tap_for.exe
-total =10.000000, time per call = 9270.933594 ms
+total =10.000000, time per call = 9906.884375 ms
 ./max_diff.exe
-total =10.000000, time per call = 0.633300 ms
+total =10.000000, time per call = 0.475500 ms
 ./max_diff_dps.exe
-total =10.000000, time per call = 0.265400 ms
+total =10.000000, time per call = 0.359700 ms
 python micro.py max
-total =10.000000, time per call = 0.216700 ms
+total =10.000000, time per call = 0.215600 ms
 mono max_fsharp_for.exe
 mono max_fsharp_rev.exe
-total =10.000000, time per call = 21.100000 ms
+total =10.000000, time per call = 20.300000 ms
