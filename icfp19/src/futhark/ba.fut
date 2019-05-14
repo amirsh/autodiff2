@@ -56,22 +56,6 @@ module fs (M: real) = {
       let res = project cam x
       in res
     ))
-
-  let compute_reproj_err cam X w feat =
-    v2d.scale w (project cam X v2d.- feat)
-
-  let compute_zach_weight_error w =
-    M.(i32 1 - w*w)
-
-  let ba_objective cams X w (obs:[][]i32) (feat:[]point_2d) =
-    let p = length w
-    let reproj_err =
-      tabulate p (\i -> compute_reproj_err cams[obs[i,0]]
-                                           X[obs[i,1]]
-                                           w[i]
-                                           feat[i])
-    let w_err = map compute_zach_weight_error w
-    in (reproj_err, w_err)
 }
 
 module f32_dual = mk_dual f32
@@ -90,11 +74,11 @@ module fs_f32_dual = fs f32_dual
 
 let main vec1 = 
   let dim = length vec1
-  let n = (dim - 11) / 3
+  let n = (dim - N_CAM_PARAMS) / 3
   let vec1' = map f32_dual.inject vec1
-  let cam = vec1[0:11]
-  in tabulate 11 (\i -> 
-    let camd = tabulate 11 (\j -> f32.bool(i == j))
+  let cam = vec1[0:N_CAM_PARAMS]
+  in tabulate N_CAM_PARAMS (\i -> 
+    let camd = tabulate N_CAM_PARAMS (\j -> f32.bool(i == j))
     let cam' = map2 (f32_dual.make_dual) cam camd
     in fs_f32_dual.project_all n vec1' cam'
   )
