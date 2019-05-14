@@ -34,8 +34,18 @@ object ExtractCSV {
       }
       m * 100 * 1000 + n
   }
-  def nameType(s: String): Int = {
-    orderType(s)
+  def nameType(s: String): Int = bench match {
+    case NMF_BENCH =>
+      val (m, n) = {
+        val dim = s.toInt
+        (dim / 10000) -> (dim % 10000)
+      }
+      if(n == 100)
+        m
+      else
+        n
+    case _ =>
+      orderType(s)
   }
   def main(args: Array[String]): Unit = {
     val FILE = args(0)

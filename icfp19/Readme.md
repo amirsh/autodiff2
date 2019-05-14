@@ -16,3 +16,11 @@ Afterwards, run the following command in the `src` directory to compile all the 
 ```
 
 Finally, run the `run.sh` script in order to run all the experiments.
+
+Plots
+---
+Run the following command in the `src` directory:
+
+```
+./plot.sh
+```
