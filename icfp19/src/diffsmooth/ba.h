@@ -47,22 +47,22 @@ array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) 
     } else {
       x1256 = 0;
     }
-    number_t x1257 = (x1256) * (x1234);
-    number_t x1258 = (x1257) * (x1256);
-    index_t x1259 = (i) == (2);
-    index_t x1260;
-    if (x1259) {
-      x1260 = 1;
+    index_t x1257 = (i) == (2);
+    index_t x1258;
+    if (x1257) {
+      x1258 = 1;
     } else {
-      x1260 = 0;
+      x1258 = 0;
     }
-    number_t x1261 = (x1254) * (x1233);
-    number_t x1262 = (x1233) * (x1254);
-    number_t x1263 = (x1261) + (x1262);
-    number_t x1264 = (x1257) + (x1258);
-    number_t x1265 = (x1263) + (x1264);
-    number_t x1266 = (x1260) * (x1235);
-    number_t x1267 = (x1258) * (x1260);
+    number_t x1259 = (x1254) * (x1233);
+    number_t x1260 = (x1233) * (x1254);
+    number_t x1261 = (x1259) + (x1260);
+    number_t x1262 = (x1256) * (x1234);
+    number_t x1263 = (x1234) * (x1256);
+    number_t x1264 = (x1262) + (x1263);
+    number_t x1265 = (x1261) + (x1264);
+    number_t x1266 = (x1258) * (x1235);
+    number_t x1267 = (x1235) * (x1258);
     number_t x1268 = (x1266) + (x1267);
     number_t x1269 = (x1265) + (x1268);
     number_t x1271 = (x1269) * (x1270);
@@ -71,7 +71,7 @@ array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) 
     number_t x1275 = (x1256) * (x1242);
     number_t x1276 = (x1234) * (x1274);
     number_t x1277 = (x1275) + (x1276);
-    number_t x1278 = (x1260) * (x1242);
+    number_t x1278 = (x1258) * (x1242);
     number_t x1279 = (x1235) * (x1274);
     number_t x1280 = (x1278) + (x1279);
     number_t x1281 = (x1254) * (x1242);

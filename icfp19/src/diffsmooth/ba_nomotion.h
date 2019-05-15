@@ -5,10 +5,10 @@
 #include <math.h>
 
 array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) {
-  array_array_array_number_t x786 = (array_array_array_number_t)storage_alloc(sizeof(int) * 2);x786->length=(cam)->length;x786->arr = (array_array_number_t*)storage_alloc(sizeof(array_array_number_t) * (cam)->length);
-  for(int i = 0; i < x786->length; i++){
-    array_array_number_t x785 = (array_array_number_t)storage_alloc(sizeof(int) * 2);x785->length=n;x785->arr = (array_number_t*)storage_alloc(sizeof(array_number_t) * n);
-    for(int i0 = 0; i0 < x785->length; i0++){
+  array_array_array_number_t x775 = (array_array_array_number_t)storage_alloc(sizeof(int) * 2);x775->length=(cam)->length;x775->arr = (array_array_number_t*)storage_alloc(sizeof(array_array_number_t) * (cam)->length);
+  for(int i = 0; i < x775->length; i++){
+    array_array_number_t x774 = (array_array_number_t)storage_alloc(sizeof(int) * 2);x774->length=n;x774->arr = (array_number_t*)storage_alloc(sizeof(array_number_t) * n);
+    for(int i0 = 0; i0 < x774->length; i0++){
       index_t x14 = (3) * (i0);
       number_t x83 = (cam->arr[0]);
       index_t x81;
@@ -224,13 +224,13 @@ array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) 
       number_t x239 = ((x347) * (x350)) + ((x349) * (x348));
       number_t x242 = (x337) * (x338);
       number_t x240 = ((x335) * (x338)) + ((x337) * (x336));
-      tuple_number_t_number_t x776 = (tuple_number_t_number_t){._1=(x217) - (x218), ._2=(x215) - (x216)};
-      tuple_number_t_number_t x777 = (tuple_number_t_number_t){._1=(x229) - (x230), ._2=(x227) - (x228)};
-      tuple_number_t_number_t x778 = (tuple_number_t_number_t){._1=(x241) - (x242), ._2=(x239) - (x240)};
+      tuple_number_t_number_t x765 = (tuple_number_t_number_t){._1=(x217) - (x218), ._2=(x215) - (x216)};
+      tuple_number_t_number_t x766 = (tuple_number_t_number_t){._1=(x229) - (x230), ._2=(x227) - (x228)};
+      tuple_number_t_number_t x767 = (tuple_number_t_number_t){._1=(x241) - (x242), ._2=(x239) - (x240)};
       array_tuple_number_t_number_t w_cross_X = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);w_cross_X->length=3;w_cross_X->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 3);
-      w_cross_X->arr[0] = x776;
-      w_cross_X->arr[1] = x777;
-      w_cross_X->arr[2] = x778;
+      w_cross_X->arr[0] = x765;
+      w_cross_X->arr[1] = x766;
+      w_cross_X->arr[2] = x767;
       number_t x619 = (cam->arr[0]);
       index_t x617;
       if ((i) == (0)) {
@@ -325,8 +325,8 @@ array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) 
       number_t x275 = (x7251) + (x7261);
       number_t x278 = (1) - (x388);
       number_t x276 = -(x386);
-      array_tuple_number_t_number_t x780 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x780->length=3;x780->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 3);
-      for(int x376 = 0; x376 < x780->length; x376++){
+      array_tuple_number_t_number_t x769 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x769->length=3;x769->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 3);
+      for(int x376 = 0; x376 < x769->length; x376++){
         index_t x524 = (11) + (x14);
         index_t j20 = (x376) + (x524);
         tuple_number_t_index_t x0010 = (tuple_number_t_index_t){._1=(xs->arr[j20]), ._2=0};
@@ -370,11 +370,11 @@ array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) 
         number_t x761 = (x713) + (x714);
         number_t x764 = (x751) * (x752);
         number_t x762 = ((x749) * (x752)) + ((x751) * (x750));
-        tuple_number_t_number_t x779 = (tuple_number_t_number_t){._1=(x763) + (x764), ._2=(x761) + (x762)};
-        x780->arr[x376] = x779;
+        tuple_number_t_number_t x768 = (tuple_number_t_number_t){._1=(x763) + (x764), ._2=(x761) + (x762)};
+        x769->arr[x376] = x768;
         
       }
-      array_tuple_number_t_number_t Xcam = x780;
+      array_tuple_number_t_number_t Xcam = x769;
       tuple_number_t_number_t x38 = (Xcam->arr[2]);
       number_t x42 = (x38)._1;
       number_t x40 = (x38)._2;
@@ -429,8 +429,8 @@ array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) 
       number_t x67 = (1) + (x122);
       number_t x68 = (x109) * (x110);
       number_t x66 = ((x107) * (x110)) + ((x109) * (x108));
-      array_tuple_number_t_number_t x782 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x782->length=2;x782->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 2);
-      for(int x98 = 0; x98 < x782->length; x98++){
+      array_tuple_number_t_number_t x771 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x771->length=2;x771->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 2);
+      for(int x98 = 0; x98 < x771->length; x98++){
         tuple_number_t_number_t xi1 = (Xcam->arr[x98]);
         number_t x253 = (xi1)._1;
         number_t x251 = (xi1)._2;
@@ -440,11 +440,11 @@ array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) 
         number_t x359 = ((x251) * (x254)) + ((x253) * (x252));
         number_t x362 = (x67) + (x68);
         number_t x360 = (x120) + (x66);
-        tuple_number_t_number_t x781 = (tuple_number_t_number_t){._1=(x361) * (x362), ._2=((x359) * (x362)) + ((x361) * (x360))};
-        x782->arr[x98] = x781;
+        tuple_number_t_number_t x770 = (tuple_number_t_number_t){._1=(x361) * (x362), ._2=((x359) * (x362)) + ((x361) * (x360))};
+        x771->arr[x98] = x770;
         
       }
-      array_tuple_number_t_number_t distorted = x782;
+      array_tuple_number_t_number_t distorted = x771;
       array_tuple_number_t_number_t v = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);v->length=2;v->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 2);
       for(int x48 = 0; x48 < v->length; x48++){
         index_t j00000 = (x48) + (7);
@@ -467,21 +467,21 @@ array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) 
         }
         number_t x206 = (x181) * (x182);
         number_t x204 = ((x179) * (x182)) + ((x181) * (x180));
-        tuple_number_t_number_t x783 = (tuple_number_t_number_t){._1=(x205) + (x206), ._2=(x203) + (x204)};
-        v->arr[x48] = x783;
+        tuple_number_t_number_t x772 = (tuple_number_t_number_t){._1=(x205) + (x206), ._2=(x203) + (x204)};
+        v->arr[x48] = x772;
         
       }
-      array_number_t x784 = (array_number_t)storage_alloc(sizeof(int) * 2);x784->length=(v)->length;x784->arr = (number_t*)storage_alloc(sizeof(number_t) * (v)->length);
-      for(int i00 = 0; i00 < x784->length; i00++){
+      array_number_t x773 = (array_number_t)storage_alloc(sizeof(int) * 2);x773->length=(v)->length;x773->arr = (number_t*)storage_alloc(sizeof(number_t) * (v)->length);
+      for(int i00 = 0; i00 < x773->length; i00++){
         tuple_number_t_number_t s = (v->arr[i00]);
-        x784->arr[i00] = (s)._2;
+        x773->arr[i00] = (s)._2;
         
       }
-      x785->arr[i0] = x784;
+      x774->arr[i0] = x773;
       
     }
-    x786->arr[i] = x785;
+    x775->arr[i] = x774;
     
   }
-  return x786;
+  return x775;
 }
