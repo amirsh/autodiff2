@@ -21,7 +21,13 @@
     #endif
   #endif
 #else
-  #include "nmf_exp.h"
+  #if defined DPS
+    #include "diffsmooth/nmf_dps.h"
+  #elif defined UNOPT
+    #include "diffsmooth/nmf_unopt.h"
+  #else
+    #include "diffsmooth/nmf.h"
+  #endif
 #endif
 
 double dist(int seed) {
@@ -133,19 +139,9 @@ void test_nmf(card_t M, card_t N, card_t K, card_t iters)
       #endif
     #else
       #if defined DPS
-        array_number_t tmp = 
-          #if defined POISSON
-            nmf_uv_poisson_dps(s, u, v, A); 
-          #else
-            nmf_uv_dps(s, u, v, A); 
-          #endif
+        array_number_t tmp = nmf_dps(s, u, v, A); 
       #else
-        array_number_t tmp = 
-          #if defined POISSON
-            nmf_uv_poisson(u, v, A);
-          #else
-            nmf_uv(u, v, A);
-          #endif
+        array_number_t tmp = nmf(u, v, A);
       #endif
       total += vector_sum(tmp);
     #endif
