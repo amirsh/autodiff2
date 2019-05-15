@@ -16,14 +16,12 @@
     #else
       #include "tapanade/submitted/10/ba_proj_d-all.h"
     #endif
-  #elif defined FUSED && defined NOUNROLL
-    #include "diffsmooth/ba_rod_jac_nounroll.h"
   #elif defined FUSED && defined DPS
-    #include "diffsmooth/ba_rod_jac_aos_dps.h"
+    #include "diffsmooth/ba_dps.h"
   #elif defined FUSED && defined NOMOTION
-    #include "diffsmooth/ba_rod_jac_nomotion.h"
+    #include "diffsmooth/ba_nomotion.h"
   #elif defined FUSED
-    #include "diffsmooth/ba_rod_jac_aos.h"
+    #include "diffsmooth/ba.h"
   #endif
 #else
   #if defined TAPENADE
@@ -367,29 +365,14 @@ void test_micro(card_t DIM, card_t iters)
     double** tmp = mat2_result_st;
     for(int i=0; i<11; i++) {
       vec_tmp->arr[i] = 1;
-      #if defined BA_ROD
-        ba_rod_native_d(3, vec1->arr, vec_tmp->arr, OUT_N, tmp, mat3_result_st[i]);
-      #else
-        ba_proj_native_d(3, vec1->arr, vec_tmp->arr, vec1->arr, OUT_N, tmp, mat3_result_st[i]);
-      #endif
+      ba_proj_native_d(3, vec1->arr, vec_tmp->arr, vec1->arr, OUT_N, tmp, mat3_result_st[i]);
       vec_tmp->arr[i] = 0;
     }
     // ba_proj_native(3, vec1->arr, OUT_N, mat4_result_st);
     #elif defined DPS
-    #if defined BA_ROD
-        ba_rod_jac_dps(mat3_result, vec1, OUT_N);
-      #else
-        // ba_proj_jac_dps(mat3_result, vec1, OUT_N);
-        ba_proj_jac2_dps(mat3_result, cam, vec1, OUT_N);
-      #endif
+      ba_dps(mat3_result, cam, vec1, OUT_N);
     #else
-      #if defined BA_ROD
-        mat3_result = ba_rod_jac(vec1, OUT_N);
-      #else
-        mat3_result = ba_proj_jac2(cam, vec1, OUT_N);
-        // matrix3d_print(mat3_result);
-      #endif
-      // mat4_result = ba_proj(vec1, OUT_N);
+      mat3_result = ba(cam, vec1, OUT_N);
     #endif
     // matrix_print(mat3_result->arr[0]);
     total += matrix3Sum(mat3_result);

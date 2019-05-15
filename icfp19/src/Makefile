@@ -2,7 +2,7 @@ REV_FOLDER=tapanade/ADFirstAidKit
 FLIB=-L /usr/local/lib/gcc/9/ -lgfortran $(REV_FOLDER)/adBuffer.c $(REV_FOLDER)/adStack.c
 OPTS=-O3 -DBUMP -lm
 
-all : ba_proj micro nmf
+all : ba micro nmf
 .PHONY: all 
 
 clean:
@@ -23,7 +23,7 @@ micro : micro-main.c
 	clang $(OPTS) micro-main.c -DLSE -DTAPENADE -DFUSED -o lse_tap_fused_for.exe
 	clang $(OPTS) micro-main.c -DLSE -DTAPENADE -DFUSED -DREV_MODE $(FLIB) -o lse_tap_fused_rev.exe
 
-ba_proj : micro-main.c
+ba : micro-main.c
 	clang $(OPTS) micro-main.c -DBA_PROJ -DFUSED -o ba_proj_diff_fused.exe
 	clang $(OPTS) micro-main.c -DBA_PROJ -DFUSED -DNOMOTION -o ba_proj_diff_fused_nomotion.exe
 	clang $(OPTS) micro-main.c -DBA_PROJ -DFUSED -DDPS -o ba_proj_diff_fused_dps.exe

@@ -11,7 +11,7 @@ array_number_t nmf(array_number_t u, array_number_t v, array_array_number_t AA) 
       tuple_number_t_number_t x54 = x126;
       for (int x62 = 0; x62 < (u)->length; x62++) {
         tuple_number_t_number_t x61 = x54;
-        number_t x123 = (v->arr[x62]);
+        number_t x123 = (v->arr[x46]);
         number_t x124 = (u->arr[x62]);
         index_t x122;
         if ((i) == (x62)) {
@@ -21,7 +21,7 @@ array_number_t nmf(array_number_t u, array_number_t v, array_array_number_t AA) 
         }
         array_number_t x18 = (AA->arr[x46]);
         tuple_number_t_index_t x93 = (tuple_number_t_index_t){._1=(x18->arr[x62]), ._2=0};
-        number_t x111 = (v->arr[x62]);
+        number_t x111 = (v->arr[x46]);
         number_t x112 = (u->arr[x62]);
         index_t x110;
         if ((i) == (x62)) {
