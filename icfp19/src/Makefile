@@ -20,7 +20,6 @@ micro : micro-main.c
 	$(call micro_bench,ADD,add)
 	$(call micro_bench,DOT,dot)
 	$(call micro_bench,VEC_MAX,max)
-	$(call micro_bench,LSE,lse)
 	clang $(OPTS) micro-main.c -DLSE -DTAPENADE -DFUSED -o lse_tap_fused_for.exe
 	clang $(OPTS) micro-main.c -DLSE -DTAPENADE -DFUSED -DREV_MODE $(FLIB) -o lse_tap_fused_rev.exe
 
