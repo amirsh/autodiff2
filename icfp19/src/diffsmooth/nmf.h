@@ -1,31 +1,31 @@
 #include <math.h>
 
 array_number_t nmf(array_number_t u, array_number_t v, array_array_number_t AA) {
-  index_t x174 = (u)->length;
-  index_t x187 = (v)->length;
-  array_number_t x189 = (array_number_t)storage_alloc(sizeof(int) * 2);x189->length=x174;x189->arr = (number_t*)storage_alloc(sizeof(number_t) * x174);
-  for(int i = 0; i < x189->length; i++){
-    number_t x175 = (u->arr[i]);
-    number_t x178 = (1) / (x175);
-    number_t x188 = 0;
-    for (int x46 = 0; x46 < x187; x46++) {
-      number_t x132 = x188;
-      number_t x176 = (v->arr[x46]);
-      number_t x177 = (x176) * (x175);
-      array_number_t x179 = (AA->arr[x46]);
-      number_t x180 = (x179->arr[i]);
-      number_t x181 = (x180) * (x176);
-      number_t x182 = -(x181);
-      number_t x183 = (x177) * (x177);
-      number_t x184 = (x182) / (x183);
-      number_t x185 = (x178) + (x184);
-      number_t x186 = (x132) + (x185);
-      x132 = x186;
-      x188 = x132;
+  index_t x205 = (u)->length;
+  index_t x218 = (v)->length;
+  array_number_t x220 = (array_number_t)storage_alloc(sizeof(int) * 2);x220->length=x205;x220->arr = (number_t*)storage_alloc(sizeof(number_t) * x205);
+  for(int i = 0; i < x220->length; i++){
+    number_t x207 = (u->arr[i]);
+    number_t x209 = (1) / (x207);
+    number_t x219 = 0;
+    for (int x46 = 0; x46 < x218; x46++) {
+      number_t x181 = x219;
+      number_t x206 = (v->arr[x46]);
+      number_t x208 = (x206) * (x207);
+      array_number_t x210 = (AA->arr[x46]);
+      number_t x211 = (x210->arr[i]);
+      number_t x212 = (x211) * (x206);
+      number_t x213 = -(x212);
+      number_t x214 = (x208) * (x208);
+      number_t x215 = (x213) / (x214);
+      number_t x216 = (x209) + (x215);
+      number_t x217 = (x181) + (x216);
+      x181 = x217;
+      x219 = x181;
     }
     
-    x189->arr[i] = x188;
+    x220->arr[i] = x219;
     
   }
-  return x189;
+  return x220;
 }
