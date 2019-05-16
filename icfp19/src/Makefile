@@ -32,7 +32,9 @@ ba : micro-main.c
 
 nmf : nmf-main.c
 	clang $(OPTS) nmf-main.c -o nmf_diff.exe
-	clang $(OPTS) nmf-main.c -DUNOPT -o nmf_diff_unopt.exe
+	clang $(OPTS) nmf-main.c -DUNFUSED -o nmf_diff_unfused.exe
+	clang $(OPTS) nmf-main.c -DNOMOTION -o nmf_diff_nomotion.exe
+	clang $(OPTS) nmf-main.c -DNONMOTION -o nmf_diff_nonmotion.exe
 	clang $(OPTS) nmf-main.c -DDPS -o nmf_diff_dps.exe
 	clang $(OPTS) nmf-main.c -DTAPENADE tapanade/submitted/3/default_d-all.c -o nmf_tap_for.exe
 	clang $(OPTS) nmf-main.c -DTAPENADE -DREV_MODE $(FLIB) tapanade/submitted/3/default_b-all.c -o nmf_tap_rev.exe

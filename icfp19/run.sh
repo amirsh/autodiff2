@@ -40,7 +40,7 @@ function get_files() {
 			   "./ba_proj_diff_fused_nomotion.exe" "./ba_proj_diff_fused.exe" "./ba_proj_diff_fused_dps.exe"
 			   "python micro.py ba" "mono ba_fsharp_for.exe" "mono ba_fsharp_rev.exe");
 	elif [ $prog == "nmf" ]; then
-		files=(	"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe" "./nmf_diff_unopt.exe" "./nmf_diff.exe" "./nmf_diff_dps.exe"
+		files=(	"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe" "./nmf_diff_unfused.exe" "./nmf_diff_nonmotion.exe" "./nmf_diff_nomotion.exe" "./nmf_diff.exe" "./nmf_diff_dps.exe"
 				"python ./nmf.py exponential" "mono nmf_fsharp_for.exe" "mono nmf_fsharp_rev.exe");
 		
 	fi

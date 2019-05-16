@@ -1,5 +1,7 @@
 #include <math.h>
 
+// > fondueJVM/test:run nmf no-motion no-nmotion
+
 array_number_t nmf(array_number_t u, array_number_t v, array_array_number_t AA) {
   array_number_t x130 = (array_number_t)storage_alloc(sizeof(int) * 2);x130->length=(u)->length;x130->arr = (number_t*)storage_alloc(sizeof(number_t) * (u)->length);
   for(int i = 0; i < x130->length; i++){
