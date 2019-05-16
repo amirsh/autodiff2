@@ -16,11 +16,13 @@
     #else
       #include "tapanade/submitted/10/ba_proj_d-all.h"
     #endif
-  #elif defined FUSED && defined DPS
+  #elif defined DPS
     #include "diffsmooth/ba_dps.h"
-  #elif defined FUSED && defined NOMOTION
+  #elif defined NOMOTION
     #include "diffsmooth/ba_nomotion.h"
-  #elif defined FUSED
+  #elif defined NONMOTION
+    #include "diffsmooth/ba_nonmotion.h"
+  #else
     #include "diffsmooth/ba.h"
   #endif
 #else

@@ -20,13 +20,12 @@ micro : micro-main.c
 	$(call micro_bench,ADD,add)
 	$(call micro_bench,DOT,dot)
 	$(call micro_bench,VEC_MAX,max)
-	clang $(OPTS) micro-main.c -DLSE -DTAPENADE -DFUSED -o lse_tap_fused_for.exe
-	clang $(OPTS) micro-main.c -DLSE -DTAPENADE -DFUSED -DREV_MODE $(FLIB) -o lse_tap_fused_rev.exe
 
 ba : micro-main.c
-	clang $(OPTS) micro-main.c -DBA_PROJ -DFUSED -o ba_proj_diff_fused.exe
-	clang $(OPTS) micro-main.c -DBA_PROJ -DFUSED -DNOMOTION -o ba_proj_diff_fused_nomotion.exe
-	clang $(OPTS) micro-main.c -DBA_PROJ -DFUSED -DDPS -o ba_proj_diff_fused_dps.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -o ba_proj_diff.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -DNOMOTION -o ba_proj_diff_nomotion.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -DNONMOTION -o ba_proj_diff_nonmotion.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -DDPS -o ba_proj_diff_dps.exe
 	clang $(OPTS) micro-main.c -DBA_PROJ -DTAPENADE -o ba_proj_tap_for.exe
 	clang $(OPTS) micro-main.c -DBA_PROJ -DTAPENADE -DREV_MODE $(FLIB) -o ba_proj_tap_rev.exe
 

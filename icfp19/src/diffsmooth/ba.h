@@ -4,6 +4,8 @@
 #include <stdio.h>
 #include <math.h>
 
+// > fondueJVM/test:run ba
+
 array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) {
   number_t x1485 = (cam->arr[0]);
   number_t x1486 = (cam->arr[1]);

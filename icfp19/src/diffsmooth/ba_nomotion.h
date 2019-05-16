@@ -4,484 +4,338 @@
 #include <stdio.h>
 #include <math.h>
 
+// > fondueJVM/test:run ba no-motion
+
 array_array_array_number_t ba(array_number_t cam, array_number_t xs, index_t n) {
-  array_array_array_number_t x775 = (array_array_array_number_t)storage_alloc(sizeof(int) * 2);x775->length=(cam)->length;x775->arr = (array_array_number_t*)storage_alloc(sizeof(array_array_number_t) * (cam)->length);
-  for(int i = 0; i < x775->length; i++){
-    array_array_number_t x774 = (array_array_number_t)storage_alloc(sizeof(int) * 2);x774->length=n;x774->arr = (array_number_t*)storage_alloc(sizeof(array_number_t) * n);
-    for(int i0 = 0; i0 < x774->length; i0++){
-      index_t x14 = (3) * (i0);
-      number_t x83 = (cam->arr[0]);
-      index_t x81;
-      if ((i) == (0)) {
-        x81 = 1;
-      } else {
-        x81 = 0;
-      }
-      number_t x84 = (cam->arr[0]);
-      index_t x82;
-      if ((i) == (0)) {
-        x82 = 1;
-      } else {
-        x82 = 0;
-      }
-      number_t x134 = (x83) * (x84);
-      number_t x132 = ((x81) * (x84)) + ((x83) * (x82));
-      number_t x830 = (cam->arr[1]);
-      index_t x810;
-      if ((i) == (1)) {
-        x810 = 1;
-      } else {
-        x810 = 0;
-      }
-      number_t x840 = (cam->arr[1]);
-      index_t x820;
-      if ((i) == (1)) {
-        x820 = 1;
-      } else {
-        x820 = 0;
-      }
-      number_t x1330 = (0) + (x134);
-      number_t x1310 = (0) + (x132);
-      number_t x1340 = (x830) * (x840);
-      number_t x1320 = ((x810) * (x840)) + ((x830) * (x820));
-      number_t x831 = (cam->arr[2]);
-      index_t x811;
-      if ((i) == (2)) {
-        x811 = 1;
-      } else {
-        x811 = 0;
-      }
-      number_t x841 = (cam->arr[2]);
-      index_t x821;
-      if ((i) == (2)) {
-        x821 = 1;
-      } else {
-        x821 = 0;
-      }
-      number_t x1331 = (x1330) + (x1340);
-      number_t x1311 = (x1310) + (x1320);
-      number_t x1341 = (x831) * (x841);
-      number_t x1321 = ((x811) * (x841)) + ((x831) * (x821));
-      number_t x46 = sqrt((x1331) + (x1341));
-      number_t x168 = ((x1311) + (x1321)) * (((1) / (x46)) * (0.5));
-      number_t x439 = (cam->arr[1]);
-      index_t x437;
-      if ((i) == (1)) {
-        x437 = 1;
-      } else {
-        x437 = 0;
-      }
-      number_t x440 = (1) / (x46);
-      number_t x438 = (-(x168)) / ((x46) * (x46));
-      index_t x428 = (11) + (x14);
-      index_t j = (2) + (x428);
-      tuple_number_t_index_t x00 = (tuple_number_t_index_t){._1=(xs->arr[j]), ._2=0};
-      number_t x547 = (x00)._1;
-      index_t x545 = (x00)._2;
-      number_t x548 = (cam->arr[5]);
-      index_t x546;
-      if ((i) == (5)) {
-        x546 = 1;
-      } else {
-        x546 = 0;
-      }
-      number_t x301 = (x439) * (x440);
-      number_t x299 = ((x437) * (x440)) + ((x439) * (x438));
-      number_t x302 = (x547) - (x548);
-      index_t x300 = (x545) - (x546);
-      number_t x415 = (cam->arr[2]);
-      index_t x413;
-      if ((i) == (2)) {
-        x413 = 1;
-      } else {
-        x413 = 0;
-      }
-      number_t x416 = (1) / (x46);
-      number_t x414 = (-(x168)) / ((x46) * (x46));
-      index_t x404 = (11) + (x14);
-      index_t j0 = (1) + (x404);
-      tuple_number_t_index_t x000 = (tuple_number_t_index_t){._1=(xs->arr[j0]), ._2=0};
-      number_t x535 = (x000)._1;
-      index_t x533 = (x000)._2;
-      number_t x536 = (cam->arr[4]);
-      index_t x534;
-      if ((i) == (4)) {
-        x534 = 1;
-      } else {
-        x534 = 0;
-      }
-      number_t x289 = (x415) * (x416);
-      number_t x287 = ((x413) * (x416)) + ((x415) * (x414));
-      number_t x2901 = (x535) - (x536);
-      index_t x288 = (x533) - (x534);
-      number_t x217 = (x301) * (x302);
-      number_t x215 = ((x299) * (x302)) + ((x301) * (x300));
-      number_t x218 = (x289) * (x2901);
-      number_t x216 = ((x287) * (x2901)) + ((x289) * (x288));
-      number_t x475 = (cam->arr[2]);
-      index_t x473;
-      if ((i) == (2)) {
-        x473 = 1;
-      } else {
-        x473 = 0;
-      }
-      number_t x476 = (1) / (x46);
-      number_t x474 = (-(x168)) / ((x46) * (x46));
-      index_t j1 = (11) + (x14);
-      tuple_number_t_index_t x001 = (tuple_number_t_index_t){._1=(xs->arr[j1]), ._2=0};
-      number_t x571 = (x001)._1;
-      index_t x569 = (x001)._2;
-      number_t x572 = (cam->arr[3]);
-      index_t x570;
-      if ((i) == (3)) {
-        x570 = 1;
-      } else {
-        x570 = 0;
-      }
-      number_t x325 = (x475) * (x476);
-      number_t x323 = ((x473) * (x476)) + ((x475) * (x474));
-      number_t x326 = (x571) - (x572);
-      index_t x324 = (x569) - (x570);
-      number_t x463 = (cam->arr[0]);
-      index_t x461;
-      if ((i) == (0)) {
-        x461 = 1;
-      } else {
-        x461 = 0;
-      }
-      number_t x464 = (1) / (x46);
-      number_t x462 = (-(x168)) / ((x46) * (x46));
-      index_t x452 = (11) + (x14);
-      index_t j00 = (2) + (x452);
-      tuple_number_t_index_t x0000 = (tuple_number_t_index_t){._1=(xs->arr[j00]), ._2=0};
-      number_t x559 = (x0000)._1;
-      index_t x557 = (x0000)._2;
-      number_t x560 = (cam->arr[5]);
-      index_t x558;
-      if ((i) == (5)) {
-        x558 = 1;
-      } else {
-        x558 = 0;
-      }
-      number_t x313 = (x463) * (x464);
-      number_t x311 = ((x461) * (x464)) + ((x463) * (x462));
-      number_t x314 = (x559) - (x560);
-      index_t x312 = (x557) - (x558);
-      number_t x229 = (x325) * (x326);
-      number_t x227 = ((x323) * (x326)) + ((x325) * (x324));
-      number_t x230 = (x313) * (x314);
-      number_t x228 = ((x311) * (x314)) + ((x313) * (x312));
-      number_t x511 = (cam->arr[0]);
-      index_t x509;
-      if ((i) == (0)) {
-        x509 = 1;
-      } else {
-        x509 = 0;
-      }
-      number_t x512 = (1) / (x46);
-      number_t x510 = (-(x168)) / ((x46) * (x46));
-      index_t x500 = (11) + (x14);
-      index_t j10 = (1) + (x500);
-      tuple_number_t_index_t x002 = (tuple_number_t_index_t){._1=(xs->arr[j10]), ._2=0};
-      number_t x595 = (x002)._1;
-      index_t x593 = (x002)._2;
-      number_t x596 = (cam->arr[4]);
-      index_t x594;
-      if ((i) == (4)) {
-        x594 = 1;
-      } else {
-        x594 = 0;
-      }
-      number_t x349 = (x511) * (x512);
-      number_t x347 = ((x509) * (x512)) + ((x511) * (x510));
-      number_t x350 = (x595) - (x596);
-      index_t x348 = (x593) - (x594);
-      number_t x487 = (cam->arr[1]);
-      index_t x485;
-      if ((i) == (1)) {
-        x485 = 1;
-      } else {
-        x485 = 0;
-      }
-      number_t x488 = (1) / (x46);
-      number_t x486 = (-(x168)) / ((x46) * (x46));
-      index_t j01 = (11) + (x14);
-      tuple_number_t_index_t x0001 = (tuple_number_t_index_t){._1=(xs->arr[j01]), ._2=0};
-      number_t x583 = (x0001)._1;
-      index_t x581 = (x0001)._2;
-      number_t x584 = (cam->arr[3]);
-      index_t x582;
-      if ((i) == (3)) {
-        x582 = 1;
-      } else {
-        x582 = 0;
-      }
-      number_t x337 = (x487) * (x488);
-      number_t x335 = ((x485) * (x488)) + ((x487) * (x486));
-      number_t x338 = (x583) - (x584);
-      index_t x336 = (x581) - (x582);
-      number_t x241 = (x349) * (x350);
-      number_t x239 = ((x347) * (x350)) + ((x349) * (x348));
-      number_t x242 = (x337) * (x338);
-      number_t x240 = ((x335) * (x338)) + ((x337) * (x336));
-      tuple_number_t_number_t x765 = (tuple_number_t_number_t){._1=(x217) - (x218), ._2=(x215) - (x216)};
-      tuple_number_t_number_t x766 = (tuple_number_t_number_t){._1=(x229) - (x230), ._2=(x227) - (x228)};
-      tuple_number_t_number_t x767 = (tuple_number_t_number_t){._1=(x241) - (x242), ._2=(x239) - (x240)};
-      array_tuple_number_t_number_t w_cross_X = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);w_cross_X->length=3;w_cross_X->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 3);
-      w_cross_X->arr[0] = x765;
-      w_cross_X->arr[1] = x766;
-      w_cross_X->arr[2] = x767;
-      number_t x619 = (cam->arr[0]);
-      index_t x617;
-      if ((i) == (0)) {
-        x617 = 1;
-      } else {
-        x617 = 0;
-      }
-      number_t x620 = (1) / (x46);
-      number_t x618 = (-(x168)) / ((x46) * (x46));
-      index_t x656 = (11) + (x14);
-      index_t j11 = (0) + (x656);
-      tuple_number_t_index_t x00000 = (tuple_number_t_index_t){._1=(xs->arr[j11]), ._2=0};
-      index_t j000 = (0) + (3);
-      number_t x679 = (x00000)._1;
-      index_t x677 = (x00000)._2;
-      number_t x680 = (cam->arr[j000]);
-      index_t x678;
-      if ((i) == (j000)) {
-        x678 = 1;
-      } else {
-        x678 = 0;
-      }
-      number_t x703 = (x619) * (x620);
-      number_t x701 = ((x617) * (x620)) + ((x619) * (x618));
-      number_t x704 = (x679) - (x680);
-      index_t x702 = (x677) - (x678);
-      number_t x728 = (x703) * (x704);
-      number_t x726 = ((x701) * (x704)) + ((x703) * (x702));
-      number_t x6190 = (cam->arr[1]);
-      index_t x6170;
-      if ((i) == (1)) {
-        x6170 = 1;
-      } else {
-        x6170 = 0;
-      }
-      number_t x6200 = (1) / (x46);
-      number_t x6180 = (-(x168)) / ((x46) * (x46));
-      index_t x6560 = (11) + (x14);
-      index_t j2 = (1) + (x6560);
-      tuple_number_t_index_t x00010 = (tuple_number_t_index_t){._1=(xs->arr[j2]), ._2=0};
-      index_t j0000 = (1) + (3);
-      number_t x6790 = (x00010)._1;
-      index_t x6770 = (x00010)._2;
-      number_t x6800 = (cam->arr[j0000]);
-      index_t x6780;
-      if ((i) == (j0000)) {
-        x6780 = 1;
-      } else {
-        x6780 = 0;
-      }
-      number_t x7030 = (x6190) * (x6200);
-      number_t x7010 = ((x6170) * (x6200)) + ((x6190) * (x6180));
-      number_t x7040 = (x6790) - (x6800);
-      index_t x7020 = (x6770) - (x6780);
-      number_t x7270 = (0) + (x728);
-      number_t x7250 = (0) + (x726);
-      number_t x7280 = (x7030) * (x7040);
-      number_t x7260 = ((x7010) * (x7040)) + ((x7030) * (x7020));
-      number_t x6191 = (cam->arr[2]);
-      index_t x6171;
-      if ((i) == (2)) {
-        x6171 = 1;
-      } else {
-        x6171 = 0;
-      }
-      number_t x6201 = (1) / (x46);
-      number_t x6181 = (-(x168)) / ((x46) * (x46));
-      index_t x6561 = (11) + (x14);
-      index_t j100 = (2) + (x6561);
-      tuple_number_t_index_t x00001 = (tuple_number_t_index_t){._1=(xs->arr[j100]), ._2=0};
-      index_t j010 = (2) + (3);
-      number_t x6791 = (x00001)._1;
-      index_t x6771 = (x00001)._2;
-      number_t x6801 = (cam->arr[j010]);
-      index_t x6781;
-      if ((i) == (j010)) {
-        x6781 = 1;
-      } else {
-        x6781 = 0;
-      }
-      number_t x7031 = (x6191) * (x6201);
-      number_t x7011 = ((x6171) * (x6201)) + ((x6191) * (x6181));
-      number_t x7041 = (x6791) - (x6801);
-      index_t x7021 = (x6771) - (x6781);
-      number_t x7271 = (x7270) + (x7280);
-      number_t x7251 = (x7250) + (x7260);
-      number_t x7281 = (x7031) * (x7041);
-      number_t x7261 = ((x7011) * (x7041)) + ((x7031) * (x7021));
-      number_t x388 = cos(x46);
-      number_t x386 = (((x1311) + (x1321)) * (((1) / (x46)) * (0.5))) * (-(sin(x46)));
-      number_t x277 = (x7271) + (x7281);
-      number_t x275 = (x7251) + (x7261);
-      number_t x278 = (1) - (x388);
-      number_t x276 = -(x386);
-      array_tuple_number_t_number_t x769 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x769->length=3;x769->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 3);
-      for(int x376 = 0; x376 < x769->length; x376++){
-        index_t x524 = (11) + (x14);
-        index_t j20 = (x376) + (x524);
-        tuple_number_t_index_t x0010 = (tuple_number_t_index_t){._1=(xs->arr[j20]), ._2=0};
-        index_t j110 = (x376) + (3);
-        number_t x631 = (x0010)._1;
-        index_t x629 = (x0010)._2;
-        number_t x632 = (cam->arr[j110]);
-        index_t x630;
-        if ((i) == (j110)) {
-          x630 = 1;
+  number_t x1485 = (cam->arr[0]);
+  number_t x1486 = (cam->arr[1]);
+  number_t x1487 = (cam->arr[2]);
+  number_t x1488 = (x1485) * (x1485);
+  number_t x1489 = (x1486) * (x1486);
+  number_t x1490 = (x1488) + (x1489);
+  number_t x1491 = (x1487) * (x1487);
+  number_t x1492 = (x1490) + (x1491);
+  number_t x1493 = sqrt(x1492);
+  number_t x1494 = (1) / (x1493);
+  number_t x1495 = (x1486) * (x1494);
+  number_t x1496 = (x1487) * (x1494);
+  number_t x1497 = (x1485) * (x1494);
+  number_t x1498 = cos(x1493);
+  number_t x1499 = (1) - (x1498);
+  number_t x1500 = (cam->arr[9]);
+  number_t x1501 = (cam->arr[10]);
+  number_t x1502 = (cam->arr[6]);
+  number_t x1503 = sin(x1493);
+  index_t x1504 = (cam)->length;
+  number_t x1522 = (x1494) * (0.5);
+  number_t x1525 = (x1493) * (x1493);
+  number_t x1536 = -(x1503);
+  number_t x1542 = (cam->arr[5]);
+  number_t x1549 = (cam->arr[4]);
+  number_t x1555 = (cam->arr[3]);
+  array_array_array_number_t x1736 = (array_array_array_number_t)storage_alloc(sizeof(int) * 2);x1736->length=x1504;x1736->arr = (array_array_number_t*)storage_alloc(sizeof(array_array_number_t) * x1504);
+  for(int i = 0; i < x1736->length; i++){
+    index_t x1505 = (i) == (0);
+    index_t x1506;
+    if (x1505) {
+      x1506 = 1;
+    } else {
+      x1506 = 0;
+    }
+    index_t x1507 = (i) == (1);
+    index_t x1508;
+    if (x1507) {
+      x1508 = 1;
+    } else {
+      x1508 = 0;
+    }
+    index_t x1509 = (i) == (2);
+    index_t x1510;
+    if (x1509) {
+      x1510 = 1;
+    } else {
+      x1510 = 0;
+    }
+    number_t x1511 = (x1506) * (x1485);
+    number_t x1512 = (x1485) * (x1506);
+    number_t x1513 = (x1511) + (x1512);
+    number_t x1514 = (x1508) * (x1486);
+    number_t x1515 = (x1486) * (x1508);
+    number_t x1516 = (x1514) + (x1515);
+    number_t x1517 = (x1513) + (x1516);
+    number_t x1518 = (x1510) * (x1487);
+    number_t x1519 = (x1487) * (x1510);
+    number_t x1520 = (x1518) + (x1519);
+    number_t x1521 = (x1517) + (x1520);
+    number_t x1523 = (x1521) * (x1522);
+    number_t x1524 = -(x1523);
+    number_t x1526 = (x1524) / (x1525);
+    number_t x1527 = (x1508) * (x1494);
+    number_t x1528 = (x1486) * (x1526);
+    number_t x1529 = (x1527) + (x1528);
+    number_t x1530 = (x1510) * (x1494);
+    number_t x1531 = (x1487) * (x1526);
+    number_t x1532 = (x1530) + (x1531);
+    number_t x1533 = (x1506) * (x1494);
+    number_t x1534 = (x1485) * (x1526);
+    number_t x1535 = (x1533) + (x1534);
+    number_t x1537 = (x1523) * (x1536);
+    index_t x1544 = (i) == (5);
+    index_t x1545;
+    if (x1544) {
+      x1545 = 1;
+    } else {
+      x1545 = 0;
+    }
+    index_t x1546 = -(x1545);
+    index_t x1551 = (i) == (4);
+    index_t x1552;
+    if (x1551) {
+      x1552 = 1;
+    } else {
+      x1552 = 0;
+    }
+    index_t x1553 = -(x1552);
+    index_t x1557 = (i) == (3);
+    index_t x1558;
+    if (x1557) {
+      x1558 = 1;
+    } else {
+      x1558 = 0;
+    }
+    index_t x1559 = -(x1558);
+    index_t x1701 = (i) == (9);
+    index_t x1702;
+    if (x1701) {
+      x1702 = 1;
+    } else {
+      x1702 = 0;
+    }
+    number_t x1575 = (x1495) * (x1546);
+    index_t x1706 = (i) == (10);
+    index_t x1707;
+    if (x1706) {
+      x1707 = 1;
+    } else {
+      x1707 = 0;
+    }
+    number_t x1578 = (x1496) * (x1553);
+    number_t x1586 = (x1496) * (x1559);
+    index_t x1729 = (i) == (6);
+    index_t x1730;
+    if (x1729) {
+      x1730 = 1;
+    } else {
+      x1730 = 0;
+    }
+    number_t x1589 = (x1497) * (x1546);
+    number_t x1597 = (x1497) * (x1553);
+    number_t x1600 = (x1495) * (x1559);
+    number_t x1622 = (x1523) * (x1498);
+    number_t x1633 = (x1497) * (x1559);
+    number_t x1636 = (x1495) * (x1553);
+    number_t x1640 = (x1496) * (x1546);
+    number_t x1644 = -(x1537);
+    array_array_number_t x1735 = (array_array_number_t)storage_alloc(sizeof(int) * 2);x1735->length=n;x1735->arr = (array_number_t*)storage_alloc(sizeof(array_number_t) * n);
+    for(int i0 = 0; i0 < x1735->length; i0++){
+      index_t x1538 = (3) * (i0);
+      index_t x1539 = (11) + (x1538);
+      index_t x1540 = (2) + (x1539);
+      number_t x1541 = (xs->arr[x1540]);
+      number_t x1543 = (x1541) - (x1542);
+      index_t x1547 = (1) + (x1539);
+      number_t x1548 = (xs->arr[x1547]);
+      number_t x1550 = (x1548) - (x1549);
+      number_t x1554 = (xs->arr[x1539]);
+      number_t x1556 = (x1554) - (x1555);
+      number_t x1560 = (x1497) * (x1556);
+      number_t x1561 = (x1495) * (x1550);
+      number_t x1562 = (x1560) + (x1561);
+      number_t x1563 = (x1496) * (x1543);
+      number_t x1564 = (x1562) + (x1563);
+      number_t x1565 = (x1564) * (x1499);
+      number_t x1571 = (x1495) * (x1543);
+      number_t x1572 = (x1496) * (x1550);
+      number_t x1573 = (x1571) - (x1572);
+      number_t x1574 = (x1529) * (x1543);
+      number_t x1576 = (x1574) + (x1575);
+      number_t x1577 = (x1532) * (x1550);
+      number_t x1579 = (x1577) + (x1578);
+      number_t x1580 = (x1576) - (x1579);
+      tuple_number_t_number_t x1581 = (tuple_number_t_number_t){._1=x1573, ._2=x1580};
+      number_t x1582 = (x1496) * (x1556);
+      number_t x1583 = (x1497) * (x1543);
+      number_t x1584 = (x1582) - (x1583);
+      number_t x1585 = (x1532) * (x1556);
+      number_t x1587 = (x1585) + (x1586);
+      number_t x1588 = (x1535) * (x1543);
+      number_t x1590 = (x1588) + (x1589);
+      number_t x1591 = (x1587) - (x1590);
+      tuple_number_t_number_t x1592 = (tuple_number_t_number_t){._1=x1584, ._2=x1591};
+      number_t x1593 = (x1497) * (x1550);
+      number_t x1594 = (x1495) * (x1556);
+      number_t x1595 = (x1593) - (x1594);
+      number_t x1596 = (x1535) * (x1550);
+      number_t x1598 = (x1596) + (x1597);
+      number_t x1599 = (x1529) * (x1556);
+      number_t x1601 = (x1599) + (x1600);
+      number_t x1602 = (x1598) - (x1601);
+      tuple_number_t_number_t x1603 = (tuple_number_t_number_t){._1=x1595, ._2=x1602};
+      array_tuple_number_t_number_t x1604 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x1604->length=3;x1604->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 3);
+      x1604->arr[0] = x1581;
+      x1604->arr[1] = x1592;
+      x1604->arr[2] = x1603;
+      number_t x1632 = (x1535) * (x1556);
+      number_t x1634 = (x1632) + (x1633);
+      number_t x1635 = (x1529) * (x1550);
+      number_t x1637 = (x1635) + (x1636);
+      number_t x1638 = (x1634) + (x1637);
+      number_t x1639 = (x1532) * (x1543);
+      number_t x1641 = (x1639) + (x1640);
+      number_t x1642 = (x1638) + (x1641);
+      number_t x1643 = (x1642) * (x1499);
+      number_t x1645 = (x1564) * (x1644);
+      number_t x1646 = (x1643) + (x1645);
+      array_tuple_number_t_number_t x1651 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x1651->length=3;x1651->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 3);
+      for(int x376 = 0; x376 < x1651->length; x376++){
+        index_t x1566 = (x376) + (3);
+        index_t x1567 = (x376) + (x1539);
+        number_t x1568 = (xs->arr[x1567]);
+        number_t x1569 = (cam->arr[x1566]);
+        number_t x1570 = (x1568) - (x1569);
+        tuple_number_t_number_t x1605 = (x1604->arr[x376]);
+        number_t x1606 = (x1605)._1;
+        number_t x1607 = (cam->arr[x376]);
+        number_t x1608 = (x1607) * (x1494);
+        number_t x1609 = (x1570) * (x1498);
+        number_t x1610 = (x1606) * (x1503);
+        number_t x1611 = (x1609) + (x1610);
+        number_t x1612 = (x1608) * (x1565);
+        number_t x1613 = (x1611) + (x1612);
+        index_t x1614 = (i) == (x1566);
+        index_t x1615;
+        if (x1614) {
+          x1615 = 1;
         } else {
-          x630 = 0;
+          x1615 = 0;
         }
-        number_t x643 = (x631) - (x632);
-        index_t x641 = (x629) - (x630);
-        number_t x644 = cos(x46);
-        number_t x642 = (((x1311) + (x1321)) * (((1) / (x46)) * (0.5))) * (-(sin(x46)));
-        tuple_number_t_number_t xi0 = (w_cross_X->arr[x376]);
-        number_t x691 = (xi0)._1;
-        number_t x689 = (xi0)._2;
-        number_t x692 = sin(x46);
-        number_t x690 = (((x1311) + (x1321)) * (((1) / (x46)) * (0.5))) * (cos(x46));
-        number_t x715 = (x643) * (x644);
-        number_t x713 = ((x641) * (x644)) + ((x643) * (x642));
-        number_t x716 = (x691) * (x692);
-        number_t x714 = ((x689) * (x692)) + ((x691) * (x690));
-        number_t x739 = (cam->arr[x376]);
-        index_t x737;
-        if ((i) == (x376)) {
-          x737 = 1;
+        index_t x1616 = -(x1615);
+        number_t x1617 = (x1616) * (x1498);
+        number_t x1618 = (x1570) * (x1537);
+        number_t x1619 = (x1617) + (x1618);
+        number_t x1620 = (x1605)._2;
+        number_t x1621 = (x1620) * (x1503);
+        number_t x1623 = (x1606) * (x1622);
+        number_t x1624 = (x1621) + (x1623);
+        number_t x1625 = (x1619) + (x1624);
+        index_t x1626 = (i) == (x376);
+        index_t x1627;
+        if (x1626) {
+          x1627 = 1;
         } else {
-          x737 = 0;
+          x1627 = 0;
         }
-        number_t x740 = (1) / (x46);
-        number_t x738 = (-(x168)) / ((x46) * (x46));
-        number_t x751 = (x739) * (x740);
-        number_t x749 = ((x737) * (x740)) + ((x739) * (x738));
-        number_t x752 = (x277) * (x278);
-        number_t x750 = ((x275) * (x278)) + ((x277) * (x276));
-        number_t x763 = (x715) + (x716);
-        number_t x761 = (x713) + (x714);
-        number_t x764 = (x751) * (x752);
-        number_t x762 = ((x749) * (x752)) + ((x751) * (x750));
-        tuple_number_t_number_t x768 = (tuple_number_t_number_t){._1=(x763) + (x764), ._2=(x761) + (x762)};
-        x769->arr[x376] = x768;
+        number_t x1628 = (x1627) * (x1494);
+        number_t x1629 = (x1607) * (x1526);
+        number_t x1630 = (x1628) + (x1629);
+        number_t x1631 = (x1630) * (x1565);
+        number_t x1647 = (x1608) * (x1646);
+        number_t x1648 = (x1631) + (x1647);
+        number_t x1649 = (x1625) + (x1648);
+        tuple_number_t_number_t x1650 = (tuple_number_t_number_t){._1=x1613, ._2=x1649};
+        x1651->arr[x376] = x1650;
         
       }
-      array_tuple_number_t_number_t Xcam = x769;
-      tuple_number_t_number_t x38 = (Xcam->arr[2]);
-      number_t x42 = (x38)._1;
-      number_t x40 = (x38)._2;
-      tuple_number_t_number_t xi = (Xcam->arr[0]);
-      number_t x193 = (xi)._1;
-      number_t x191 = (xi)._2;
-      number_t x194 = (1) / (x42);
-      number_t x192 = (-(x40)) / ((x42) * (x42));
-      number_t x265 = (x193) * (x194);
-      number_t x263 = ((x191) * (x194)) + ((x193) * (x192));
-      number_t x266 = (x193) * (x194);
-      number_t x264 = ((x191) * (x194)) + ((x193) * (x192));
-      number_t x374 = (x265) * (x266);
-      number_t x372 = ((x263) * (x266)) + ((x265) * (x264));
-      tuple_number_t_number_t xi0 = (Xcam->arr[1]);
-      number_t x1930 = (xi0)._1;
-      number_t x1910 = (xi0)._2;
-      number_t x1940 = (1) / (x42);
-      number_t x1920 = (-(x40)) / ((x42) * (x42));
-      number_t x2650 = (x1930) * (x1940);
-      number_t x2630 = ((x1910) * (x1940)) + ((x1930) * (x1920));
-      number_t x2660 = (x1930) * (x1940);
-      number_t x2640 = ((x1910) * (x1940)) + ((x1930) * (x1920));
-      number_t x3730 = (0) + (x374);
-      number_t x3710 = (0) + (x372);
-      number_t x3740 = (x2650) * (x2660);
-      number_t x3720 = ((x2630) * (x2660)) + ((x2650) * (x2640));
-      number_t x157 = (cam->arr[9]);
-      index_t x155;
-      if ((i) == (9)) {
-        x155 = 1;
-      } else {
-        x155 = 0;
-      }
-      number_t x158 = (x3730) + (x3740);
-      number_t x156 = (x3710) + (x3720);
-      number_t x122 = (x157) * (x158);
-      number_t x120 = ((x155) * (x158)) + ((x157) * (x156));
-      number_t x145 = (cam->arr[10]);
-      index_t x143;
-      if ((i) == (10)) {
-        x143 = 1;
-      } else {
-        x143 = 0;
-      }
-      number_t x146 = (x3730) + (x3740);
-      number_t x144 = (x3710) + (x3720);
-      number_t x109 = (x145) * (x146);
-      number_t x107 = ((x143) * (x146)) + ((x145) * (x144));
-      number_t x110 = (x3730) + (x3740);
-      number_t x108 = (x3710) + (x3720);
-      number_t x67 = (1) + (x122);
-      number_t x68 = (x109) * (x110);
-      number_t x66 = ((x107) * (x110)) + ((x109) * (x108));
-      array_tuple_number_t_number_t x771 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x771->length=2;x771->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 2);
-      for(int x98 = 0; x98 < x771->length; x98++){
-        tuple_number_t_number_t xi1 = (Xcam->arr[x98]);
-        number_t x253 = (xi1)._1;
-        number_t x251 = (xi1)._2;
-        number_t x254 = (1) / (x42);
-        number_t x252 = (-(x40)) / ((x42) * (x42));
-        number_t x361 = (x253) * (x254);
-        number_t x359 = ((x251) * (x254)) + ((x253) * (x252));
-        number_t x362 = (x67) + (x68);
-        number_t x360 = (x120) + (x66);
-        tuple_number_t_number_t x770 = (tuple_number_t_number_t){._1=(x361) * (x362), ._2=((x359) * (x362)) + ((x361) * (x360))};
-        x771->arr[x98] = x770;
+      array_tuple_number_t_number_t x1652 = x1651;
+      tuple_number_t_number_t x1653 = (x1652->arr[2]);
+      number_t x1654 = (x1653)._1;
+      tuple_number_t_number_t x1655 = (x1652->arr[0]);
+      number_t x1656 = (x1655)._1;
+      number_t x1657 = (1) / (x1654);
+      number_t x1658 = (x1653)._2;
+      number_t x1659 = -(x1658);
+      number_t x1660 = (x1654) * (x1654);
+      number_t x1661 = (x1659) / (x1660);
+      number_t x1662 = (x1656) * (x1657);
+      number_t x1663 = (x1655)._2;
+      number_t x1664 = (x1663) * (x1657);
+      number_t x1665 = (x1656) * (x1661);
+      number_t x1666 = (x1664) + (x1665);
+      tuple_number_t_number_t x1667 = (x1652->arr[1]);
+      number_t x1668 = (x1667)._1;
+      number_t x1669 = (x1668) * (x1657);
+      number_t x1670 = (x1667)._2;
+      number_t x1671 = (x1670) * (x1657);
+      number_t x1672 = (x1668) * (x1661);
+      number_t x1673 = (x1671) + (x1672);
+      number_t x1674 = (x1662) * (x1662);
+      number_t x1675 = (x1669) * (x1669);
+      number_t x1676 = (x1674) + (x1675);
+      number_t x1677 = (x1666) * (x1662);
+      number_t x1678 = (x1662) * (x1666);
+      number_t x1679 = (x1677) + (x1678);
+      number_t x1680 = (x1673) * (x1669);
+      number_t x1681 = (x1669) * (x1673);
+      number_t x1682 = (x1680) + (x1681);
+      number_t x1683 = (x1679) + (x1682);
+      number_t x1684 = (x1501) * (x1676);
+      number_t x1685 = (x1500) * (x1676);
+      number_t x1686 = (1) + (x1685);
+      number_t x1687 = (x1684) * (x1676);
+      number_t x1688 = (x1686) + (x1687);
+      number_t x1703 = (x1702) * (x1676);
+      number_t x1704 = (x1500) * (x1683);
+      number_t x1705 = (x1703) + (x1704);
+      number_t x1708 = (x1707) * (x1676);
+      number_t x1709 = (x1501) * (x1683);
+      number_t x1710 = (x1708) + (x1709);
+      number_t x1711 = (x1710) * (x1676);
+      number_t x1712 = (x1684) * (x1683);
+      number_t x1713 = (x1711) + (x1712);
+      number_t x1714 = (x1705) + (x1713);
+      array_tuple_number_t_number_t x1718 = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);x1718->length=2;x1718->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 2);
+      for(int x98 = 0; x98 < x1718->length; x98++){
+        tuple_number_t_number_t x1692 = (x1652->arr[x98]);
+        number_t x1693 = (x1692)._1;
+        number_t x1694 = (x1693) * (x1657);
+        number_t x1695 = (x1694) * (x1688);
+        number_t x1696 = (x1692)._2;
+        number_t x1697 = (x1696) * (x1657);
+        number_t x1698 = (x1693) * (x1661);
+        number_t x1699 = (x1697) + (x1698);
+        number_t x1700 = (x1699) * (x1688);
+        number_t x1715 = (x1694) * (x1714);
+        number_t x1716 = (x1700) + (x1715);
+        tuple_number_t_number_t x1717 = (tuple_number_t_number_t){._1=x1695, ._2=x1716};
+        x1718->arr[x98] = x1717;
         
       }
-      array_tuple_number_t_number_t distorted = x771;
-      array_tuple_number_t_number_t v = (array_tuple_number_t_number_t)storage_alloc(sizeof(int) * 2);v->length=2;v->arr = (tuple_number_t_number_t*)storage_alloc(sizeof(tuple_number_t_number_t) * 2);
-      for(int x48 = 0; x48 < v->length; x48++){
-        index_t j00000 = (x48) + (7);
-        tuple_number_t_number_t xi1 = (distorted->arr[x48]);
-        number_t x181 = (xi1)._1;
-        number_t x179 = (xi1)._2;
-        number_t x182 = (cam->arr[6]);
-        index_t x180;
-        if ((i) == (6)) {
-          x180 = 1;
+      array_tuple_number_t_number_t x1719 = x1718;
+      array_number_t x1734 = (array_number_t)storage_alloc(sizeof(int) * 2);x1734->length=2;x1734->arr = (number_t*)storage_alloc(sizeof(number_t) * 2);
+      for(int i00 = 0; i00 < x1734->length; i00++){
+        index_t x1690 = (i00) + (7);
+        tuple_number_t_number_t x1720 = (x1719->arr[i00]);
+        number_t x1721 = (x1720)._1;
+        index_t x1725 = (i) == (x1690);
+        index_t x1726;
+        if (x1725) {
+          x1726 = 1;
         } else {
-          x180 = 0;
+          x1726 = 0;
         }
-        number_t x205 = (cam->arr[j00000]);
-        index_t x203;
-        if ((i) == (j00000)) {
-          x203 = 1;
-        } else {
-          x203 = 0;
-        }
-        number_t x206 = (x181) * (x182);
-        number_t x204 = ((x179) * (x182)) + ((x181) * (x180));
-        tuple_number_t_number_t x772 = (tuple_number_t_number_t){._1=(x205) + (x206), ._2=(x203) + (x204)};
-        v->arr[x48] = x772;
+        number_t x1727 = (x1720)._2;
+        number_t x1728 = (x1727) * (x1502);
+        number_t x1731 = (x1721) * (x1730);
+        number_t x1732 = (x1728) + (x1731);
+        number_t x1733 = (x1726) + (x1732);
+        x1734->arr[i00] = x1733;
         
       }
-      array_number_t x773 = (array_number_t)storage_alloc(sizeof(int) * 2);x773->length=(v)->length;x773->arr = (number_t*)storage_alloc(sizeof(number_t) * (v)->length);
-      for(int i00 = 0; i00 < x773->length; i00++){
-        tuple_number_t_number_t s = (v->arr[i00]);
-        x773->arr[i00] = (s)._2;
-        
-      }
-      x774->arr[i0] = x773;
+      x1735->arr[i0] = x1734;
       
     }
-    x775->arr[i] = x774;
+    x1736->arr[i] = x1735;
     
   }
-  return x775;
+  return x1736;
 }

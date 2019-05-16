@@ -37,10 +37,11 @@ function get_files() {
 		files=("./max_tap_rev.exe" "./max_tap_for.exe" "./max_diff.exe" "./max_diff_dps.exe" "python micro.py max" "mono max_fsharp_for.exe" "mono max_fsharp_rev.exe");
 	elif [ $prog == "ba" ]; then
 		files=("./ba_proj_tap_rev.exe" "./ba_proj_tap_for.exe"
-			   "./ba_proj_diff_fused_nomotion.exe" "./ba_proj_diff_fused.exe" "./ba_proj_diff_fused_dps.exe"
+			   "./ba_proj_diff_nonmotion.exe" "./ba_proj_diff_nomotion.exe" "./ba_proj_diff.exe" "./ba_proj_diff_dps.exe"
 			   "python micro.py ba" "mono ba_fsharp_for.exe" "mono ba_fsharp_rev.exe");
 	elif [ $prog == "nmf" ]; then
-		files=(	"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe" "./nmf_diff_unfused.exe" "./nmf_diff_nonmotion.exe" "./nmf_diff_nomotion.exe" "./nmf_diff.exe" "./nmf_diff_dps.exe"
+		files=(	"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe" #"./nmf_diff_unfused.exe" # For the moment, as it needs a lot of RAM
+			    "./nmf_diff_nonmotion.exe" "./nmf_diff_nomotion.exe" "./nmf_diff.exe" "./nmf_diff_dps.exe"
 				"python ./nmf.py exponential" "mono nmf_fsharp_for.exe" "mono nmf_fsharp_rev.exe");
 		
 	fi
