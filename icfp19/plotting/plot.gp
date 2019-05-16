@@ -16,12 +16,12 @@ df_motion = "#FCB164"
 set style line 1 lc rgb push_color lw 6 pt 3
 set style line 2 lc rgb pull_color lw 6 pt 3
 set style line 3 lc rgb stream_s_color lw 6 pt 3
-set style line 4 lc rgb stream_v_color lw 6 pt 3
+set style line 4 lc rgb stream_v_color lw 2 pt 12
 set style line 5 lc rgb push_c_color lw 6 pt 3
 set style line 6 lc rgb pull_c_color lw 6 pt 3
 set style line 7 lc rgb theano_color lw 6 pt 3
-set style line 8 lc rgb df_motion lw 6 pt 3
-set style line 9 lc rgb "#fb5a59" lw 6 pt 3
+set style line 8 lc rgb df_motion lw 2 pt 12
+set style line 9 lc rgb "#fb5a59" lw 2 pt 12
 set style line 10 lc rgb "#b68ea3" lw 6 pt 3
 
 TapenadeR = "Tapenade (R)"
@@ -29,8 +29,9 @@ TapenadeF = "Tapenade (F)"
 TapenadeRFused = "Tapenade (R) + Fused"
 TapenadeFFused = "Tapenade (F) + Fused"
 DiffSmooth = "dF\\~"
-DiffSmoothMotion = "dF\\~ + Code Motion"
-DiffSmoothMotionDPS = "dF\\~ + Code Motion + DPS"
+DiffSmoothMotionNN = "dF\\~ + Code Motion"
+DiffSmoothMotion = "dF\\~ + Code Motion++"
+DiffSmoothMotionDPS = "dF\\~ + Code Motion++ + DPS"
 DiffSmoothDPS = "dF\\~ + DPS"
 Theano = "Theano"
 DiffSharpF = "DiffSharp (F)"
@@ -131,14 +132,15 @@ set output 'ba.pdf'
 
 set title "Jacobian of Project in Bundle Adjustment"
 
-plot 'data/ba.csv' every ::1 using ($1):($9) title DiffSharpR ls 5, \
-   'data/ba.csv' every ::1 using ($1):($8) title DiffSharpF ls 6, \
+plot 'data/ba.csv' every ::1 using ($1):($10) title DiffSharpR ls 5, \
+   'data/ba.csv' every ::1 using ($1):($9) title DiffSharpF ls 6, \
    'data/ba.csv' every ::1 using ($1):($2) title TapenadeR ls 1, \
    'data/ba.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
-   'data/ba.csv' every ::1 using ($1):($7) title Theano ls 7, \
+   'data/ba.csv' every ::1 using ($1):($8) title Theano ls 7, \
    'data/ba.csv' every ::1 using ($1):($4) title DiffSmooth ls 3, \
-   'data/ba.csv' every ::1 using ($1):($5) title DiffSmoothMotion ls 8, \
-   'data/ba.csv' every ::1 using ($1):($6) title DiffSmoothMotionDPS ls 4, \
+   'data/ba.csv' every ::1 using ($1):($5) title DiffSmoothMotionNN ls 9, \
+   'data/ba.csv' every ::1 using ($1):($6) title DiffSmoothMotion ls 8, \
+   'data/ba.csv' every ::1 using ($1):($7) title DiffSmoothMotionDPS ls 4, \
 
 set xlabel "Dimension (K)"
 
@@ -146,22 +148,26 @@ set output 'nmf_1.pdf'
 
 set title "Non-Negative Matrix Factorization -- Dimension of A: 100 x K"
 
-plot 'data/nmf.csv' every ::1::6 using ($1):($8) title DiffSharpR ls 5, \
-   'data/nmf.csv' every ::1::6 using ($1):($7) title DiffSharpF ls 6, \
+plot 'data/nmf.csv' every ::1::6 using ($1):($10) title DiffSharpR ls 5, \
+   'data/nmf.csv' every ::1::6 using ($1):($9) title DiffSharpF ls 6, \
    'data/nmf.csv' every ::1::6 using ($1):($2) title TapenadeR ls 1, \
    'data/nmf.csv' every ::1::6 using ($1):($3) title TapenadeF ls 2, \
-   'data/nmf.csv' every ::1::6 using ($1):($6) title Theano ls 7, \
+   'data/nmf.csv' every ::1::6 using ($1):($8) title Theano ls 7, \
    'data/nmf.csv' every ::1::6 using ($1):($4) title DiffSmooth ls 3, \
-   'data/nmf.csv' every ::1::6 using ($1):($5) title DiffSmoothDPS ls 4
+   'data/nmf.csv' every ::1::6 using ($1):($5) title DiffSmoothMotionNN ls 9, \
+   'data/nmf.csv' every ::1::6 using ($1):($6) title DiffSmoothMotion ls 8, \
+   'data/nmf.csv' every ::1::6 using ($1):($7) title DiffSmoothMotionDPS ls 4
 
 set output 'nmf_2.pdf' 
 
 set title "Non-Negative Matrix Factorization -- Dimension of A: K x 100"
 
-plot 'data/nmf.csv' every ::7 using ($1):($8) title DiffSharpR ls 5, \
-   'data/nmf.csv' every ::7 using ($1):($7) title DiffSharpF ls 6, \
+plot 'data/nmf.csv' every ::7 using ($1):($10) title DiffSharpR ls 5, \
+   'data/nmf.csv' every ::7 using ($1):($9) title DiffSharpF ls 6, \
    'data/nmf.csv' every ::7 using ($1):($2) title TapenadeR ls 1, \
    'data/nmf.csv' every ::7 using ($1):($3) title TapenadeF ls 2, \
-   'data/nmf.csv' every ::7 using ($1):($6) title Theano ls 7, \
+   'data/nmf.csv' every ::7 using ($1):($8) title Theano ls 7, \
    'data/nmf.csv' every ::7 using ($1):($4) title DiffSmooth ls 3, \
-   'data/nmf.csv' every ::7 using ($1):($5) title DiffSmoothDPS ls 4
+   'data/nmf.csv' every ::7 using ($1):($5) title DiffSmoothMotionNN ls 9, \
+   'data/nmf.csv' every ::7 using ($1):($6) title DiffSmoothMotion ls 8, \
+   'data/nmf.csv' every ::7 using ($1):($7) title DiffSmoothMotionDPS ls 4
