@@ -1,12 +1,15 @@
 Autodiff Experimentation
 ===
 
-Installation
+Requirements for Mac OSX
 ---
-In order to compile the DiffSharp files, you have to make sure that:
-* fsharpc is installed. 
+Make sure that you have the following software installed
+* fsharpc, which is part of the mono framework (`brew install mono`)
 * DLL files for DiffSharp, FsAlg, and FSharpQuotationEvaluator are in the `src` folder.
-
+* Python 2.7 (`brew install python@2`)
+* Clang (`brew install clang`)
+* Theano 0.9.0 (`pip install theano`)
+* Scala 2.12 (`brew install scala --devel`)
 
 Compilation
 ---
