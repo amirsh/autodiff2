@@ -40,7 +40,7 @@ function get_files() {
 			   "./ba_proj_diff_nonmotion.exe" "./ba_proj_diff_nomotion.exe" "./ba_proj_diff.exe" "./ba_proj_diff_dps.exe"
 			   "python micro.py ba" "mono ba_fsharp_for.exe" "mono ba_fsharp_rev.exe");
 	elif [ $prog == "nmf" ]; then
-		files=(	"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe" #"./nmf_diff_unfused.exe" # For the moment, as it needs a lot of RAM
+		files=(	"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe" "./nmf_diff_unfused.exe"
 			    "./nmf_diff_nonmotion.exe" "./nmf_diff_nomotion.exe" "./nmf_diff.exe" "./nmf_diff_dps.exe"
 				"python ./nmf.py exponential" "mono nmf_fsharp_for.exe" "mono nmf_fsharp_rev.exe");
 		
@@ -64,7 +64,7 @@ function run_bench {
 		do
 			echo "$f" >> $outfile
 			# eval "$f $p 10"
-			eval "gtimeout 1200 $f $p 10" >> $outfile
+			eval "gtimeout 1200 $f $p 5" >> $outfile
 		done
 	done
 }

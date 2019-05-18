@@ -32,7 +32,7 @@ ba : micro-main.c
 
 nmf : nmf-main.c
 	clang $(OPTS) nmf-main.c -o nmf_diff.exe
-	clang $(OPTS) nmf-main.c -DUNFUSED -o nmf_diff_unfused.exe
+	clang $(OPTS) nmf-main.c -DNOFUSION -o nmf_diff_nofusion.exe
 	clang $(OPTS) nmf-main.c -DNOMOTION -o nmf_diff_nomotion.exe
 	clang $(OPTS) nmf-main.c -DNONMOTION -o nmf_diff_nonmotion.exe
 	clang $(OPTS) nmf-main.c -DDPS -o nmf_diff_dps.exe

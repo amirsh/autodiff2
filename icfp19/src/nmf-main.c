@@ -23,8 +23,8 @@
 #else
   #if defined DPS
     #include "diffsmooth/nmf_dps.h"
-  #elif defined UNFUSED
-    #include "diffsmooth/nmf_unfused.h"
+  #elif defined NOFUSION
+    #include "diffsmooth/nmf_nofusion.h"
   #elif defined NOMOTION
     #include "diffsmooth/nmf_nomotion.h"
   #elif defined NONMOTION
