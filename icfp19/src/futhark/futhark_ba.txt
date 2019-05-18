@@ -1,0 +1,10 @@
+Compiling ba.fut...
+Results for ba.fut:
+dataset [29]f32:         8.40μs (avg. of 10 runs; RSD: 0.06)
+dataset [47]f32:        13.50μs (avg. of 10 runs; RSD: 0.04)
+dataset [86]f32:        21.40μs (avg. of 10 runs; RSD: 0.02)
+dataset [161]f32:       32.20μs (avg. of 10 runs; RSD: 0.01)
+dataset [311]f32:       58.80μs (avg. of 10 runs; RSD: 0.01)
+dataset [611]f32:      125.80μs (avg. of 10 runs; RSD: 0.04)
+dataset [1211]f32:     227.40μs (avg. of 10 runs; RSD: 0.06)
+dataset [2411]f32:     435.30μs (avg. of 10 runs; RSD: 0.03)

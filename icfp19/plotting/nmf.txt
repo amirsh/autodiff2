@@ -1,225 +1,247 @@
 1000100
 ./nmf_tap_rev_unf.exe
-total =-71053676.424946, time per call = 0.334600 ms
+total =-71053676.424946, time per call = 0.260400 ms
 ./nmf_tap_for_unf.exe
-total =-71053676.424946, time per call = 22.204401 ms
+total =-71053676.424946, time per call = 18.053799 ms
 ./nmf_diff_unfused.exe
-total =-71053676.424946, time per call = 122.622803 ms
+total =-71053676.424946, time per call = 106.380798 ms
 ./nmf_diff_nonmotion.exe
-total =-71053676.424946, time per call = 3.679400 ms
+total =-71053676.424946, time per call = 3.255400 ms
 ./nmf_diff_nomotion.exe
-total =-71053676.424946, time per call = 4.028200 ms
+total =-71053676.424946, time per call = 3.385600 ms
 ./nmf_diff.exe
-total =-71053676.424946, time per call = 0.063400 ms
+total =-71053676.424946, time per call = 0.083000 ms
 ./nmf_diff_dps.exe
-total =-71053676.424946, time per call = 0.084800 ms
+total =-71053676.424946, time per call = 0.062200 ms
 python ./nmf.py exponential
-total =-71053676.424946, time per call = 0.252200 ms
+total =-71053676.424946, time per call = 0.191800 ms
 mono nmf_fsharp_for.exe
-total =-71290863.391414, time per call = 1043.800000 ms
+total =-71290863.391414, time per call = 750.200000 ms
 mono nmf_fsharp_rev.exe
-total =-71290863.391414, time per call = 39.600000 ms
+total =-71290863.391414, time per call = 31.600000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 19.503300 ms
 2000100
 ./nmf_tap_rev_unf.exe
-total =-29572522.521304, time per call = 0.737600 ms
+total =-29572522.521304, time per call = 0.718600 ms
 ./nmf_tap_for_unf.exe
-total =-29572522.521304, time per call = 41.597198 ms
+total =-29572522.521304, time per call = 37.328601 ms
 ./nmf_diff_unfused.exe
-total =-29572522.521304, time per call = 232.568994 ms
+total =-29572522.521304, time per call = 204.914795 ms
 ./nmf_diff_nonmotion.exe
-total =-29572522.521304, time per call = 7.246600 ms
+total =-29572522.521304, time per call = 6.729400 ms
 ./nmf_diff_nomotion.exe
-total =-29572522.521304, time per call = 7.468400 ms
+total =-29572522.521304, time per call = 7.306000 ms
 ./nmf_diff.exe
-total =-29572522.521304, time per call = 0.141800 ms
+total =-29572522.521304, time per call = 0.147000 ms
 ./nmf_diff_dps.exe
-total =-29572522.521304, time per call = 0.163000 ms
+total =-29572522.521304, time per call = 0.141400 ms
 python ./nmf.py exponential
-total =-29572522.521304, time per call = 0.369400 ms
+total =-29572522.521304, time per call = 0.283000 ms
 mono nmf_fsharp_for.exe
-total =-30016221.484765, time per call = 2124.400000 ms
+total =-30016221.484765, time per call = 1724.600000 ms
 mono nmf_fsharp_rev.exe
-total =-30016221.484765, time per call = 82.800000 ms
+total =-30016221.484765, time per call = 66.400000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 76.767200 ms
 4000100
 ./nmf_tap_rev_unf.exe
-total =-2259548707.243537, time per call = 1.441800 ms
+total =-2259548707.243537, time per call = 1.364200 ms
 ./nmf_tap_for_unf.exe
-total =-2259548707.243536, time per call = 86.387201 ms
+total =-2259548707.243536, time per call = 74.153601 ms
 ./nmf_diff_unfused.exe
-total =-2259548707.243536, time per call = 470.942578 ms
+total =-2259548707.243536, time per call = 414.280615 ms
 ./nmf_diff_nonmotion.exe
-total =-2259548707.243536, time per call = 14.135600 ms
+total =-2259548707.243536, time per call = 13.029401 ms
 ./nmf_diff_nomotion.exe
-total =-2259548707.243536, time per call = 15.231799 ms
+total =-2259548707.243536, time per call = 13.849400 ms
 ./nmf_diff.exe
-total =-2259548707.243536, time per call = 0.248600 ms
+total =-2259548707.243536, time per call = 0.279800 ms
 ./nmf_diff_dps.exe
-total =-2259548707.243536, time per call = 0.292800 ms
+total =-2259548707.243536, time per call = 0.278800 ms
 python ./nmf.py exponential
-total =-2259548707.243535, time per call = 0.494800 ms
+total =-2259548707.243535, time per call = 0.509800 ms
 mono nmf_fsharp_for.exe
-total =-2262226814.222050, time per call = 4515.800000 ms
+total =-2262226814.222050, time per call = 3796.400000 ms
 mono nmf_fsharp_rev.exe
-total =-2262226814.222050, time per call = 158.200000 ms
+total =-2262226814.222050, time per call = 135.600000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 306.827100 ms
 8000100
 ./nmf_tap_rev_unf.exe
-total =-220974940.138024, time per call = 3.076600 ms
+total =-220974940.138024, time per call = 2.676600 ms
 ./nmf_tap_for_unf.exe
-total =-220974940.138024, time per call = 178.696997 ms
+total =-220974940.138024, time per call = 153.665796 ms
 ./nmf_diff_unfused.exe
-total =-220974940.138024, time per call = 960.985352 ms
+total =-220974940.138024, time per call = 880.418164 ms
 ./nmf_diff_nonmotion.exe
-total =-220974940.138024, time per call = 28.789801 ms
+total =-220974940.138024, time per call = 27.817801 ms
 ./nmf_diff_nomotion.exe
-total =-220974940.138024, time per call = 30.574799 ms
+total =-220974940.138024, time per call = 27.800800 ms
 ./nmf_diff.exe
-total =-220974940.138024, time per call = 0.610200 ms
+total =-220974940.138024, time per call = 0.602800 ms
 ./nmf_diff_dps.exe
-total =-220974940.138024, time per call = 0.592400 ms
+total =-220974940.138024, time per call = 0.529400 ms
 python ./nmf.py exponential
-total =-220974940.138024, time per call = 1.058600 ms
+total =-220974940.138024, time per call = 0.843000 ms
 mono nmf_fsharp_for.exe
-total =-223147044.642802, time per call = 9558.800000 ms
+total =-223147044.642802, time per call = 7848.200000 ms
 mono nmf_fsharp_rev.exe
-total =-223147044.642802, time per call = 410.800000 ms
+total =-223147044.642802, time per call = 404.000000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 1217.159400 ms
 16000100
 ./nmf_tap_rev_unf.exe
-total =-34631067795.491425, time per call = 6.351600 ms
+total =-34631067795.491425, time per call = 6.421000 ms
 ./nmf_tap_for_unf.exe
-total =-34631067795.491463, time per call = 389.806201 ms
+total =-34631067795.491463, time per call = 352.425000 ms
 ./nmf_diff_unfused.exe
-total =-34631067795.491463, time per call = 2003.328516 ms
+total =-34631067795.491463, time per call = 1785.361719 ms
 ./nmf_diff_nonmotion.exe
-total =-34631067795.491463, time per call = 63.940802 ms
+total =-34631067795.491463, time per call = 53.608002 ms
 ./nmf_diff_nomotion.exe
-total =-34631067795.491463, time per call = 64.981598 ms
+total =-34631067795.491463, time per call = 55.160400 ms
 ./nmf_diff.exe
-total =-34631067795.491463, time per call = 1.226200 ms
+total =-34631067795.491463, time per call = 1.062400 ms
 ./nmf_diff_dps.exe
-total =-34631067795.491463, time per call = 1.256000 ms
+total =-34631067795.491463, time per call = 1.029200 ms
 python ./nmf.py exponential
-total =-34631067795.491463, time per call = 2.142600 ms
+total =-34631067795.491463, time per call = 2.005600 ms
 mono nmf_fsharp_for.exe
-total =-34649166551.152200, time per call = 21102.800000 ms
+total =-34649166551.152200, time per call = 17869.200000 ms
 mono nmf_fsharp_rev.exe
-total =-34649166551.152200, time per call = 744.600000 ms
+total =-34649166551.152200, time per call = 858.800000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 5107.877300 ms
 32000100
 ./nmf_tap_rev_unf.exe
-total =-3908621010391.074219, time per call = 15.748599 ms
+total =-3908621010391.074219, time per call = 12.720600 ms
 ./nmf_tap_for_unf.exe
-total =-3908621010391.073242, time per call = 863.199805 ms
+total =-3908621010391.073242, time per call = 746.689600 ms
 ./nmf_diff_unfused.exe
 ./nmf_diff_nonmotion.exe
-total =-3908621010391.073242, time per call = 118.251001 ms
+total =-3908621010391.073242, time per call = 109.735803 ms
 ./nmf_diff_nomotion.exe
-total =-3908621010391.073242, time per call = 125.495203 ms
+total =-3908621010391.073242, time per call = 110.872205 ms
 ./nmf_diff.exe
-total =-3908621010391.073242, time per call = 2.423400 ms
+total =-3908621010391.073242, time per call = 2.188400 ms
 ./nmf_diff_dps.exe
-total =-3908621010391.073242, time per call = 2.339000 ms
+total =-3908621010391.073242, time per call = 2.561600 ms
 python ./nmf.py exponential
-total =-3908621010391.074219, time per call = 3.946200 ms
+total =-3908621010391.074219, time per call = 3.557600 ms
 mono nmf_fsharp_for.exe
-total =-3908729891998.610000, time per call = 41983.200000 ms
+total =-3908729891998.610000, time per call = 35895.200000 ms
 mono nmf_fsharp_rev.exe
-total =-3908729891998.610000, time per call = 1722.200000 ms
+total =-3908729891998.610000, time per call = 1457.400000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 21467.456600 ms
 1000200
 ./nmf_tap_rev_unf.exe
-total =-73351641.865599, time per call = 0.717200 ms
+total =-73351641.865599, time per call = 0.577800 ms
 ./nmf_tap_for_unf.exe
-total =-73351641.865599, time per call = 82.317200 ms
+total =-73351641.865599, time per call = 72.244202 ms
 ./nmf_diff_unfused.exe
-total =-73351641.865599, time per call = 468.349609 ms
+total =-73351641.865599, time per call = 401.967798 ms
 ./nmf_diff_nonmotion.exe
-total =-73351641.865599, time per call = 14.456000 ms
+total =-73351641.865599, time per call = 12.417000 ms
 ./nmf_diff_nomotion.exe
-total =-73351641.865599, time per call = 15.118800 ms
+total =-73351641.865599, time per call = 13.770000 ms
 ./nmf_diff.exe
-total =-73351641.865599, time per call = 0.143000 ms
+total =-73351641.865599, time per call = 0.142400 ms
 ./nmf_diff_dps.exe
-total =-73351641.865599, time per call = 0.149200 ms
+total =-73351641.865599, time per call = 0.149400 ms
 python ./nmf.py exponential
-total =-73351641.865599, time per call = 0.300000 ms
+total =-73351641.865599, time per call = 0.318800 ms
 mono nmf_fsharp_for.exe
-total =-73813469.762446, time per call = 4493.800000 ms
+total =-73813469.762446, time per call = 3293.600000 ms
 mono nmf_fsharp_rev.exe
-total =-73813469.762446, time per call = 80.400000 ms
+total =-73813469.762446, time per call = 65.200000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 38.110100 ms
 1000400
 ./nmf_tap_rev_unf.exe
-total =-1078237539.392267, time per call = 1.372000 ms
+total =-1078237539.392267, time per call = 1.172800 ms
 ./nmf_tap_for_unf.exe
-total =-1078237539.392267, time per call = 327.471802 ms
+total =-1078237539.392267, time per call = 289.393188 ms
 ./nmf_diff_unfused.exe
-total =-1078237539.392267, time per call = 1881.415625 ms
+total =-1078237539.392267, time per call = 1664.736719 ms
 ./nmf_diff_nonmotion.exe
-total =-1078237539.392267, time per call = 55.429602 ms
+total =-1078237539.392267, time per call = 49.392401 ms
 ./nmf_diff_nomotion.exe
-total =-1078237539.392267, time per call = 60.138202 ms
+total =-1078237539.392267, time per call = 55.474597 ms
 ./nmf_diff.exe
-total =-1078237539.392267, time per call = 0.323200 ms
+total =-1078237539.392267, time per call = 0.252600 ms
 ./nmf_diff_dps.exe
-total =-1078237539.392267, time per call = 0.294200 ms
+total =-1078237539.392267, time per call = 0.248000 ms
 python ./nmf.py exponential
-total =-1078237539.392267, time per call = 0.663400 ms
+total =-1078237539.392267, time per call = 0.585600 ms
 mono nmf_fsharp_for.exe
-total =-1079911125.361500, time per call = 17232.400000 ms
+total =-1079911125.361500, time per call = 14465.600000 ms
 mono nmf_fsharp_rev.exe
-total =-1079911125.361500, time per call = 150.000000 ms
+total =-1079911125.361500, time per call = 128.200000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 77.856200 ms
 1000800
 ./nmf_tap_rev_unf.exe
-total =-1479430217.103637, time per call = 2.962000 ms
+total =-1479430217.103637, time per call = 2.667800 ms
 ./nmf_tap_for_unf.exe
-total =-1479430217.103637, time per call = 1364.051563 ms
+total =-1479430217.103637, time per call = 1148.745996 ms
 ./nmf_diff_unfused.exe
 ./nmf_diff_nonmotion.exe
-total =-1479430217.103637, time per call = 216.213403 ms
+total =-1479430217.103637, time per call = 183.697400 ms
 ./nmf_diff_nomotion.exe
-total =-1479430217.103637, time per call = 238.829810 ms
+total =-1479430217.103637, time per call = 203.327002 ms
 ./nmf_diff.exe
-total =-1479430217.103637, time per call = 0.646200 ms
+total =-1479430217.103637, time per call = 0.495000 ms
 ./nmf_diff_dps.exe
-total =-1479430217.103637, time per call = 0.595600 ms
+total =-1479430217.103637, time per call = 0.484200 ms
 python ./nmf.py exponential
-total =-1479430217.103637, time per call = 1.081400 ms
+total =-1479430217.103637, time per call = 1.016600 ms
 mono nmf_fsharp_for.exe
-total =-1482193697.821800, time per call = 70599.200000 ms
+total =-1482193697.821800, time per call = 59184.400000 ms
 mono nmf_fsharp_rev.exe
-total =-1482193697.821800, time per call = 333.600000 ms
+total =-1482193697.821800, time per call = 267.200000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 154.300400 ms
 1001600
 ./nmf_tap_rev_unf.exe
-total =-22912829451.920715, time per call = 6.805000 ms
+total =-22912829451.920715, time per call = 5.462200 ms
 ./nmf_tap_for_unf.exe
-total =-22912829451.920700, time per call = 5930.784766 ms
+total =-22912829451.920700, time per call = 5148.885156 ms
 ./nmf_diff_unfused.exe
 ./nmf_diff_nonmotion.exe
-total =-22912829451.920700, time per call = 891.782227 ms
+total =-22912829451.920700, time per call = 754.242383 ms
 ./nmf_diff_nomotion.exe
-total =-22912829451.920700, time per call = 979.829590 ms
+total =-22912829451.920700, time per call = 829.163965 ms
 ./nmf_diff.exe
-total =-22912829451.920700, time per call = 1.259200 ms
+total =-22912829451.920700, time per call = 0.994400 ms
 ./nmf_diff_dps.exe
-total =-22912829451.920700, time per call = 1.318400 ms
+total =-22912829451.920700, time per call = 0.996000 ms
 python ./nmf.py exponential
-total =-22912829451.920700, time per call = 1.983600 ms
+total =-22912829451.920700, time per call = 1.920200 ms
 mono nmf_fsharp_for.exe
 mono nmf_fsharp_rev.exe
-total =-22920818415.840200, time per call = 583.400000 ms
+total =-22920818415.840200, time per call = 605.600000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 305.418600 ms
 1003200
 ./nmf_tap_rev_unf.exe
-total =-34176926851971.066406, time per call = 12.350000 ms
+total =-34176926851971.066406, time per call = 12.919200 ms
 ./nmf_tap_for_unf.exe
-total =-34176926851971.066406, time per call = 22339.548438 ms
+total =-34176926851971.066406, time per call = 22772.495312 ms
 ./nmf_diff_unfused.exe
 ./nmf_diff_nonmotion.exe
-total =-34176926851971.066406, time per call = 3027.683984 ms
+total =-34176926851971.066406, time per call = 3137.021289 ms
 ./nmf_diff_nomotion.exe
-total =-34176926851971.066406, time per call = 3359.938281 ms
+total =-34176926851971.066406, time per call = 3470.310547 ms
 ./nmf_diff.exe
-total =-34176926851971.066406, time per call = 2.044200 ms
+total =-34176926851971.066406, time per call = 2.092400 ms
 ./nmf_diff_dps.exe
-total =-34176926851971.066406, time per call = 2.118600 ms
+total =-34176926851971.066406, time per call = 2.116200 ms
 python ./nmf.py exponential
-total =-34176926851971.066406, time per call = 3.267800 ms
+total =-34176926851971.066406, time per call = 3.357200 ms
 mono nmf_fsharp_for.exe
 mono nmf_fsharp_rev.exe
 total =-34177014571513.300000, time per call = 1262.000000 ms
+futhark/time_futhark.sh nmf
+total =500.000000, time per call = 615.834400 ms

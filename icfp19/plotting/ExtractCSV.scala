@@ -54,7 +54,7 @@ object ExtractCSV {
       bench = NMF_BENCH
     
     def isTime(s: String) = s.contains(TIME)
-    def isExe(s: String) = s.contains(".exe") || s.contains("python")
+    def isExe(s: String) = s.contains(".exe") || s.contains("python") || s.contains("futhark")
     val data = scala.collection.mutable.HashMap[String, List[(String, Double)]]()
     def extractTime(s: String) = s.substring(s.indexOf(TIME) + TIME.length).dropRight(2).toDouble
     for(i <- lines) { 

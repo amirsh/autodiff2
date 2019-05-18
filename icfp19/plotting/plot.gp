@@ -14,6 +14,7 @@ theano_color = "#CCC174"
 DiffSmoothMotion_color = "#FCB164"
 DiffSmoothMotionNN_color = "#fb5a59"
 DiffSmoothFusion_color = "#228822"
+Futhark_color = "#222299"
 
 set style line 1 lc rgb TapenadeR_color lw 2 pt 12
 set style line 2 lc rgb TapenadeF_color lw 2 pt 12
@@ -25,6 +26,7 @@ set style line 7 lc rgb theano_color lw 2 pt 3
 set style line 8 lc rgb DiffSmoothMotion_color lw 4 pt 12 dashtype 2
 set style line 9 lc rgb DiffSmoothMotionNN_color lw 4 pt 12 dashtype 4
 set style line 10 lc rgb DiffSmoothFusion_color lw 4 pt 12 dashtype 2
+set style line 11 lc rgb Futhark_color lw 2 pt 3
 
 TapenadeR = "Tapenade (R)"
 TapenadeF = "Tapenade (F)"
@@ -37,6 +39,7 @@ DiffSmoothMotion = ".. + CM++"
 DiffSmoothMotionDPS = ".. + DPS"
 DiffSmoothDPS = "dF\\~ + DPS"
 Theano = "Theano"
+Futhark = "Futhark"
 DiffSharpF = "DiffSharp (F)"
 DiffSharpR = "DiffSharp (R)"
 
@@ -140,6 +143,7 @@ plot 'data/ba.csv' every ::1 using ($1):($11) title DiffSharpR ls 5, \
    'data/ba.csv' every ::1 using ($1):($2) title TapenadeR ls 1, \
    'data/ba.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/ba.csv' every ::1 using ($1):($9) title Theano ls 7, \
+   'data/ba.csv' every ::1 using ($1):($12) title Futhark ls 11, \
    'data/ba.csv' every ::1 using ($1):($4) title DiffSmooth ls 3, \
    'data/ba.csv' every ::1 using ($1):($5) title DiffSmoothFusion ls 10, \
    'data/ba.csv' every ::1 using ($1):($6) title DiffSmoothMotionNN ls 9, \
@@ -157,6 +161,7 @@ plot 'data/nmf.csv' every ::1::6 using ($1):($11) title DiffSharpR ls 5, \
    'data/nmf.csv' every ::1::6 using ($1):($2) title TapenadeR ls 1, \
    'data/nmf.csv' every ::1::6 using ($1):($3) title TapenadeF ls 2, \
    'data/nmf.csv' every ::1::6 using ($1):($9) title Theano ls 7, \
+   'data/nmf.csv' every ::1::6 using ($1):($12) title Futhark ls 11, \
    'data/nmf.csv' every ::1::6 using ($1):($4) title DiffSmooth ls 3, \
    'data/nmf.csv' every ::1::6 using ($1):($5) title DiffSmoothFusion ls 10, \
    'data/nmf.csv' every ::1::6 using ($1):($6) title DiffSmoothMotionNN ls 9, \
@@ -172,6 +177,7 @@ plot 'data/nmf.csv' every ::7 using ($1):($11) title DiffSharpR ls 5, \
    'data/nmf.csv' every ::7 using ($1):($2) title TapenadeR ls 1, \
    'data/nmf.csv' every ::7 using ($1):($3) title TapenadeF ls 2, \
    'data/nmf.csv' every ::7 using ($1):($9) title Theano ls 7, \
+   'data/nmf.csv' every ::7 using ($1):($12) title Futhark ls 11, \
    'data/nmf.csv' every ::7 using ($1):($4) title DiffSmooth ls 3, \
    'data/nmf.csv' every ::7 using ($1):($5) title DiffSmoothFusion ls 10, \
    'data/nmf.csv' every ::7 using ($1):($6) title DiffSmoothMotionNN ls 9, \
