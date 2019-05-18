@@ -10,6 +10,7 @@
 #define INIT_HEAP_SIZE (1 << 20)
 #define ALLIGN_BY_16(x) (((((x) + 15) >> 4) << 4))
 #define MAX_HEAP_SIZE ((memory_size_t)(1) << 31)
+#define MAX_MEM_SIZE 15000000000
 
 typedef struct heap_t { 
   storage_t storage; 
@@ -53,6 +54,9 @@ inline storage_t bulk_alloc(memory_size_t size) {
     // heapObject.free_index = oldHeapObject.free_index;
     // memcpy(heapObject.storage, oldHeapObject.storage, heapObject.free_index);
     // free(oldHeapObject.storage);
+    if(new_size > MAX_MEM_SIZE) {
+      exit(-1);
+    }
   } 
   storage_t allocatedStorage = (void *)((memory_size_t)heapObject.storage + heapObject.free_index);
   heapObject.free_index = heapObject.free_index + aligned_size;
