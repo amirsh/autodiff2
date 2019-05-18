@@ -23,6 +23,7 @@ micro : micro-main.c
 
 ba : micro-main.c
 	clang $(OPTS) micro-main.c -DBA_PROJ -o ba_proj_diff.exe
+	clang $(OPTS) micro-main.c -DBA_PROJ -DNOFUSION -o ba_proj_diff_nofusion.exe
 	clang $(OPTS) micro-main.c -DBA_PROJ -DNOMOTION -o ba_proj_diff_nomotion.exe
 	clang $(OPTS) micro-main.c -DBA_PROJ -DNONMOTION -o ba_proj_diff_nonmotion.exe
 	clang $(OPTS) micro-main.c -DBA_PROJ -DDPS -o ba_proj_diff_dps.exe

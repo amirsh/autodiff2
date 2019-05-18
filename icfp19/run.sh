@@ -36,7 +36,7 @@ function get_files() {
 	elif [ $prog == "max" ]; then
 		files=("./max_tap_rev.exe" "./max_tap_for.exe" "./max_diff.exe" "./max_diff_dps.exe" "python micro.py max" "mono max_fsharp_for.exe" "mono max_fsharp_rev.exe");
 	elif [ $prog == "ba" ]; then
-		files=("./ba_proj_tap_rev.exe" "./ba_proj_tap_for.exe"
+		files=("./ba_proj_tap_rev.exe" "./ba_proj_tap_for.exe" "./ba_proj_diff_nofusion.exe"
 			   "./ba_proj_diff_nonmotion.exe" "./ba_proj_diff_nomotion.exe" "./ba_proj_diff.exe" "./ba_proj_diff_dps.exe"
 			   "python micro.py ba" "mono ba_fsharp_for.exe" "mono ba_fsharp_rev.exe");
 	elif [ $prog == "nmf" ]; then

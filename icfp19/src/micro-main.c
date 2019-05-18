@@ -18,6 +18,8 @@
     #endif
   #elif defined DPS
     #include "diffsmooth/ba_dps.h"
+  #elif defined NOFUSION
+    #include "diffsmooth/ba_nofusion.h"
   #elif defined NOMOTION
     #include "diffsmooth/ba_nomotion.h"
   #elif defined NONMOTION
