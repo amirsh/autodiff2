@@ -38,11 +38,11 @@ function get_files() {
 	elif [ $prog == "ba" ]; then
 		files=("./ba_proj_tap_rev.exe" "./ba_proj_tap_for.exe" "./ba_proj_diff_nofusion.exe"
 			   "./ba_proj_diff_nonmotion.exe" "./ba_proj_diff_nomotion.exe" "./ba_proj_diff.exe" "./ba_proj_diff_dps.exe"
-			   "python micro.py ba" "mono ba_fsharp_for.exe" "mono ba_fsharp_rev.exe");
+			   "python micro.py ba" "mono ba_fsharp_for.exe" "mono ba_fsharp_rev.exe" "futhark/time_futhark.sh ba");
 	elif [ $prog == "nmf" ]; then
 		files=(	"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe" "./nmf_diff_unfused.exe"
 			    "./nmf_diff_nonmotion.exe" "./nmf_diff_nomotion.exe" "./nmf_diff.exe" "./nmf_diff_dps.exe"
-				"python ./nmf.py exponential" "mono nmf_fsharp_for.exe" "mono nmf_fsharp_rev.exe");
+				"python ./nmf.py exponential" "mono nmf_fsharp_for.exe" "mono nmf_fsharp_rev.exe" "futhark/time_futhark.sh nmf");
 		
 	fi
 	declare -p files;
@@ -73,7 +73,9 @@ run_bench "mults"
 run_bench "add"
 run_bench "dot"
 run_bench "max"
+cd futhark; ./run_futhark.sh ba; cd ..;
 run_bench "ba"
+cd futhark; ./run_futhark.sh nmf; cd ..;
 run_bench "nmf"
 
 cd ..
