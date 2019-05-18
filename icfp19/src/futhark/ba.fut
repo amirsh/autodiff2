@@ -53,13 +53,11 @@ module fs (M: real) = {
   let project_all n xs cam = 
     flatten (tabulate n (\i -> 
       let x = point_3d xs[(3*i):(3+3*i)]
-      let res = project cam x
-      in res
+      in project cam x
     ))
 }
 
-module f32_dual = mk_dual f32
-
+module fs_f32 = fs f32
 module fs_f32_dual = fs f32_dual
 
 -- ==
@@ -75,10 +73,7 @@ module fs_f32_dual = fs f32_dual
 let main vec1 = 
   let dim = length vec1
   let n = (dim - N_CAM_PARAMS) / 3
-  let vec1' = map f32_dual.inject vec1
+  let xs' = map f32_dual.inject vec1[N_CAM_PARAMS:dim]
   let cam = vec1[0:N_CAM_PARAMS]
-  in tabulate N_CAM_PARAMS (\i -> 
-    let camd = tabulate N_CAM_PARAMS (\j -> f32.bool(i == j))
-    let cam' = map2 (f32_dual.make_dual) cam camd
-    in fs_f32_dual.project_all n vec1' cam'
-  )
+  let jac = jacobian (fs_f32_dual.project_all n xs') cam
+  in jac |> flatten |> f32_dual.sum |> f32_dual.get_deriv

@@ -122,3 +122,13 @@ module mk_dual(T: real): {
   let set_deriv (x,_) x'= (x,x')
   let make_dual x x' = (x,x')
 }
+
+module f32_dual = mk_dual f32
+
+let jacobian (f: []f32_dual.t -> []f32_dual.t)(x: []f32.t): [][]f32_dual.t =
+  let n = length x in
+  tabulate n (\i ->
+    let dx = tabulate n (\j -> f32.bool(i == j)) 
+    let x' = map2 (f32_dual.make_dual) x dx
+    in f x'
+  )
