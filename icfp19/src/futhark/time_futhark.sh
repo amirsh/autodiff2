@@ -1,8 +1,10 @@
 PROG=$1
 PARAM=$2
 
-if [[ $PROG == "ba" ]]; then
+if [[ $PROG == "ba" || $PROG == "max" ]]; then
 	RES=$(cat futhark/futhark_$PROG.txt | grep "\[$PARAM\]" | awk '{print $3}' | cut -d'μ' -f 1)
+elif [[ $PROG == "add" || $PROG == "dot" || $PROG == "mults" ]]; then
+	RES=$(cat futhark/futhark_$PROG.txt | grep "\[$PARAM\]" | awk '{print $4}' | cut -d'μ' -f 1)
 else
 	M=$(($PARAM / 10000))
 	N=$(($PARAM % 10000))
