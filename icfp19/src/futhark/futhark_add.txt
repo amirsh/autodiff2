@@ -1,0 +1,10 @@
+Compiling add.fut...
+Results for add.fut:
+dataset [50]f32 [50]f32:           3.80μs (avg. of 10 runs; RSD: 0.11)
+dataset [100]f32 [100]f32:        15.70μs (avg. of 10 runs; RSD: 0.21)
+dataset [200]f32 [200]f32:        54.00μs (avg. of 10 runs; RSD: 0.00)
+dataset [400]f32 [400]f32:       209.30μs (avg. of 10 runs; RSD: 0.00)
+dataset [800]f32 [800]f32:       875.20μs (avg. of 10 runs; RSD: 0.07)
+dataset [1600]f32 [1600]f32:    3416.60μs (avg. of 10 runs; RSD: 0.06)
+dataset [3200]f32 [3200]f32:   18324.80μs (avg. of 10 runs; RSD: 0.02)
+dataset [6400]f32 [6400]f32:  113165.20μs (avg. of 10 runs; RSD: 0.02)

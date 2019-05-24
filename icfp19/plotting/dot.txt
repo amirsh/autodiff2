@@ -13,6 +13,8 @@ mono dot_fsharp_for.exe
 total =459.529070, time per call = 2.700000 ms
 mono dot_fsharp_rev.exe
 total =459.529070, time per call = 0.800000 ms
+futhark/time_futhark.sh dot
+total =500.000000, time per call = .009400 ms
 200
 ./dot_tap_rev.exe
 total =978.344030, time per call = 0.001400 ms
@@ -28,6 +30,8 @@ mono dot_fsharp_for.exe
 total =978.344030, time per call = 8.000000 ms
 mono dot_fsharp_rev.exe
 total =978.344030, time per call = 1.400000 ms
+futhark/time_futhark.sh dot
+total =500.000000, time per call = .038900 ms
 400
 ./dot_tap_rev.exe
 total =1960.724910, time per call = 0.001600 ms
@@ -43,6 +47,8 @@ mono dot_fsharp_for.exe
 total =1960.724910, time per call = 30.000000 ms
 mono dot_fsharp_rev.exe
 total =1960.724910, time per call = 1.500000 ms
+futhark/time_futhark.sh dot
+total =500.000000, time per call = .148600 ms
 800
 ./dot_tap_rev.exe
 total =3859.237200, time per call = 0.002300 ms
@@ -58,6 +64,8 @@ mono dot_fsharp_for.exe
 total =3859.237200, time per call = 118.700000 ms
 mono dot_fsharp_rev.exe
 total =3859.237200, time per call = 2.000000 ms
+futhark/time_futhark.sh dot
+total =500.000000, time per call = .565000 ms
 1600
 ./dot_tap_rev.exe
 total =7683.429590, time per call = 0.003800 ms
@@ -73,6 +81,8 @@ mono dot_fsharp_for.exe
 total =7683.429590, time per call = 704.900000 ms
 mono dot_fsharp_rev.exe
 total =7683.429590, time per call = 2.100000 ms
+futhark/time_futhark.sh dot
+total =500.000000, time per call = 2.403600 ms
 3200
 ./dot_tap_rev.exe
 total =15566.615610, time per call = 0.006200 ms
@@ -88,6 +98,8 @@ mono dot_fsharp_for.exe
 total =15566.615610, time per call = 2699.900000 ms
 mono dot_fsharp_rev.exe
 total =15566.615610, time per call = 5.200000 ms
+futhark/time_futhark.sh dot
+total =500.000000, time per call = 9.395600 ms
 6400
 ./dot_tap_rev.exe
 total =31159.788570, time per call = 0.011100 ms
@@ -103,6 +115,8 @@ mono dot_fsharp_for.exe
 total =31159.788570, time per call = 10835.900000 ms
 mono dot_fsharp_rev.exe
 total =31159.788570, time per call = 11.900000 ms
+futhark/time_futhark.sh dot
+total =500.000000, time per call = 36.267900 ms
 12800
 ./dot_tap_rev.exe
 total =63224.190710, time per call = 0.020900 ms
@@ -118,3 +132,5 @@ mono dot_fsharp_for.exe
 total =63224.190710, time per call = 43096.800000 ms
 mono dot_fsharp_rev.exe
 total =63224.190710, time per call = 35.600000 ms
+futhark/time_futhark.sh dot
+total =500.000000, time per call = 148.874500 ms

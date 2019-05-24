@@ -13,6 +13,8 @@ mono max_fsharp_for.exe
 total =10.000000, time per call = 57.500000 ms
 mono max_fsharp_rev.exe
 total =10.000000, time per call = 3.500000 ms
+futhark/time_futhark.sh max
+total =500.000000, time per call = 2.186500 ms
 1600
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.008500 ms
@@ -28,6 +30,8 @@ mono max_fsharp_for.exe
 total =10.000000, time per call = 444.000000 ms
 mono max_fsharp_rev.exe
 total =10.000000, time per call = 3.000000 ms
+futhark/time_futhark.sh max
+total =500.000000, time per call = 8.321300 ms
 3200
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.015800 ms
@@ -43,6 +47,8 @@ mono max_fsharp_for.exe
 total =10.000000, time per call = 1730.800000 ms
 mono max_fsharp_rev.exe
 total =10.000000, time per call = 3.700000 ms
+futhark/time_futhark.sh max
+total =500.000000, time per call = 31.811900 ms
 6400
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.029400 ms
@@ -58,6 +64,8 @@ mono max_fsharp_for.exe
 total =10.000000, time per call = 6821.600000 ms
 mono max_fsharp_rev.exe
 total =10.000000, time per call = 4.600000 ms
+futhark/time_futhark.sh max
+total =500.000000, time per call = 133.270700 ms
 12800
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.057600 ms
@@ -73,6 +81,8 @@ mono max_fsharp_for.exe
 total =10.000000, time per call = 26719.800000 ms
 mono max_fsharp_rev.exe
 total =10.000000, time per call = 6.800000 ms
+futhark/time_futhark.sh max
+total =500.000000, time per call = 483.012500 ms
 25600
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.116300 ms
@@ -88,6 +98,8 @@ mono max_fsharp_for.exe
 total =10.000000, time per call = 109409.400000 ms
 mono max_fsharp_rev.exe
 total =10.000000, time per call = 13.300000 ms
+futhark/time_futhark.sh max
+total =500.000000, time per call = 1948.023500 ms
 51200
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.282000 ms
@@ -102,3 +114,5 @@ total =10.000000, time per call = 0.215600 ms
 mono max_fsharp_for.exe
 mono max_fsharp_rev.exe
 total =10.000000, time per call = 20.300000 ms
+futhark/time_futhark.sh max
+total =500.000000, time per call = 7969.900700 ms

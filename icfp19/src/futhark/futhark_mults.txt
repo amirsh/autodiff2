@@ -1,0 +1,10 @@
+Compiling mults.fut...
+Results for mults.fut:
+dataset [200]f32 f32:         0.50μs (avg. of 10 runs; RSD: 1.00)
+dataset [400]f32 f32:         0.80μs (avg. of 10 runs; RSD: 0.50)
+dataset [800]f32 f32:         1.60μs (avg. of 10 runs; RSD: 0.31)
+dataset [1600]f32 f32:        1.90μs (avg. of 10 runs; RSD: 0.16)
+dataset [3200]f32 f32:        3.70μs (avg. of 10 runs; RSD: 0.12)
+dataset [6400]f32 f32:        8.60μs (avg. of 10 runs; RSD: 0.06)
+dataset [12800]f32 f32:      14.60μs (avg. of 10 runs; RSD: 0.03)
+dataset [25600]f32 f32:      29.50μs (avg. of 10 runs; RSD: 0.02)

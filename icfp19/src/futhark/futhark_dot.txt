@@ -1,0 +1,10 @@
+Compiling dot.fut...
+Results for dot.fut:
+dataset [100]f32 [100]f32:           9.40μs (avg. of 10 runs; RSD: 0.05)
+dataset [200]f32 [200]f32:          38.90μs (avg. of 10 runs; RSD: 0.08)
+dataset [400]f32 [400]f32:         148.60μs (avg. of 10 runs; RSD: 0.00)
+dataset [800]f32 [800]f32:         565.00μs (avg. of 10 runs; RSD: 0.07)
+dataset [1600]f32 [1600]f32:      2403.60μs (avg. of 10 runs; RSD: 0.06)
+dataset [3200]f32 [3200]f32:      9395.60μs (avg. of 10 runs; RSD: 0.06)
+dataset [6400]f32 [6400]f32:     36267.90μs (avg. of 10 runs; RSD: 0.02)
+dataset [12800]f32 [12800]f32:  148874.50μs (avg. of 10 runs; RSD: 0.04)

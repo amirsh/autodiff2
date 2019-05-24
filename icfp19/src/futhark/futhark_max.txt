@@ -1,0 +1,9 @@
+Compiling max.fut...
+Results for max.fut:
+dataset [800]f32:      2186.50μs (avg. of 10 runs; RSD: 0.06)
+dataset [1600]f32:     8321.30μs (avg. of 10 runs; RSD: 0.08)
+dataset [3200]f32:    31811.90μs (avg. of 10 runs; RSD: 0.05)
+dataset [6400]f32:   133270.70μs (avg. of 10 runs; RSD: 0.11)
+dataset [12800]f32:  483012.50μs (avg. of 10 runs; RSD: 0.02)
+dataset [25600]f32: 1948023.50μs (avg. of 10 runs; RSD: 0.03)
+dataset [51200]f32: 7969900.70μs (avg. of 10 runs; RSD: 0.02)

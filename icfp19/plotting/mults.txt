@@ -13,6 +13,8 @@ mono mults_fsharp_for.exe
 total =19.750396, time per call = 5.400000 ms
 mono mults_fsharp_rev.exe
 total =19.750396, time per call = 10.600000 ms
+futhark/time_futhark.sh mults
+total =500.000000, time per call = .000500 ms
 400
 ./mults_tap_rev.exe
 total =8176.111362, time per call = 0.166000 ms
@@ -28,6 +30,8 @@ mono mults_fsharp_for.exe
 total =19.750396, time per call = 2.900000 ms
 mono mults_fsharp_rev.exe
 total =19.750396, time per call = 32.000000 ms
+futhark/time_futhark.sh mults
+total =500.000000, time per call = .000800 ms
 800
 ./mults_tap_rev.exe
 total =16290.811457, time per call = 0.589300 ms
@@ -43,6 +47,8 @@ mono mults_fsharp_for.exe
 total =19.750396, time per call = 3.100000 ms
 mono mults_fsharp_rev.exe
 total =19.750396, time per call = 125.900000 ms
+futhark/time_futhark.sh mults
+total =500.000000, time per call = .001600 ms
 1600
 ./mults_tap_rev.exe
 total =33119.993999, time per call = 2.462900 ms
@@ -58,6 +64,8 @@ mono mults_fsharp_for.exe
 total =19.750396, time per call = 2.900000 ms
 mono mults_fsharp_rev.exe
 total =19.750396, time per call = 559.800000 ms
+futhark/time_futhark.sh mults
+total =500.000000, time per call = .001900 ms
 3200
 ./mults_tap_rev.exe
 total =65290.191340, time per call = 9.047000 ms
@@ -73,6 +81,8 @@ mono mults_fsharp_for.exe
 total =19.750396, time per call = 4.000000 ms
 mono mults_fsharp_rev.exe
 total =19.750396, time per call = 2197.800000 ms
+futhark/time_futhark.sh mults
+total =500.000000, time per call = .003700 ms
 6400
 ./mults_tap_rev.exe
 total =130329.409167, time per call = 35.017401 ms
@@ -88,6 +98,8 @@ mono mults_fsharp_for.exe
 total =19.750396, time per call = 5.900000 ms
 mono mults_fsharp_rev.exe
 total =19.750396, time per call = 8907.200000 ms
+futhark/time_futhark.sh mults
+total =500.000000, time per call = .008600 ms
 12800
 ./mults_tap_rev.exe
 total =258462.466939, time per call = 145.745105 ms
@@ -103,6 +115,8 @@ mono mults_fsharp_for.exe
 total =19.750396, time per call = 9.800000 ms
 mono mults_fsharp_rev.exe
 total =19.750396, time per call = 37030.200000 ms
+futhark/time_futhark.sh mults
+total =500.000000, time per call = .014600 ms
 25600
 ./mults_tap_rev.exe
 total =518158.745239, time per call = 570.282812 ms
@@ -117,3 +131,5 @@ total =518158.745239, time per call = 1554.161800 ms
 mono mults_fsharp_for.exe
 total =19.750396, time per call = 18.000000 ms
 mono mults_fsharp_rev.exe
+futhark/time_futhark.sh mults
+total =500.000000, time per call = .029500 ms

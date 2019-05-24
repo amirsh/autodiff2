@@ -94,6 +94,7 @@ plot 'data/add.csv' every ::1 using ($1):($8) title DiffSharpR ls 5, \
    'data/add.csv' every ::1 using ($1):($2) title TapenadeR ls 1, \
    'data/add.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/add.csv' every ::1 using ($1):($6) title Theano ls 7, \
+   'data/add.csv' every ::1 using ($1):($9) title Futhark ls 11, \
    'data/add.csv' every ::1 using ($1):($4) title DiffSmooth ls 3, \
    'data/add.csv' every ::1 using ($1):($5) title DiffSmoothDPS ls 4
 
@@ -106,6 +107,7 @@ plot 'data/mults.csv' every ::1 using ($1):($8) title DiffSharpR ls 5, \
    'data/mults.csv' every ::1 using ($1):($2) title TapenadeR ls 1, \
    'data/mults.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/mults.csv' every ::1 using ($1):($6) title Theano ls 7, \
+   'data/mults.csv' every ::1 using ($1):($9) title Futhark ls 11, \
    'data/mults.csv' every ::1 using ($1):($4) title DiffSmooth ls 3, \
    'data/mults.csv' every ::1 using ($1):($5) title DiffSmoothDPS ls 4
 
@@ -119,6 +121,7 @@ plot 'data/dot.csv' every ::1 using ($1):($8) title DiffSharpR ls 5, \
    'data/dot.csv' every ::1 using ($1):($2) title TapenadeR ls 1, \
    'data/dot.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/dot.csv' every ::1 using ($1):($6) title Theano ls 7, \
+   'data/dot.csv' every ::1 using ($1):($9) title Futhark ls 11, \
    'data/dot.csv' every ::1 using ($1):($4) title DiffSmooth ls 3, \
    'data/dot.csv' every ::1 using ($1):($5) title DiffSmoothDPS ls 4
 
@@ -131,6 +134,7 @@ plot 'data/max.csv' every ::1 using ($1):($8) title DiffSharpR ls 5, \
    'data/max.csv' every ::1 using ($1):($2) title TapenadeR ls 1, \
    'data/max.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/max.csv' every ::1 using ($1):($6) title Theano ls 7, \
+   'data/max.csv' every ::1 using ($1):($9) title Futhark ls 11, \
    'data/max.csv' every ::1 using ($1):($4) title DiffSmooth ls 3, \
    'data/max.csv' every ::1 using ($1):($5) title DiffSmoothDPS ls 4
 
