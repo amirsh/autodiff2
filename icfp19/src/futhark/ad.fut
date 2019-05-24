@@ -57,9 +57,9 @@ module mk_dual(T: real): {
   -- | Returns one on empty input.
   let product = reduce (*) (inject (T.i32 1))
   -- | Returns `lowest` on empty input.
-  let maximum = reduce min highest
+  let minimum = reduce min highest
   -- | Returns `highest` on empty input.
-  let minimum = reduce max lowest
+  let maximum = reduce max lowest
 
 
   -- val from_fraction: i32 -> i32 -> t
@@ -131,7 +131,7 @@ let jacobian (f: []f32_dual.t -> []f32_dual.t)(x: []f32.t): [][]f32_dual.t =
     let dx = tabulate n (\j -> f32.bool(i == j)) 
     let x' = map2 (f32_dual.make_dual) x dx
     in f x'
-  )
+  ) |> opaque
 
 let grad (f: []f32_dual.t -> f32_dual.t)(x: []f32.t): []f32_dual.t =
   let n = length x in
@@ -139,4 +139,4 @@ let grad (f: []f32_dual.t -> f32_dual.t)(x: []f32.t): []f32_dual.t =
     let dx = tabulate n (\j -> f32.bool(i == j)) 
     let x' = map2 (f32_dual.make_dual) x dx
     in f x'
-  )
+  ) |> opaque
