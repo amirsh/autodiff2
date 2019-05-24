@@ -132,3 +132,11 @@ let jacobian (f: []f32_dual.t -> []f32_dual.t)(x: []f32.t): [][]f32_dual.t =
     let x' = map2 (f32_dual.make_dual) x dx
     in f x'
   )
+
+let grad (f: []f32_dual.t -> f32_dual.t)(x: []f32.t): []f32_dual.t =
+  let n = length x in
+  tabulate n (\i ->
+    let dx = tabulate n (\j -> f32.bool(i == j)) 
+    let x' = map2 (f32_dual.make_dual) x dx
+    in f x'
+  )
