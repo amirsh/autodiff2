@@ -28,21 +28,39 @@ function get_files() {
 	prog=$1
 	local files;
 	if [ $prog == "mults" ]; then
-		files=("./mults_tap_rev.exe" "./mults_tap_for.exe" "./mults_diff.exe" "./mults_diff_dps.exe" "python micro.py mults" "mono mults_fsharp_for.exe" "mono mults_fsharp_rev.exe");
+		files=(
+				"./mults_tap_rev.exe" "./mults_tap_for.exe" "./mults_diff.exe" "./mults_diff_dps.exe" "python micro.py mults" "mono mults_fsharp_for.exe" "mono mults_fsharp_rev.exe"
+				"python micro_tf.py mults"
+			  );
 	elif [ $prog == "add" ]; then
-		files=("./add_tap_rev.exe" "./add_tap_for.exe" "./add_diff.exe" "./add_diff_dps.exe" "python micro.py add" "mono add_fsharp_for.exe" "mono add_fsharp_rev.exe");
+		files=(
+				"./add_tap_rev.exe" "./add_tap_for.exe" "./add_diff.exe" "./add_diff_dps.exe" "python micro.py add" "mono add_fsharp_for.exe" "mono add_fsharp_rev.exe"
+				"python micro_tf.py add"
+			  );
 	elif [ $prog == "dot" ]; then
-		files=("./dot_tap_rev.exe" "./dot_tap_for.exe" "./dot_diff.exe" "./dot_diff_dps.exe" "python micro.py dot" "mono dot_fsharp_for.exe" "mono dot_fsharp_rev.exe");
+		files=(
+				"./dot_tap_rev.exe" "./dot_tap_for.exe" "./dot_diff.exe" "./dot_diff_dps.exe" "python micro.py dot" "mono dot_fsharp_for.exe" "mono dot_fsharp_rev.exe"
+				"python micro_tf.py dot"
+			  );
 	elif [ $prog == "max" ]; then
-		files=("./max_tap_rev.exe" "./max_tap_for.exe" "./max_diff.exe" "./max_diff_dps.exe" "python micro.py max" "mono max_fsharp_for.exe" "mono max_fsharp_rev.exe");
+		files=(
+				"./max_tap_rev.exe" "./max_tap_for.exe" "./max_diff.exe" "./max_diff_dps.exe" "python micro.py max" "mono max_fsharp_for.exe" "mono max_fsharp_rev.exe"
+				"python micro_tf.py max"
+			  );
 	elif [ $prog == "ba" ]; then
-		files=("./ba_proj_tap_rev.exe" "./ba_proj_tap_for.exe" "./ba_proj_diff_nofusion.exe"
-			   "./ba_proj_diff_nonmotion.exe" "./ba_proj_diff_nomotion.exe" "./ba_proj_diff.exe" "./ba_proj_diff_dps.exe"
-			   "python micro.py ba" "mono ba_fsharp_for.exe" "mono ba_fsharp_rev.exe" "futhark/time_futhark.sh ba");
+		files=(
+				"./ba_proj_tap_rev.exe" "./ba_proj_tap_for.exe" "./ba_proj_diff_nofusion.exe"
+				"./ba_proj_diff_nonmotion.exe" "./ba_proj_diff_nomotion.exe" "./ba_proj_diff.exe" "./ba_proj_diff_dps.exe"
+				"python micro.py ba" "mono ba_fsharp_for.exe" "mono ba_fsharp_rev.exe" "futhark/time_futhark.sh ba"
+			   	"python micro_tf.py ba"
+			   	);
 	elif [ $prog == "nmf" ]; then
-		files=(	"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe" "./nmf_diff_unfused.exe"
-			    "./nmf_diff_nonmotion.exe" "./nmf_diff_nomotion.exe" "./nmf_diff.exe" "./nmf_diff_dps.exe"
-				"python ./nmf.py exponential" "mono nmf_fsharp_for.exe" "mono nmf_fsharp_rev.exe" "futhark/time_futhark.sh nmf");
+		files=(	
+				"./nmf_tap_rev_unf.exe" "./nmf_tap_for_unf.exe" "./nmf_diff_unfused.exe"
+				"./nmf_diff_nonmotion.exe" "./nmf_diff_nomotion.exe" "./nmf_diff.exe" "./nmf_diff_dps.exe"
+				"python ./nmf.py exponential" "mono nmf_fsharp_for.exe" "mono nmf_fsharp_rev.exe" "futhark/time_futhark.sh nmf"
+				"python ./nmf_tf.py exponential"
+			  );
 		
 	fi
 	declare -p files;
@@ -73,9 +91,9 @@ run_bench "mults"
 run_bench "add"
 run_bench "dot"
 run_bench "max"
-cd futhark; ./run_futhark.sh ba; cd ..;
+# cd futhark; ./run_futhark.sh ba; cd ..;
 run_bench "ba"
-cd futhark; ./run_futhark.sh nmf; cd ..;
+# cd futhark; ./run_futhark.sh nmf; cd ..;
 run_bench "nmf"
 
 cd ..
