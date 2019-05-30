@@ -141,7 +141,6 @@ def micro(prog, dim, iters):
     # jit_level = tf.OptimizerOptions.ON_2
 
     config.graph_options.optimizer_options.global_jit_level = jit_level
-    run_metadata = tf.RunMetadata()
     sess = tf.Session(config=config)
     tf.global_variables_initializer().run(session=sess)
     for i in range(iters+1):
