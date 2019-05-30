@@ -15,6 +15,8 @@ mono mults_fsharp_rev.exe
 total =19.750396, time per call = 10.600000 ms
 futhark/time_futhark.sh mults
 total =500.000000, time per call = .000500 ms
+python micro_tf.py mults
+total =1392.533112, time per call = 0.977800 ms
 400
 ./mults_tap_rev.exe
 total =8176.111362, time per call = 0.166000 ms
@@ -32,6 +34,8 @@ mono mults_fsharp_rev.exe
 total =19.750396, time per call = 32.000000 ms
 futhark/time_futhark.sh mults
 total =500.000000, time per call = .000800 ms
+python micro_tf.py mults
+total =2759.943695, time per call = 1.886400 ms
 800
 ./mults_tap_rev.exe
 total =16290.811457, time per call = 0.589300 ms
@@ -49,6 +53,8 @@ mono mults_fsharp_rev.exe
 total =19.750396, time per call = 125.900000 ms
 futhark/time_futhark.sh mults
 total =500.000000, time per call = .001600 ms
+python micro_tf.py mults
+total =5510.246582, time per call = 1.978000 ms
 1600
 ./mults_tap_rev.exe
 total =33119.993999, time per call = 2.462900 ms
@@ -66,6 +72,8 @@ mono mults_fsharp_rev.exe
 total =19.750396, time per call = 559.800000 ms
 futhark/time_futhark.sh mults
 total =500.000000, time per call = .001900 ms
+python micro_tf.py mults
+total =11214.135742, time per call = 4.550800 ms
 3200
 ./mults_tap_rev.exe
 total =65290.191340, time per call = 9.047000 ms
@@ -83,6 +91,8 @@ mono mults_fsharp_rev.exe
 total =19.750396, time per call = 2197.800000 ms
 futhark/time_futhark.sh mults
 total =500.000000, time per call = .003700 ms
+python micro_tf.py mults
+total =22117.531494, time per call = 19.641000 ms
 6400
 ./mults_tap_rev.exe
 total =130329.409167, time per call = 35.017401 ms
@@ -100,6 +110,8 @@ mono mults_fsharp_rev.exe
 total =19.750396, time per call = 8907.200000 ms
 futhark/time_futhark.sh mults
 total =500.000000, time per call = .008600 ms
+python micro_tf.py mults
+total =44161.174805, time per call = 101.557600 ms
 12800
 ./mults_tap_rev.exe
 total =258462.466939, time per call = 145.745105 ms
@@ -117,6 +129,8 @@ mono mults_fsharp_rev.exe
 total =19.750396, time per call = 37030.200000 ms
 futhark/time_futhark.sh mults
 total =500.000000, time per call = .014600 ms
+python micro_tf.py mults
+total =87589.119141, time per call = 400.522200 ms
 25600
 ./mults_tap_rev.exe
 total =518158.745239, time per call = 570.282812 ms
@@ -133,3 +147,5 @@ total =19.750396, time per call = 18.000000 ms
 mono mults_fsharp_rev.exe
 futhark/time_futhark.sh mults
 total =500.000000, time per call = .029500 ms
+python micro_tf.py mults
+total =175607.587891, time per call = 1592.216200 ms

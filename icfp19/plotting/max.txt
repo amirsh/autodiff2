@@ -15,6 +15,8 @@ mono max_fsharp_rev.exe
 total =10.000000, time per call = 3.500000 ms
 futhark/time_futhark.sh max
 total =500.000000, time per call = 2.186500 ms
+python micro_tf.py max
+total =5.000000, time per call = 0.541400 ms
 1600
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.008500 ms
@@ -32,6 +34,8 @@ mono max_fsharp_rev.exe
 total =10.000000, time per call = 3.000000 ms
 futhark/time_futhark.sh max
 total =500.000000, time per call = 8.321300 ms
+python micro_tf.py max
+total =5.000000, time per call = 0.567600 ms
 3200
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.015800 ms
@@ -49,6 +53,8 @@ mono max_fsharp_rev.exe
 total =10.000000, time per call = 3.700000 ms
 futhark/time_futhark.sh max
 total =500.000000, time per call = 31.811900 ms
+python micro_tf.py max
+total =5.000000, time per call = 0.672800 ms
 6400
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.029400 ms
@@ -66,6 +72,8 @@ mono max_fsharp_rev.exe
 total =10.000000, time per call = 4.600000 ms
 futhark/time_futhark.sh max
 total =500.000000, time per call = 133.270700 ms
+python micro_tf.py max
+total =5.000000, time per call = 0.562200 ms
 12800
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.057600 ms
@@ -83,6 +91,8 @@ mono max_fsharp_rev.exe
 total =10.000000, time per call = 6.800000 ms
 futhark/time_futhark.sh max
 total =500.000000, time per call = 483.012500 ms
+python micro_tf.py max
+total =5.000000, time per call = 0.607200 ms
 25600
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.116300 ms
@@ -100,6 +110,8 @@ mono max_fsharp_rev.exe
 total =10.000000, time per call = 13.300000 ms
 futhark/time_futhark.sh max
 total =500.000000, time per call = 1948.023500 ms
+python micro_tf.py max
+total =5.000000, time per call = 0.701800 ms
 51200
 ./max_tap_rev.exe
 total =10.000000, time per call = 0.282000 ms
@@ -116,3 +128,5 @@ mono max_fsharp_rev.exe
 total =10.000000, time per call = 20.300000 ms
 futhark/time_futhark.sh max
 total =500.000000, time per call = 7969.900700 ms
+python micro_tf.py max
+total =5.000000, time per call = 0.887600 ms

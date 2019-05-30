@@ -15,6 +15,8 @@ mono add_fsharp_rev.exe
 total =500.000000, time per call = 4.700000 ms
 futhark/time_futhark.sh add
 total =500.000000, time per call = .003800 ms
+python micro_tf.py add
+total =250.000000, time per call = 0.733000 ms
 100
 ./add_tap_rev.exe
 total =1000.000000, time per call = 0.017200 ms
@@ -32,6 +34,8 @@ mono add_fsharp_rev.exe
 total =1000.000000, time per call = 7.400000 ms
 futhark/time_futhark.sh add
 total =500.000000, time per call = .015700 ms
+python micro_tf.py add
+total =500.000000, time per call = 0.764800 ms
 200
 ./add_tap_rev.exe
 total =2000.000000, time per call = 0.067900 ms
@@ -49,6 +53,8 @@ mono add_fsharp_rev.exe
 total =2000.000000, time per call = 19.900000 ms
 futhark/time_futhark.sh add
 total =500.000000, time per call = .054000 ms
+python micro_tf.py add
+total =1000.000000, time per call = 0.782400 ms
 400
 ./add_tap_rev.exe
 total =4000.000000, time per call = 0.258000 ms
@@ -66,6 +72,8 @@ mono add_fsharp_rev.exe
 total =4000.000000, time per call = 71.400000 ms
 futhark/time_futhark.sh add
 total =500.000000, time per call = .209300 ms
+python micro_tf.py add
+total =2000.000000, time per call = 1.132400 ms
 800
 ./add_tap_rev.exe
 total =8000.000000, time per call = 1.048100 ms
@@ -83,6 +91,8 @@ mono add_fsharp_rev.exe
 total =8000.000000, time per call = 273.300000 ms
 futhark/time_futhark.sh add
 total =500.000000, time per call = .875200 ms
+python micro_tf.py add
+total =4000.000000, time per call = 1.487400 ms
 1600
 ./add_tap_rev.exe
 total =16000.000000, time per call = 5.301400 ms
@@ -100,6 +110,8 @@ mono add_fsharp_rev.exe
 total =16000.000000, time per call = 1234.400000 ms
 futhark/time_futhark.sh add
 total =500.000000, time per call = 3.416600 ms
+python micro_tf.py add
+total =8000.000000, time per call = 4.149600 ms
 3200
 ./add_tap_rev.exe
 total =32000.000000, time per call = 23.005701 ms
@@ -117,6 +129,8 @@ mono add_fsharp_rev.exe
 total =32000.000000, time per call = 5327.700000 ms
 futhark/time_futhark.sh add
 total =500.000000, time per call = 18.324800 ms
+python micro_tf.py add
+total =16000.000000, time per call = 14.785600 ms
 6400
 ./add_tap_rev.exe
 total =64000.000000, time per call = 92.271698 ms
@@ -134,3 +148,5 @@ mono add_fsharp_rev.exe
 total =64000.000000, time per call = 27918.900000 ms
 futhark/time_futhark.sh add
 total =500.000000, time per call = 113.165200 ms
+python micro_tf.py add
+total =32000.000000, time per call = 78.745000 ms

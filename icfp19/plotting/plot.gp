@@ -15,6 +15,7 @@ DiffSmoothMotion_color = "#FCB164"
 DiffSmoothMotionNN_color = "#fb5a59"
 DiffSmoothFusion_color = "#228822"
 Futhark_color = "#222299"
+Tensorflow_color = "#9b3a9b"
 
 set style line 1 lc rgb TapenadeR_color lw 4 pt 12
 set style line 2 lc rgb TapenadeF_color lw 4 pt 12
@@ -27,6 +28,7 @@ set style line 8 lc rgb DiffSmoothMotion_color lw 6 pt 12 #dashtype 2
 set style line 9 lc rgb DiffSmoothMotionNN_color lw 6 pt 12 #dashtype 4
 set style line 10 lc rgb DiffSmoothFusion_color lw 6 pt 12 #dashtype 2
 set style line 11 lc rgb Futhark_color lw 4 pt 3
+set style line 12 lc rgb Tensorflow_color lw 4 pt 3
 
 TapenadeR = "Tapenade (R)"
 TapenadeF = "Tapenade (F)"
@@ -44,6 +46,7 @@ Theano = "Theano"
 Futhark = "Futhark"
 DiffSharpF = "DiffSharp (F)"
 DiffSharpR = "DiffSharp (R)"
+Tensorflow = "TensorFlow"
 
 # --- start common commands ---
 set border 1+2
@@ -98,6 +101,7 @@ plot 'data/dot.csv' every ::1 using ($1):($8) title DiffSharpR ls 5, \
    'data/dot.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/dot.csv' every ::1 using ($1):($6) title Theano ls 7, \
    'data/dot.csv' every ::1 using ($1):($9) title Futhark ls 11, \
+   'data/dot.csv' every ::1 using ($1):($10) title Tensorflow ls 12, \
    'data/dot.csv' every ::1 using ($1):($4) title DiffSmoothOpt ls 3, \
    'data/dot.csv' every ::1 using ($1):($5) title DiffSmoothOptDPS ls 4
 
@@ -113,6 +117,7 @@ plot 'data/add.csv' every ::1 using ($1):($8) title DiffSharpR ls 5, \
    'data/add.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/add.csv' every ::1 using ($1):($6) title Theano ls 7, \
    'data/add.csv' every ::1 using ($1):($9) title Futhark ls 11, \
+   'data/add.csv' every ::1 using ($1):($10) title Tensorflow ls 12, \
    'data/add.csv' every ::1 using ($1):($4) title DiffSmoothOpt ls 3, \
    'data/add.csv' every ::1 using ($1):($5) title DiffSmoothOptDPS ls 4
 
@@ -126,6 +131,7 @@ plot 'data/mults.csv' every ::1 using ($1):($8) title DiffSharpR ls 5, \
    'data/mults.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/mults.csv' every ::1 using ($1):($6) title Theano ls 7, \
    'data/mults.csv' every ::1 using ($1):($9) title Futhark ls 11, \
+   'data/mults.csv' every ::1 using ($1):($10) title Tensorflow ls 12, \
    'data/mults.csv' every ::1 using ($1):($4) title DiffSmoothOpt ls 3, \
    'data/mults.csv' every ::1 using ($1):($5) title DiffSmoothOptDPS ls 4
 
@@ -139,6 +145,7 @@ plot 'data/max.csv' every ::1 using ($1):($8) title DiffSharpR ls 5, \
    'data/max.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/max.csv' every ::1 using ($1):($6) title Theano ls 7, \
    'data/max.csv' every ::1 using ($1):($9) title Futhark ls 11, \
+   'data/max.csv' every ::1 using ($1):($10) title Tensorflow ls 12, \
    'data/max.csv' every ::1 using ($1):($4) title DiffSmoothOpt ls 3, \
    'data/max.csv' every ::1 using ($1):($5) title DiffSmoothOptDPS ls 4
 
@@ -154,6 +161,7 @@ plot 'data/ba.csv' every ::1 using ($1):($11) title DiffSharpR ls 5, \
    'data/ba.csv' every ::1 using ($1):($3) title TapenadeF ls 2, \
    'data/ba.csv' every ::1 using ($1):($9) title Theano ls 7, \
    'data/ba.csv' every ::1 using ($1):($12) title Futhark ls 11, \
+   'data/ba.csv' every ::1 using ($1):($13) title Tensorflow ls 12, \
    'data/ba.csv' every ::1 using ($1):($8) title DiffSmoothOptDPS ls 4, \
 
 set output 'ba_df.pdf' 
@@ -180,6 +188,7 @@ plot 'data/nmf.csv' every ::1::6 using ($1):($11) title DiffSharpR ls 5, \
    'data/nmf.csv' every ::1::6 using ($1):($3) title TapenadeF ls 2, \
    'data/nmf.csv' every ::1::6 using ($1):($9) title Theano ls 7, \
    'data/nmf.csv' every ::1::6 using ($1):($12) title Futhark ls 11, \
+   'data/nmf.csv' every ::1::6 using ($1):($13) title Tensorflow ls 12, \
    'data/nmf.csv' every ::1::6 using ($1):($8) title DiffSmoothOptDPS ls 4
 
 set output 'nmf_1_df.pdf' 
@@ -206,6 +215,7 @@ plot 'data/nmf.csv' every ::7 using ($1):($11) title DiffSharpR ls 5, \
    'data/nmf.csv' every ::7 using ($1):($3) title TapenadeF ls 2, \
    'data/nmf.csv' every ::7 using ($1):($9) title Theano ls 7, \
    'data/nmf.csv' every ::7 using ($1):($12) title Futhark ls 11, \
+   'data/nmf.csv' every ::7 using ($1):($13) title Tensorflow ls 12, \
    'data/nmf.csv' every ::7 using ($1):($8) title DiffSmoothOptDPS ls 4
 
 set yrange [0.1:100000];

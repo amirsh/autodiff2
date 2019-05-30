@@ -21,6 +21,8 @@ mono ba_fsharp_rev.exe
 total =-230758659671529.000000, time per call = 9.800000 ms
 futhark/time_futhark.sh ba
 total =500.000000, time per call = .008400 ms
+python micro_tf.py ba
+total =-230762915769265.500000, time per call = 13.088800 ms
 47
 ./ba_proj_tap_rev.exe
 total =-266638545844449.875000, time per call = 0.515400 ms
@@ -44,6 +46,8 @@ mono ba_fsharp_rev.exe
 total =-266638545844450.000000, time per call = 12.800000 ms
 futhark/time_futhark.sh ba
 total =500.000000, time per call = .013500 ms
+python micro_tf.py ba
+total =-266644897598607.500000, time per call = 25.149400 ms
 86
 ./ba_proj_tap_rev.exe
 total =-268358910357062.562500, time per call = 2.007400 ms
@@ -67,6 +71,8 @@ mono ba_fsharp_rev.exe
 total =-268358910357063.000000, time per call = 26.000000 ms
 futhark/time_futhark.sh ba
 total =500.000000, time per call = .021400 ms
+python micro_tf.py ba
+total =-268365276391397.000000, time per call = 45.539200 ms
 161
 ./ba_proj_tap_rev.exe
 total =-484197581747422.750000, time per call = 9.285400 ms
@@ -90,6 +96,8 @@ mono ba_fsharp_rev.exe
 total =-484197581747423.000000, time per call = 74.200000 ms
 futhark/time_futhark.sh ba
 total =500.000000, time per call = .032200 ms
+python micro_tf.py ba
+total =-484206472078267.000000, time per call = 87.421200 ms
 311
 ./ba_proj_tap_rev.exe
 total =-1719515384689430.250000, time per call = 30.289001 ms
@@ -113,6 +121,8 @@ mono ba_fsharp_rev.exe
 total =-1719515384689430.000000, time per call = 274.800000 ms
 futhark/time_futhark.sh ba
 total =500.000000, time per call = .058800 ms
+python micro_tf.py ba
+total =-1719633786699776.000000, time per call = 168.652200 ms
 611
 ./ba_proj_tap_rev.exe
 total =-68413364361092293306875904.000000, time per call = 122.154004 ms
@@ -136,6 +146,8 @@ mono ba_fsharp_rev.exe
 total =-68413364361092300000000000.000000, time per call = 1172.200000 ms
 futhark/time_futhark.sh ba
 total =500.000000, time per call = .125800 ms
+python micro_tf.py ba
+total =-68675301214183153203150848.000000, time per call = 334.487600 ms
 1211
 ./ba_proj_tap_rev.exe
 total =-68563096824998388731740160.000000, time per call = 471.731787 ms
@@ -159,6 +171,8 @@ mono ba_fsharp_rev.exe
 total =-68563096824998400000000000.000000, time per call = 6060.800000 ms
 futhark/time_futhark.sh ba
 total =500.000000, time per call = .227400 ms
+python micro_tf.py ba
+total =-68825217963499127006298112.000000, time per call = 675.416200 ms
 2411
 ./ba_proj_tap_rev.exe
 total =-68569892295175347562872832.000000, time per call = 1940.828906 ms
@@ -182,3 +196,5 @@ mono ba_fsharp_rev.exe
 total =-68569892295175400000000000.000000, time per call = 29313.000000 ms
 futhark/time_futhark.sh ba
 total =500.000000, time per call = .435300 ms
+python micro_tf.py ba
+total =-68832004383721153219264512.000000, time per call = 1477.247200 ms
