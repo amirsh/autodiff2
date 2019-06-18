@@ -149,6 +149,8 @@ plot 'data/max.csv' every ::1 using ($1):($8) title DiffSharpR ls 5, \
 
 set key on
 
+set yrange [0.001:1000000];
+
 set output 'ba.pdf' 
 
 set title "Jacobian of Project in Bundle Adjustment"
@@ -175,6 +177,8 @@ plot 'data/ba.csv' every ::1 using ($1):($4) title DiffSmooth ls 3, \
 set xlabel "Dimension (K)"
 
 unset key
+
+set yrange [0.01:100000];
 
 set output 'nmf_1.pdf' 
 
@@ -215,8 +219,6 @@ plot 'data/nmf.csv' every ::7 using ($1):($11) title DiffSharpR ls 5, \
    'data/nmf.csv' every ::7 using ($1):($13) title Tensorflow ls 12, \
    'data/nmf.csv' every ::7 using ($1):($12) title Futhark ls 11, \
    'data/nmf.csv' every ::7 using ($1):($8) title DiffSmoothOptDPS ls 4
-
-set yrange [0.1:100000];
 
 set output 'nmf_2_df.pdf' 
 
